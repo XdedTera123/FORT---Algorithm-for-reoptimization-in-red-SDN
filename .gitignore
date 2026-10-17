@@ -1,0 +1,10 @@
+# Ignorar todos los archivos y carpetas del directorio raíz
+/*
+
+# Permitir las carpetas específicas (y su contenido)
+!/Algoritmos/
+!/Presentaciones/
+!/Videos/
+
+# Permitir el propio archivo .gitignore para que se suba al repositorio
+!/.gitignore

@@ -1,0 +1,987 @@
+{
+  "tipo": "Caminos_Candidatos_PostFallo",
+  "generado_utc": "2026-10-12T14:46:18.743803+00:00",
+  "topologia_origen": "/home/vboxuser/Desktop/Tesis-SDN/resultados/etapa03/TopologiaPostFallo.json",
+  "estado_origen": "/home/vboxuser/Desktop/Tesis-SDN/resultados/etapa02/EstadoPostFallo.json",
+  "captura_origen_simultanea": false,
+  "enlace_fallado": [
+    "s1",
+    "s2"
+  ],
+  "criterio_orden": "Menor numero de saltos",
+  "max_caminos_por_comunicacion": 5,
+  "cantidad_comunicaciones": 12,
+  "cantidad_candidatos": 60,
+  "comunicaciones": [
+    {
+      "origen": "h1",
+      "destino": "h2",
+      "ruta_fs_referencia": [
+        "h1",
+        "s1",
+        "s4",
+        "s2",
+        "h2"
+      ],
+      "cantidad_caminos_encontrados": 11,
+      "candidatos": [
+        {
+          "id": "h1_h2_c01",
+          "ruta": [
+            "h1",
+            "s1",
+            "s4",
+            "s2",
+            "h2"
+          ],
+          "saltos_entre_switches": 2,
+          "es_ruta_fs": true
+        },
+        {
+          "id": "h1_h2_c02",
+          "ruta": [
+            "h1",
+            "s1",
+            "s3",
+            "s4",
+            "s2",
+            "h2"
+          ],
+          "saltos_entre_switches": 3,
+          "es_ruta_fs": false
+        },
+        {
+          "id": "h1_h2_c03",
+          "ruta": [
+            "h1",
+            "s1",
+            "s4",
+            "s5",
+            "s2",
+            "h2"
+          ],
+          "saltos_entre_switches": 3,
+          "es_ruta_fs": false
+        },
+        {
+          "id": "h1_h2_c04",
+          "ruta": [
+            "h1",
+            "s1",
+            "s3",
+            "s4",
+            "s5",
+            "s2",
+            "h2"
+          ],
+          "saltos_entre_switches": 4,
+          "es_ruta_fs": false
+        },
+        {
+          "id": "h1_h2_c05",
+          "ruta": [
+            "h1",
+            "s1",
+            "s3",
+            "s6",
+            "s7",
+            "s4",
+            "s2",
+            "h2"
+          ],
+          "saltos_entre_switches": 5,
+          "es_ruta_fs": false
+        }
+      ]
+    },
+    {
+      "origen": "h1",
+      "destino": "h3",
+      "ruta_fs_referencia": [
+        "h1",
+        "s1",
+        "s4",
+        "s2",
+        "s5",
+        "h3"
+      ],
+      "cantidad_caminos_encontrados": 10,
+      "candidatos": [
+        {
+          "id": "h1_h3_c01",
+          "ruta": [
+            "h1",
+            "s1",
+            "s4",
+            "s5",
+            "h3"
+          ],
+          "saltos_entre_switches": 2,
+          "es_ruta_fs": false
+        },
+        {
+          "id": "h1_h3_c02",
+          "ruta": [
+            "h1",
+            "s1",
+            "s3",
+            "s4",
+            "s5",
+            "h3"
+          ],
+          "saltos_entre_switches": 3,
+          "es_ruta_fs": false
+        },
+        {
+          "id": "h1_h3_c03",
+          "ruta": [
+            "h1",
+            "s1",
+            "s4",
+            "s2",
+            "s5",
+            "h3"
+          ],
+          "saltos_entre_switches": 3,
+          "es_ruta_fs": true
+        },
+        {
+          "id": "h1_h3_c04",
+          "ruta": [
+            "h1",
+            "s1",
+            "s3",
+            "s4",
+            "s2",
+            "s5",
+            "h3"
+          ],
+          "saltos_entre_switches": 4,
+          "es_ruta_fs": false
+        },
+        {
+          "id": "h1_h3_c05",
+          "ruta": [
+            "h1",
+            "s1",
+            "s4",
+            "s7",
+            "s8",
+            "s5",
+            "h3"
+          ],
+          "saltos_entre_switches": 4,
+          "es_ruta_fs": false
+        }
+      ]
+    },
+    {
+      "origen": "h1",
+      "destino": "h4",
+      "ruta_fs_referencia": [
+        "h1",
+        "s1",
+        "s4",
+        "s7",
+        "h4"
+      ],
+      "cantidad_caminos_encontrados": 8,
+      "candidatos": [
+        {
+          "id": "h1_h4_c01",
+          "ruta": [
+            "h1",
+            "s1",
+            "s4",
+            "s7",
+            "h4"
+          ],
+          "saltos_entre_switches": 2,
+          "es_ruta_fs": true
+        },
+        {
+          "id": "h1_h4_c02",
+          "ruta": [
+            "h1",
+            "s1",
+            "s3",
+            "s4",
+            "s7",
+            "h4"
+          ],
+          "saltos_entre_switches": 3,
+          "es_ruta_fs": false
+        },
+        {
+          "id": "h1_h4_c03",
+          "ruta": [
+            "h1",
+            "s1",
+            "s3",
+            "s6",
+            "s7",
+            "h4"
+          ],
+          "saltos_entre_switches": 3,
+          "es_ruta_fs": false
+        },
+        {
+          "id": "h1_h4_c04",
+          "ruta": [
+            "h1",
+            "s1",
+            "s4",
+            "s3",
+            "s6",
+            "s7",
+            "h4"
+          ],
+          "saltos_entre_switches": 4,
+          "es_ruta_fs": false
+        },
+        {
+          "id": "h1_h4_c05",
+          "ruta": [
+            "h1",
+            "s1",
+            "s4",
+            "s5",
+            "s8",
+            "s7",
+            "h4"
+          ],
+          "saltos_entre_switches": 4,
+          "es_ruta_fs": false
+        }
+      ]
+    },
+    {
+      "origen": "h2",
+      "destino": "h1",
+      "ruta_fs_referencia": [
+        "h2",
+        "s2",
+        "s4",
+        "s1",
+        "h1"
+      ],
+      "cantidad_caminos_encontrados": 11,
+      "candidatos": [
+        {
+          "id": "h2_h1_c01",
+          "ruta": [
+            "h2",
+            "s2",
+            "s4",
+            "s1",
+            "h1"
+          ],
+          "saltos_entre_switches": 2,
+          "es_ruta_fs": true
+        },
+        {
+          "id": "h2_h1_c02",
+          "ruta": [
+            "h2",
+            "s2",
+            "s4",
+            "s3",
+            "s1",
+            "h1"
+          ],
+          "saltos_entre_switches": 3,
+          "es_ruta_fs": false
+        },
+        {
+          "id": "h2_h1_c03",
+          "ruta": [
+            "h2",
+            "s2",
+            "s5",
+            "s4",
+            "s1",
+            "h1"
+          ],
+          "saltos_entre_switches": 3,
+          "es_ruta_fs": false
+        },
+        {
+          "id": "h2_h1_c04",
+          "ruta": [
+            "h2",
+            "s2",
+            "s5",
+            "s4",
+            "s3",
+            "s1",
+            "h1"
+          ],
+          "saltos_entre_switches": 4,
+          "es_ruta_fs": false
+        },
+        {
+          "id": "h2_h1_c05",
+          "ruta": [
+            "h2",
+            "s2",
+            "s4",
+            "s7",
+            "s6",
+            "s3",
+            "s1",
+            "h1"
+          ],
+          "saltos_entre_switches": 5,
+          "es_ruta_fs": false
+        }
+      ]
+    },
+    {
+      "origen": "h2",
+      "destino": "h3",
+      "ruta_fs_referencia": [
+        "h2",
+        "s2",
+        "s5",
+        "h3"
+      ],
+      "cantidad_caminos_encontrados": 5,
+      "candidatos": [
+        {
+          "id": "h2_h3_c01",
+          "ruta": [
+            "h2",
+            "s2",
+            "s5",
+            "h3"
+          ],
+          "saltos_entre_switches": 1,
+          "es_ruta_fs": true
+        },
+        {
+          "id": "h2_h3_c02",
+          "ruta": [
+            "h2",
+            "s2",
+            "s4",
+            "s5",
+            "h3"
+          ],
+          "saltos_entre_switches": 2,
+          "es_ruta_fs": false
+        },
+        {
+          "id": "h2_h3_c03",
+          "ruta": [
+            "h2",
+            "s2",
+            "s4",
+            "s7",
+            "s8",
+            "s5",
+            "h3"
+          ],
+          "saltos_entre_switches": 4,
+          "es_ruta_fs": false
+        },
+        {
+          "id": "h2_h3_c04",
+          "ruta": [
+            "h2",
+            "s2",
+            "s4",
+            "s3",
+            "s6",
+            "s7",
+            "s8",
+            "s5",
+            "h3"
+          ],
+          "saltos_entre_switches": 6,
+          "es_ruta_fs": false
+        },
+        {
+          "id": "h2_h3_c05",
+          "ruta": [
+            "h2",
+            "s2",
+            "s4",
+            "s1",
+            "s3",
+            "s6",
+            "s7",
+            "s8",
+            "s5",
+            "h3"
+          ],
+          "saltos_entre_switches": 7,
+          "es_ruta_fs": false
+        }
+      ]
+    },
+    {
+      "origen": "h2",
+      "destino": "h4",
+      "ruta_fs_referencia": [
+        "h2",
+        "s2",
+        "s4",
+        "s7",
+        "h4"
+      ],
+      "cantidad_caminos_encontrados": 8,
+      "candidatos": [
+        {
+          "id": "h2_h4_c01",
+          "ruta": [
+            "h2",
+            "s2",
+            "s4",
+            "s7",
+            "h4"
+          ],
+          "saltos_entre_switches": 2,
+          "es_ruta_fs": true
+        },
+        {
+          "id": "h2_h4_c02",
+          "ruta": [
+            "h2",
+            "s2",
+            "s5",
+            "s4",
+            "s7",
+            "h4"
+          ],
+          "saltos_entre_switches": 3,
+          "es_ruta_fs": false
+        },
+        {
+          "id": "h2_h4_c03",
+          "ruta": [
+            "h2",
+            "s2",
+            "s5",
+            "s8",
+            "s7",
+            "h4"
+          ],
+          "saltos_entre_switches": 3,
+          "es_ruta_fs": false
+        },
+        {
+          "id": "h2_h4_c04",
+          "ruta": [
+            "h2",
+            "s2",
+            "s4",
+            "s3",
+            "s6",
+            "s7",
+            "h4"
+          ],
+          "saltos_entre_switches": 4,
+          "es_ruta_fs": false
+        },
+        {
+          "id": "h2_h4_c05",
+          "ruta": [
+            "h2",
+            "s2",
+            "s4",
+            "s5",
+            "s8",
+            "s7",
+            "h4"
+          ],
+          "saltos_entre_switches": 4,
+          "es_ruta_fs": false
+        }
+      ]
+    },
+    {
+      "origen": "h3",
+      "destino": "h1",
+      "ruta_fs_referencia": [
+        "h3",
+        "s5",
+        "s2",
+        "s4",
+        "s1",
+        "h1"
+      ],
+      "cantidad_caminos_encontrados": 10,
+      "candidatos": [
+        {
+          "id": "h3_h1_c01",
+          "ruta": [
+            "h3",
+            "s5",
+            "s4",
+            "s1",
+            "h1"
+          ],
+          "saltos_entre_switches": 2,
+          "es_ruta_fs": false
+        },
+        {
+          "id": "h3_h1_c02",
+          "ruta": [
+            "h3",
+            "s5",
+            "s2",
+            "s4",
+            "s1",
+            "h1"
+          ],
+          "saltos_entre_switches": 3,
+          "es_ruta_fs": true
+        },
+        {
+          "id": "h3_h1_c03",
+          "ruta": [
+            "h3",
+            "s5",
+            "s4",
+            "s3",
+            "s1",
+            "h1"
+          ],
+          "saltos_entre_switches": 3,
+          "es_ruta_fs": false
+        },
+        {
+          "id": "h3_h1_c04",
+          "ruta": [
+            "h3",
+            "s5",
+            "s2",
+            "s4",
+            "s3",
+            "s1",
+            "h1"
+          ],
+          "saltos_entre_switches": 4,
+          "es_ruta_fs": false
+        },
+        {
+          "id": "h3_h1_c05",
+          "ruta": [
+            "h3",
+            "s5",
+            "s8",
+            "s7",
+            "s4",
+            "s1",
+            "h1"
+          ],
+          "saltos_entre_switches": 4,
+          "es_ruta_fs": false
+        }
+      ]
+    },
+    {
+      "origen": "h3",
+      "destino": "h2",
+      "ruta_fs_referencia": [
+        "h3",
+        "s5",
+        "s2",
+        "h2"
+      ],
+      "cantidad_caminos_encontrados": 5,
+      "candidatos": [
+        {
+          "id": "h3_h2_c01",
+          "ruta": [
+            "h3",
+            "s5",
+            "s2",
+            "h2"
+          ],
+          "saltos_entre_switches": 1,
+          "es_ruta_fs": true
+        },
+        {
+          "id": "h3_h2_c02",
+          "ruta": [
+            "h3",
+            "s5",
+            "s4",
+            "s2",
+            "h2"
+          ],
+          "saltos_entre_switches": 2,
+          "es_ruta_fs": false
+        },
+        {
+          "id": "h3_h2_c03",
+          "ruta": [
+            "h3",
+            "s5",
+            "s8",
+            "s7",
+            "s4",
+            "s2",
+            "h2"
+          ],
+          "saltos_entre_switches": 4,
+          "es_ruta_fs": false
+        },
+        {
+          "id": "h3_h2_c04",
+          "ruta": [
+            "h3",
+            "s5",
+            "s8",
+            "s7",
+            "s6",
+            "s3",
+            "s4",
+            "s2",
+            "h2"
+          ],
+          "saltos_entre_switches": 6,
+          "es_ruta_fs": false
+        },
+        {
+          "id": "h3_h2_c05",
+          "ruta": [
+            "h3",
+            "s5",
+            "s8",
+            "s7",
+            "s6",
+            "s3",
+            "s1",
+            "s4",
+            "s2",
+            "h2"
+          ],
+          "saltos_entre_switches": 7,
+          "es_ruta_fs": false
+        }
+      ]
+    },
+    {
+      "origen": "h3",
+      "destino": "h4",
+      "ruta_fs_referencia": [
+        "h3",
+        "s5",
+        "s4",
+        "s7",
+        "h4"
+      ],
+      "cantidad_caminos_encontrados": 7,
+      "candidatos": [
+        {
+          "id": "h3_h4_c01",
+          "ruta": [
+            "h3",
+            "s5",
+            "s4",
+            "s7",
+            "h4"
+          ],
+          "saltos_entre_switches": 2,
+          "es_ruta_fs": true
+        },
+        {
+          "id": "h3_h4_c02",
+          "ruta": [
+            "h3",
+            "s5",
+            "s8",
+            "s7",
+            "h4"
+          ],
+          "saltos_entre_switches": 2,
+          "es_ruta_fs": false
+        },
+        {
+          "id": "h3_h4_c03",
+          "ruta": [
+            "h3",
+            "s5",
+            "s2",
+            "s4",
+            "s7",
+            "h4"
+          ],
+          "saltos_entre_switches": 3,
+          "es_ruta_fs": false
+        },
+        {
+          "id": "h3_h4_c04",
+          "ruta": [
+            "h3",
+            "s5",
+            "s4",
+            "s3",
+            "s6",
+            "s7",
+            "h4"
+          ],
+          "saltos_entre_switches": 4,
+          "es_ruta_fs": false
+        },
+        {
+          "id": "h3_h4_c05",
+          "ruta": [
+            "h3",
+            "s5",
+            "s2",
+            "s4",
+            "s3",
+            "s6",
+            "s7",
+            "h4"
+          ],
+          "saltos_entre_switches": 5,
+          "es_ruta_fs": false
+        }
+      ]
+    },
+    {
+      "origen": "h4",
+      "destino": "h1",
+      "ruta_fs_referencia": [
+        "h4",
+        "s7",
+        "s4",
+        "s1",
+        "h1"
+      ],
+      "cantidad_caminos_encontrados": 8,
+      "candidatos": [
+        {
+          "id": "h4_h1_c01",
+          "ruta": [
+            "h4",
+            "s7",
+            "s4",
+            "s1",
+            "h1"
+          ],
+          "saltos_entre_switches": 2,
+          "es_ruta_fs": true
+        },
+        {
+          "id": "h4_h1_c02",
+          "ruta": [
+            "h4",
+            "s7",
+            "s4",
+            "s3",
+            "s1",
+            "h1"
+          ],
+          "saltos_entre_switches": 3,
+          "es_ruta_fs": false
+        },
+        {
+          "id": "h4_h1_c03",
+          "ruta": [
+            "h4",
+            "s7",
+            "s6",
+            "s3",
+            "s1",
+            "h1"
+          ],
+          "saltos_entre_switches": 3,
+          "es_ruta_fs": false
+        },
+        {
+          "id": "h4_h1_c04",
+          "ruta": [
+            "h4",
+            "s7",
+            "s6",
+            "s3",
+            "s4",
+            "s1",
+            "h1"
+          ],
+          "saltos_entre_switches": 4,
+          "es_ruta_fs": false
+        },
+        {
+          "id": "h4_h1_c05",
+          "ruta": [
+            "h4",
+            "s7",
+            "s8",
+            "s5",
+            "s4",
+            "s1",
+            "h1"
+          ],
+          "saltos_entre_switches": 4,
+          "es_ruta_fs": false
+        }
+      ]
+    },
+    {
+      "origen": "h4",
+      "destino": "h2",
+      "ruta_fs_referencia": [
+        "h4",
+        "s7",
+        "s4",
+        "s2",
+        "h2"
+      ],
+      "cantidad_caminos_encontrados": 8,
+      "candidatos": [
+        {
+          "id": "h4_h2_c01",
+          "ruta": [
+            "h4",
+            "s7",
+            "s4",
+            "s2",
+            "h2"
+          ],
+          "saltos_entre_switches": 2,
+          "es_ruta_fs": true
+        },
+        {
+          "id": "h4_h2_c02",
+          "ruta": [
+            "h4",
+            "s7",
+            "s4",
+            "s5",
+            "s2",
+            "h2"
+          ],
+          "saltos_entre_switches": 3,
+          "es_ruta_fs": false
+        },
+        {
+          "id": "h4_h2_c03",
+          "ruta": [
+            "h4",
+            "s7",
+            "s8",
+            "s5",
+            "s2",
+            "h2"
+          ],
+          "saltos_entre_switches": 3,
+          "es_ruta_fs": false
+        },
+        {
+          "id": "h4_h2_c04",
+          "ruta": [
+            "h4",
+            "s7",
+            "s6",
+            "s3",
+            "s4",
+            "s2",
+            "h2"
+          ],
+          "saltos_entre_switches": 4,
+          "es_ruta_fs": false
+        },
+        {
+          "id": "h4_h2_c05",
+          "ruta": [
+            "h4",
+            "s7",
+            "s8",
+            "s5",
+            "s4",
+            "s2",
+            "h2"
+          ],
+          "saltos_entre_switches": 4,
+          "es_ruta_fs": false
+        }
+      ]
+    },
+    {
+      "origen": "h4",
+      "destino": "h3",
+      "ruta_fs_referencia": [
+        "h4",
+        "s7",
+        "s4",
+        "s5",
+        "h3"
+      ],
+      "cantidad_caminos_encontrados": 7,
+      "candidatos": [
+        {
+          "id": "h4_h3_c01",
+          "ruta": [
+            "h4",
+            "s7",
+            "s4",
+            "s5",
+            "h3"
+          ],
+          "saltos_entre_switches": 2,
+          "es_ruta_fs": true
+        },
+        {
+          "id": "h4_h3_c02",
+          "ruta": [
+            "h4",
+            "s7",
+            "s8",
+            "s5",
+            "h3"
+          ],
+          "saltos_entre_switches": 2,
+          "es_ruta_fs": false
+        },
+        {
+          "id": "h4_h3_c03",
+          "ruta": [
+            "h4",
+            "s7",
+            "s4",
+            "s2",
+            "s5",
+            "h3"
+          ],
+          "saltos_entre_switches": 3,
+          "es_ruta_fs": false
+        },
+        {
+          "id": "h4_h3_c04",
+          "ruta": [
+            "h4",
+            "s7",
+            "s6",
+            "s3",
+            "s4",
+            "s5",
+            "h3"
+          ],
+          "saltos_entre_switches": 4,
+          "es_ruta_fs": false
+        },
+        {
+          "id": "h4_h3_c05",
+          "ruta": [
+            "h4",
+            "s7",
+            "s6",
+            "s3",
+            "s1",
+            "s4",
+            "s5",
+            "h3"
+          ],
+          "saltos_entre_switches": 5,
+          "es_ruta_fs": false
+        }
+      ]
+    }
+  ]
+}

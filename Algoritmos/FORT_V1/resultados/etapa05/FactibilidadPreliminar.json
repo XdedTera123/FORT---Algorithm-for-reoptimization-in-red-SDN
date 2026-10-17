@@ -1,0 +1,685 @@
+{
+  "tipo": "FactibilidadEstructural_Preliminar",
+  "generado_utc": "2026-10-12T20:06:12.703763+00:00",
+  "enlace_fallado": [
+    "s1",
+    "s2"
+  ],
+  "targets_analizados": 40,
+  "parejas_evaluadas": 24,
+  "parejas_que_pasan_estructura": 24,
+  "parejas_rechazadas_por_estructura": 0,
+  "parejas_con_seguridad_definitiva_demostrada": 0,
+  "estados_con_ip_arp_divergentes": 66,
+  "tiempo_evaluacion_s": 0.223663,
+  "modificaciones_ejecutadas_en_ovs": 0,
+  "criterio": "Validez topologica, puertos PS, existencia de capacidad RS y coherencia de los estados logicos. No certifica seguridad de ejecucion.",
+  "limitaciones": [
+    "La capacidad RS se verifica, pero no se evalua aun congestion ni Peak MLU.",
+    "No se suma RS observado a demandas del mismo trafico.",
+    "FS, PS y RS fueron capturados secuencialmente durante una sesion piloto.",
+    "No se verifica el estado OpenFlow actual al ejecutar este analisis.",
+    "No se ha demostrado instalacion atomica ni preservacion de FF extremo a extremo.",
+    "Las divergencias IP/ARP son estados logicos, no perdidas de paquetes medidas."
+  ],
+  "targets": [
+    {
+      "target_id": "T000",
+      "estado_original": "REFERENCIA_FS_SIN_CAMBIOS",
+      "parejas_evaluadas": 0,
+      "evaluaciones": []
+    },
+    {
+      "target_id": "T001",
+      "estado_original": "CANDIDATAS_NO_VALIDADAS",
+      "parejas_evaluadas": 1,
+      "evaluaciones": [
+        {
+          "transition_id": "T001_TR01",
+          "estrategia": "SECUENCIAL_ASC",
+          "estado_evaluacion": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+          "estados_analizados": 13,
+          "comprobaciones_ruta_protocolo": 312,
+          "estados_con_divergencia_ip_arp": 1,
+          "problemas_estructurales": [],
+          "riesgos_pendientes": [
+            "Estados transitorios con IP y ARP en configuraciones distintas",
+            "Proteccion FF extremo a extremo no certificada",
+            "Conflictos con reglas, prioridades y grupos OVS actuales no verificados",
+            "Instalacion y BarrierReply reales no comprobados",
+            "Peak MLU y continuidad del trafico pendientes"
+          ],
+          "factibilidad_definitiva_demostrada": false
+        }
+      ]
+    },
+    {
+      "target_id": "T002",
+      "estado_original": "CANDIDATAS_NO_VALIDADAS",
+      "parejas_evaluadas": 3,
+      "evaluaciones": [
+        {
+          "transition_id": "T002_TR01",
+          "estrategia": "SECUENCIAL_ASC",
+          "estado_evaluacion": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+          "estados_analizados": 37,
+          "comprobaciones_ruta_protocolo": 888,
+          "estados_con_divergencia_ip_arp": 2,
+          "problemas_estructurales": [],
+          "riesgos_pendientes": [
+            "Estados transitorios con IP y ARP en configuraciones distintas",
+            "Proteccion FF extremo a extremo no certificada",
+            "Conflictos con reglas, prioridades y grupos OVS actuales no verificados",
+            "Instalacion y BarrierReply reales no comprobados",
+            "Peak MLU y continuidad del trafico pendientes"
+          ],
+          "factibilidad_definitiva_demostrada": false
+        },
+        {
+          "transition_id": "T002_TR02",
+          "estrategia": "SECUENCIAL_DESC",
+          "estado_evaluacion": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+          "estados_analizados": 37,
+          "comprobaciones_ruta_protocolo": 888,
+          "estados_con_divergencia_ip_arp": 2,
+          "problemas_estructurales": [],
+          "riesgos_pendientes": [
+            "Estados transitorios con IP y ARP en configuraciones distintas",
+            "Proteccion FF extremo a extremo no certificada",
+            "Conflictos con reglas, prioridades y grupos OVS actuales no verificados",
+            "Instalacion y BarrierReply reales no comprobados",
+            "Peak MLU y continuidad del trafico pendientes"
+          ],
+          "factibilidad_definitiva_demostrada": false
+        },
+        {
+          "transition_id": "T002_TR03",
+          "estrategia": "PREPARAR_TODOS_LUEGO_ACTIVAR",
+          "estado_evaluacion": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+          "estados_analizados": 37,
+          "comprobaciones_ruta_protocolo": 888,
+          "estados_con_divergencia_ip_arp": 2,
+          "problemas_estructurales": [],
+          "riesgos_pendientes": [
+            "Estados transitorios con IP y ARP en configuraciones distintas",
+            "Proteccion FF extremo a extremo no certificada",
+            "Conflictos con reglas, prioridades y grupos OVS actuales no verificados",
+            "Instalacion y BarrierReply reales no comprobados",
+            "Peak MLU y continuidad del trafico pendientes"
+          ],
+          "factibilidad_definitiva_demostrada": false
+        }
+      ]
+    },
+    {
+      "target_id": "T003",
+      "estado_original": "BLOQUEADO_POR_PLAN_LOCAL",
+      "parejas_evaluadas": 0,
+      "evaluaciones": []
+    },
+    {
+      "target_id": "T004",
+      "estado_original": "BLOQUEADO_POR_PLAN_LOCAL",
+      "parejas_evaluadas": 0,
+      "evaluaciones": []
+    },
+    {
+      "target_id": "T005",
+      "estado_original": "BLOQUEADO_POR_PLAN_LOCAL",
+      "parejas_evaluadas": 0,
+      "evaluaciones": []
+    },
+    {
+      "target_id": "T006",
+      "estado_original": "BLOQUEADO_POR_PLAN_LOCAL",
+      "parejas_evaluadas": 0,
+      "evaluaciones": []
+    },
+    {
+      "target_id": "T007",
+      "estado_original": "CANDIDATAS_NO_VALIDADAS",
+      "parejas_evaluadas": 1,
+      "evaluaciones": [
+        {
+          "transition_id": "T007_TR01",
+          "estrategia": "SECUENCIAL_ASC",
+          "estado_evaluacion": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+          "estados_analizados": 13,
+          "comprobaciones_ruta_protocolo": 312,
+          "estados_con_divergencia_ip_arp": 1,
+          "problemas_estructurales": [],
+          "riesgos_pendientes": [
+            "Estados transitorios con IP y ARP en configuraciones distintas",
+            "Proteccion FF extremo a extremo no certificada",
+            "Conflictos con reglas, prioridades y grupos OVS actuales no verificados",
+            "Instalacion y BarrierReply reales no comprobados",
+            "Peak MLU y continuidad del trafico pendientes"
+          ],
+          "factibilidad_definitiva_demostrada": false
+        }
+      ]
+    },
+    {
+      "target_id": "T008",
+      "estado_original": "BLOQUEADO_POR_PLAN_LOCAL",
+      "parejas_evaluadas": 0,
+      "evaluaciones": []
+    },
+    {
+      "target_id": "T009",
+      "estado_original": "BLOQUEADO_POR_PLAN_LOCAL",
+      "parejas_evaluadas": 0,
+      "evaluaciones": []
+    },
+    {
+      "target_id": "T010",
+      "estado_original": "BLOQUEADO_POR_PLAN_LOCAL",
+      "parejas_evaluadas": 0,
+      "evaluaciones": []
+    },
+    {
+      "target_id": "T011",
+      "estado_original": "BLOQUEADO_POR_PLAN_LOCAL",
+      "parejas_evaluadas": 0,
+      "evaluaciones": []
+    },
+    {
+      "target_id": "T012",
+      "estado_original": "BLOQUEADO_POR_PLAN_LOCAL",
+      "parejas_evaluadas": 0,
+      "evaluaciones": []
+    },
+    {
+      "target_id": "T013",
+      "estado_original": "CANDIDATAS_NO_VALIDADAS",
+      "parejas_evaluadas": 1,
+      "evaluaciones": [
+        {
+          "transition_id": "T013_TR01",
+          "estrategia": "SECUENCIAL_ASC",
+          "estado_evaluacion": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+          "estados_analizados": 16,
+          "comprobaciones_ruta_protocolo": 384,
+          "estados_con_divergencia_ip_arp": 1,
+          "problemas_estructurales": [],
+          "riesgos_pendientes": [
+            "Estados transitorios con IP y ARP en configuraciones distintas",
+            "Proteccion FF extremo a extremo no certificada",
+            "Conflictos con reglas, prioridades y grupos OVS actuales no verificados",
+            "Instalacion y BarrierReply reales no comprobados",
+            "Peak MLU y continuidad del trafico pendientes"
+          ],
+          "factibilidad_definitiva_demostrada": false
+        }
+      ]
+    },
+    {
+      "target_id": "T014",
+      "estado_original": "BLOQUEADO_POR_PLAN_LOCAL",
+      "parejas_evaluadas": 0,
+      "evaluaciones": []
+    },
+    {
+      "target_id": "T015",
+      "estado_original": "BLOQUEADO_POR_PLAN_LOCAL",
+      "parejas_evaluadas": 0,
+      "evaluaciones": []
+    },
+    {
+      "target_id": "T016",
+      "estado_original": "BLOQUEADO_POR_PLAN_LOCAL",
+      "parejas_evaluadas": 0,
+      "evaluaciones": []
+    },
+    {
+      "target_id": "T017",
+      "estado_original": "CANDIDATAS_NO_VALIDADAS",
+      "parejas_evaluadas": 3,
+      "evaluaciones": [
+        {
+          "transition_id": "T017_TR01",
+          "estrategia": "SECUENCIAL_ASC",
+          "estado_evaluacion": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+          "estados_analizados": 124,
+          "comprobaciones_ruta_protocolo": 2976,
+          "estados_con_divergencia_ip_arp": 8,
+          "problemas_estructurales": [],
+          "riesgos_pendientes": [
+            "Estados transitorios con IP y ARP en configuraciones distintas",
+            "Proteccion FF extremo a extremo no certificada",
+            "Conflictos con reglas, prioridades y grupos OVS actuales no verificados",
+            "Instalacion y BarrierReply reales no comprobados",
+            "Peak MLU y continuidad del trafico pendientes"
+          ],
+          "factibilidad_definitiva_demostrada": false
+        },
+        {
+          "transition_id": "T017_TR02",
+          "estrategia": "SECUENCIAL_DESC",
+          "estado_evaluacion": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+          "estados_analizados": 124,
+          "comprobaciones_ruta_protocolo": 2976,
+          "estados_con_divergencia_ip_arp": 8,
+          "problemas_estructurales": [],
+          "riesgos_pendientes": [
+            "Estados transitorios con IP y ARP en configuraciones distintas",
+            "Proteccion FF extremo a extremo no certificada",
+            "Conflictos con reglas, prioridades y grupos OVS actuales no verificados",
+            "Instalacion y BarrierReply reales no comprobados",
+            "Peak MLU y continuidad del trafico pendientes"
+          ],
+          "factibilidad_definitiva_demostrada": false
+        },
+        {
+          "transition_id": "T017_TR03",
+          "estrategia": "PREPARAR_TODOS_LUEGO_ACTIVAR",
+          "estado_evaluacion": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+          "estados_analizados": 124,
+          "comprobaciones_ruta_protocolo": 2976,
+          "estados_con_divergencia_ip_arp": 8,
+          "problemas_estructurales": [],
+          "riesgos_pendientes": [
+            "Estados transitorios con IP y ARP en configuraciones distintas",
+            "Proteccion FF extremo a extremo no certificada",
+            "Conflictos con reglas, prioridades y grupos OVS actuales no verificados",
+            "Instalacion y BarrierReply reales no comprobados",
+            "Peak MLU y continuidad del trafico pendientes"
+          ],
+          "factibilidad_definitiva_demostrada": false
+        }
+      ]
+    },
+    {
+      "target_id": "T018",
+      "estado_original": "BLOQUEADO_POR_PLAN_LOCAL",
+      "parejas_evaluadas": 0,
+      "evaluaciones": []
+    },
+    {
+      "target_id": "T019",
+      "estado_original": "BLOQUEADO_POR_PLAN_LOCAL",
+      "parejas_evaluadas": 0,
+      "evaluaciones": []
+    },
+    {
+      "target_id": "T020",
+      "estado_original": "CANDIDATAS_NO_VALIDADAS",
+      "parejas_evaluadas": 3,
+      "evaluaciones": [
+        {
+          "transition_id": "T020_TR01",
+          "estrategia": "SECUENCIAL_ASC",
+          "estado_evaluacion": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+          "estados_analizados": 37,
+          "comprobaciones_ruta_protocolo": 888,
+          "estados_con_divergencia_ip_arp": 2,
+          "problemas_estructurales": [],
+          "riesgos_pendientes": [
+            "Estados transitorios con IP y ARP en configuraciones distintas",
+            "Proteccion FF extremo a extremo no certificada",
+            "Conflictos con reglas, prioridades y grupos OVS actuales no verificados",
+            "Instalacion y BarrierReply reales no comprobados",
+            "Peak MLU y continuidad del trafico pendientes"
+          ],
+          "factibilidad_definitiva_demostrada": false
+        },
+        {
+          "transition_id": "T020_TR02",
+          "estrategia": "SECUENCIAL_DESC",
+          "estado_evaluacion": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+          "estados_analizados": 37,
+          "comprobaciones_ruta_protocolo": 888,
+          "estados_con_divergencia_ip_arp": 2,
+          "problemas_estructurales": [],
+          "riesgos_pendientes": [
+            "Estados transitorios con IP y ARP en configuraciones distintas",
+            "Proteccion FF extremo a extremo no certificada",
+            "Conflictos con reglas, prioridades y grupos OVS actuales no verificados",
+            "Instalacion y BarrierReply reales no comprobados",
+            "Peak MLU y continuidad del trafico pendientes"
+          ],
+          "factibilidad_definitiva_demostrada": false
+        },
+        {
+          "transition_id": "T020_TR03",
+          "estrategia": "PREPARAR_TODOS_LUEGO_ACTIVAR",
+          "estado_evaluacion": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+          "estados_analizados": 37,
+          "comprobaciones_ruta_protocolo": 888,
+          "estados_con_divergencia_ip_arp": 2,
+          "problemas_estructurales": [],
+          "riesgos_pendientes": [
+            "Estados transitorios con IP y ARP en configuraciones distintas",
+            "Proteccion FF extremo a extremo no certificada",
+            "Conflictos con reglas, prioridades y grupos OVS actuales no verificados",
+            "Instalacion y BarrierReply reales no comprobados",
+            "Peak MLU y continuidad del trafico pendientes"
+          ],
+          "factibilidad_definitiva_demostrada": false
+        }
+      ]
+    },
+    {
+      "target_id": "T021",
+      "estado_original": "BLOQUEADO_POR_PLAN_LOCAL",
+      "parejas_evaluadas": 0,
+      "evaluaciones": []
+    },
+    {
+      "target_id": "T022",
+      "estado_original": "BLOQUEADO_POR_PLAN_LOCAL",
+      "parejas_evaluadas": 0,
+      "evaluaciones": []
+    },
+    {
+      "target_id": "T023",
+      "estado_original": "BLOQUEADO_POR_PLAN_LOCAL",
+      "parejas_evaluadas": 0,
+      "evaluaciones": []
+    },
+    {
+      "target_id": "T024",
+      "estado_original": "BLOQUEADO_POR_PLAN_LOCAL",
+      "parejas_evaluadas": 0,
+      "evaluaciones": []
+    },
+    {
+      "target_id": "T025",
+      "estado_original": "BLOQUEADO_POR_PLAN_LOCAL",
+      "parejas_evaluadas": 0,
+      "evaluaciones": []
+    },
+    {
+      "target_id": "T026",
+      "estado_original": "CANDIDATAS_NO_VALIDADAS",
+      "parejas_evaluadas": 3,
+      "evaluaciones": [
+        {
+          "transition_id": "T026_TR01",
+          "estrategia": "SECUENCIAL_ASC",
+          "estado_evaluacion": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+          "estados_analizados": 37,
+          "comprobaciones_ruta_protocolo": 888,
+          "estados_con_divergencia_ip_arp": 2,
+          "problemas_estructurales": [],
+          "riesgos_pendientes": [
+            "Estados transitorios con IP y ARP en configuraciones distintas",
+            "Proteccion FF extremo a extremo no certificada",
+            "Conflictos con reglas, prioridades y grupos OVS actuales no verificados",
+            "Instalacion y BarrierReply reales no comprobados",
+            "Peak MLU y continuidad del trafico pendientes"
+          ],
+          "factibilidad_definitiva_demostrada": false
+        },
+        {
+          "transition_id": "T026_TR02",
+          "estrategia": "SECUENCIAL_DESC",
+          "estado_evaluacion": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+          "estados_analizados": 37,
+          "comprobaciones_ruta_protocolo": 888,
+          "estados_con_divergencia_ip_arp": 2,
+          "problemas_estructurales": [],
+          "riesgos_pendientes": [
+            "Estados transitorios con IP y ARP en configuraciones distintas",
+            "Proteccion FF extremo a extremo no certificada",
+            "Conflictos con reglas, prioridades y grupos OVS actuales no verificados",
+            "Instalacion y BarrierReply reales no comprobados",
+            "Peak MLU y continuidad del trafico pendientes"
+          ],
+          "factibilidad_definitiva_demostrada": false
+        },
+        {
+          "transition_id": "T026_TR03",
+          "estrategia": "PREPARAR_TODOS_LUEGO_ACTIVAR",
+          "estado_evaluacion": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+          "estados_analizados": 37,
+          "comprobaciones_ruta_protocolo": 888,
+          "estados_con_divergencia_ip_arp": 2,
+          "problemas_estructurales": [],
+          "riesgos_pendientes": [
+            "Estados transitorios con IP y ARP en configuraciones distintas",
+            "Proteccion FF extremo a extremo no certificada",
+            "Conflictos con reglas, prioridades y grupos OVS actuales no verificados",
+            "Instalacion y BarrierReply reales no comprobados",
+            "Peak MLU y continuidad del trafico pendientes"
+          ],
+          "factibilidad_definitiva_demostrada": false
+        }
+      ]
+    },
+    {
+      "target_id": "T027",
+      "estado_original": "BLOQUEADO_POR_PLAN_LOCAL",
+      "parejas_evaluadas": 0,
+      "evaluaciones": []
+    },
+    {
+      "target_id": "T028",
+      "estado_original": "BLOQUEADO_POR_PLAN_LOCAL",
+      "parejas_evaluadas": 0,
+      "evaluaciones": []
+    },
+    {
+      "target_id": "T029",
+      "estado_original": "BLOQUEADO_POR_PLAN_LOCAL",
+      "parejas_evaluadas": 0,
+      "evaluaciones": []
+    },
+    {
+      "target_id": "T030",
+      "estado_original": "BLOQUEADO_POR_PLAN_LOCAL",
+      "parejas_evaluadas": 0,
+      "evaluaciones": []
+    },
+    {
+      "target_id": "T031",
+      "estado_original": "BLOQUEADO_POR_PLAN_LOCAL",
+      "parejas_evaluadas": 0,
+      "evaluaciones": []
+    },
+    {
+      "target_id": "T032",
+      "estado_original": "CANDIDATAS_NO_VALIDADAS",
+      "parejas_evaluadas": 3,
+      "evaluaciones": [
+        {
+          "transition_id": "T032_TR01",
+          "estrategia": "SECUENCIAL_ASC",
+          "estado_evaluacion": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+          "estados_analizados": 40,
+          "comprobaciones_ruta_protocolo": 960,
+          "estados_con_divergencia_ip_arp": 2,
+          "problemas_estructurales": [],
+          "riesgos_pendientes": [
+            "Estados transitorios con IP y ARP en configuraciones distintas",
+            "Proteccion FF extremo a extremo no certificada",
+            "Conflictos con reglas, prioridades y grupos OVS actuales no verificados",
+            "Instalacion y BarrierReply reales no comprobados",
+            "Peak MLU y continuidad del trafico pendientes"
+          ],
+          "factibilidad_definitiva_demostrada": false
+        },
+        {
+          "transition_id": "T032_TR02",
+          "estrategia": "SECUENCIAL_DESC",
+          "estado_evaluacion": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+          "estados_analizados": 40,
+          "comprobaciones_ruta_protocolo": 960,
+          "estados_con_divergencia_ip_arp": 2,
+          "problemas_estructurales": [],
+          "riesgos_pendientes": [
+            "Estados transitorios con IP y ARP en configuraciones distintas",
+            "Proteccion FF extremo a extremo no certificada",
+            "Conflictos con reglas, prioridades y grupos OVS actuales no verificados",
+            "Instalacion y BarrierReply reales no comprobados",
+            "Peak MLU y continuidad del trafico pendientes"
+          ],
+          "factibilidad_definitiva_demostrada": false
+        },
+        {
+          "transition_id": "T032_TR03",
+          "estrategia": "PREPARAR_TODOS_LUEGO_ACTIVAR",
+          "estado_evaluacion": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+          "estados_analizados": 40,
+          "comprobaciones_ruta_protocolo": 960,
+          "estados_con_divergencia_ip_arp": 2,
+          "problemas_estructurales": [],
+          "riesgos_pendientes": [
+            "Estados transitorios con IP y ARP en configuraciones distintas",
+            "Proteccion FF extremo a extremo no certificada",
+            "Conflictos con reglas, prioridades y grupos OVS actuales no verificados",
+            "Instalacion y BarrierReply reales no comprobados",
+            "Peak MLU y continuidad del trafico pendientes"
+          ],
+          "factibilidad_definitiva_demostrada": false
+        }
+      ]
+    },
+    {
+      "target_id": "T033",
+      "estado_original": "CANDIDATAS_NO_VALIDADAS",
+      "parejas_evaluadas": 3,
+      "evaluaciones": [
+        {
+          "transition_id": "T033_TR01",
+          "estrategia": "SECUENCIAL_ASC",
+          "estado_evaluacion": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+          "estados_analizados": 58,
+          "comprobaciones_ruta_protocolo": 1392,
+          "estados_con_divergencia_ip_arp": 3,
+          "problemas_estructurales": [],
+          "riesgos_pendientes": [
+            "Estados transitorios con IP y ARP en configuraciones distintas",
+            "Proteccion FF extremo a extremo no certificada",
+            "Conflictos con reglas, prioridades y grupos OVS actuales no verificados",
+            "Instalacion y BarrierReply reales no comprobados",
+            "Peak MLU y continuidad del trafico pendientes"
+          ],
+          "factibilidad_definitiva_demostrada": false
+        },
+        {
+          "transition_id": "T033_TR02",
+          "estrategia": "SECUENCIAL_DESC",
+          "estado_evaluacion": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+          "estados_analizados": 58,
+          "comprobaciones_ruta_protocolo": 1392,
+          "estados_con_divergencia_ip_arp": 3,
+          "problemas_estructurales": [],
+          "riesgos_pendientes": [
+            "Estados transitorios con IP y ARP en configuraciones distintas",
+            "Proteccion FF extremo a extremo no certificada",
+            "Conflictos con reglas, prioridades y grupos OVS actuales no verificados",
+            "Instalacion y BarrierReply reales no comprobados",
+            "Peak MLU y continuidad del trafico pendientes"
+          ],
+          "factibilidad_definitiva_demostrada": false
+        },
+        {
+          "transition_id": "T033_TR03",
+          "estrategia": "PREPARAR_TODOS_LUEGO_ACTIVAR",
+          "estado_evaluacion": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+          "estados_analizados": 58,
+          "comprobaciones_ruta_protocolo": 1392,
+          "estados_con_divergencia_ip_arp": 3,
+          "problemas_estructurales": [],
+          "riesgos_pendientes": [
+            "Estados transitorios con IP y ARP en configuraciones distintas",
+            "Proteccion FF extremo a extremo no certificada",
+            "Conflictos con reglas, prioridades y grupos OVS actuales no verificados",
+            "Instalacion y BarrierReply reales no comprobados",
+            "Peak MLU y continuidad del trafico pendientes"
+          ],
+          "factibilidad_definitiva_demostrada": false
+        }
+      ]
+    },
+    {
+      "target_id": "T034",
+      "estado_original": "BLOQUEADO_POR_PLAN_LOCAL",
+      "parejas_evaluadas": 0,
+      "evaluaciones": []
+    },
+    {
+      "target_id": "T035",
+      "estado_original": "BLOQUEADO_POR_PLAN_LOCAL",
+      "parejas_evaluadas": 0,
+      "evaluaciones": []
+    },
+    {
+      "target_id": "T036",
+      "estado_original": "BLOQUEADO_POR_PLAN_LOCAL",
+      "parejas_evaluadas": 0,
+      "evaluaciones": []
+    },
+    {
+      "target_id": "T037",
+      "estado_original": "BLOQUEADO_POR_PLAN_LOCAL",
+      "parejas_evaluadas": 0,
+      "evaluaciones": []
+    },
+    {
+      "target_id": "T038",
+      "estado_original": "CANDIDATAS_NO_VALIDADAS",
+      "parejas_evaluadas": 3,
+      "evaluaciones": [
+        {
+          "transition_id": "T038_TR01",
+          "estrategia": "SECUENCIAL_ASC",
+          "estado_evaluacion": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+          "estados_analizados": 37,
+          "comprobaciones_ruta_protocolo": 888,
+          "estados_con_divergencia_ip_arp": 2,
+          "problemas_estructurales": [],
+          "riesgos_pendientes": [
+            "Estados transitorios con IP y ARP en configuraciones distintas",
+            "Proteccion FF extremo a extremo no certificada",
+            "Conflictos con reglas, prioridades y grupos OVS actuales no verificados",
+            "Instalacion y BarrierReply reales no comprobados",
+            "Peak MLU y continuidad del trafico pendientes"
+          ],
+          "factibilidad_definitiva_demostrada": false
+        },
+        {
+          "transition_id": "T038_TR02",
+          "estrategia": "SECUENCIAL_DESC",
+          "estado_evaluacion": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+          "estados_analizados": 37,
+          "comprobaciones_ruta_protocolo": 888,
+          "estados_con_divergencia_ip_arp": 2,
+          "problemas_estructurales": [],
+          "riesgos_pendientes": [
+            "Estados transitorios con IP y ARP en configuraciones distintas",
+            "Proteccion FF extremo a extremo no certificada",
+            "Conflictos con reglas, prioridades y grupos OVS actuales no verificados",
+            "Instalacion y BarrierReply reales no comprobados",
+            "Peak MLU y continuidad del trafico pendientes"
+          ],
+          "factibilidad_definitiva_demostrada": false
+        },
+        {
+          "transition_id": "T038_TR03",
+          "estrategia": "PREPARAR_TODOS_LUEGO_ACTIVAR",
+          "estado_evaluacion": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+          "estados_analizados": 37,
+          "comprobaciones_ruta_protocolo": 888,
+          "estados_con_divergencia_ip_arp": 2,
+          "problemas_estructurales": [],
+          "riesgos_pendientes": [
+            "Estados transitorios con IP y ARP en configuraciones distintas",
+            "Proteccion FF extremo a extremo no certificada",
+            "Conflictos con reglas, prioridades y grupos OVS actuales no verificados",
+            "Instalacion y BarrierReply reales no comprobados",
+            "Peak MLU y continuidad del trafico pendientes"
+          ],
+          "factibilidad_definitiva_demostrada": false
+        }
+      ]
+    },
+    {
+      "target_id": "T039",
+      "estado_original": "BLOQUEADO_POR_PLAN_LOCAL",
+      "parejas_evaluadas": 0,
+      "evaluaciones": []
+    }
+  ]
+}

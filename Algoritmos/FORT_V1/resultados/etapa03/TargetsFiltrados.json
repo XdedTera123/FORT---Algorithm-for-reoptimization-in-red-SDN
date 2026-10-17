@@ -1,0 +1,311 @@
+{
+  "tipo": "FiltradoTargets_Preliminar",
+  "generado_utc": "2026-10-12T15:33:32.797633+00:00",
+  "enlace_fallado": [
+    "s1",
+    "s2"
+  ],
+  "referencia_fs": "T000",
+  "rutas_fs_comparadas_directamente": true,
+  "rutas_fs_verificadas": 12,
+  "grupos_ff_registrados_ps": 20,
+  "grupos_con_respaldo_inferido_ps": 4,
+  "direcciones_operativas": 22,
+  "maxima_utilizacion_observada_rs_pct": 23.4098,
+  "mlu_fs_estimada_pct": 22.7,
+  "cantidad_targets": 40,
+  "cantidad_admitidos": 40,
+  "cantidad_descartados": 0,
+  "admitidos": [
+    {
+      "target_id": "T000",
+      "rutas_modificadas": 0,
+      "mlu_final_estimada_pct": 22.7,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T001",
+      "rutas_modificadas": 1,
+      "mlu_final_estimada_pct": 22.7,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T002",
+      "rutas_modificadas": 2,
+      "mlu_final_estimada_pct": 22.7,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T003",
+      "rutas_modificadas": 3,
+      "mlu_final_estimada_pct": 22.7,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T004",
+      "rutas_modificadas": 5,
+      "mlu_final_estimada_pct": 22.7,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T005",
+      "rutas_modificadas": 8,
+      "mlu_final_estimada_pct": 28.99,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T006",
+      "rutas_modificadas": 12,
+      "mlu_final_estimada_pct": 26.89,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T007",
+      "rutas_modificadas": 1,
+      "mlu_final_estimada_pct": 22.7,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T008",
+      "rutas_modificadas": 2,
+      "mlu_final_estimada_pct": 22.7,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T009",
+      "rutas_modificadas": 3,
+      "mlu_final_estimada_pct": 22.7,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T010",
+      "rutas_modificadas": 5,
+      "mlu_final_estimada_pct": 29.39,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T011",
+      "rutas_modificadas": 8,
+      "mlu_final_estimada_pct": 39.49,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T012",
+      "rutas_modificadas": 12,
+      "mlu_final_estimada_pct": 27.3,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T013",
+      "rutas_modificadas": 1,
+      "mlu_final_estimada_pct": 14.7,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T014",
+      "rutas_modificadas": 2,
+      "mlu_final_estimada_pct": 22.7,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T015",
+      "rutas_modificadas": 3,
+      "mlu_final_estimada_pct": 22.7,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T016",
+      "rutas_modificadas": 5,
+      "mlu_final_estimada_pct": 20.6,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T017",
+      "rutas_modificadas": 8,
+      "mlu_final_estimada_pct": 23.1,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T018",
+      "rutas_modificadas": 12,
+      "mlu_final_estimada_pct": 22.7,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T019",
+      "rutas_modificadas": 1,
+      "mlu_final_estimada_pct": 22.7,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T020",
+      "rutas_modificadas": 2,
+      "mlu_final_estimada_pct": 28.99,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T021",
+      "rutas_modificadas": 3,
+      "mlu_final_estimada_pct": 24.8,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T022",
+      "rutas_modificadas": 5,
+      "mlu_final_estimada_pct": 22.7,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T023",
+      "rutas_modificadas": 8,
+      "mlu_final_estimada_pct": 23.1,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T024",
+      "rutas_modificadas": 12,
+      "mlu_final_estimada_pct": 27.3,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T025",
+      "rutas_modificadas": 1,
+      "mlu_final_estimada_pct": 22.7,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T026",
+      "rutas_modificadas": 2,
+      "mlu_final_estimada_pct": 22.7,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T027",
+      "rutas_modificadas": 3,
+      "mlu_final_estimada_pct": 22.7,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T028",
+      "rutas_modificadas": 5,
+      "mlu_final_estimada_pct": 20.6,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T029",
+      "rutas_modificadas": 8,
+      "mlu_final_estimada_pct": 22.7,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T030",
+      "rutas_modificadas": 12,
+      "mlu_final_estimada_pct": 21.01,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T031",
+      "rutas_modificadas": 1,
+      "mlu_final_estimada_pct": 20.6,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T032",
+      "rutas_modificadas": 2,
+      "mlu_final_estimada_pct": 20.6,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T033",
+      "rutas_modificadas": 3,
+      "mlu_final_estimada_pct": 22.7,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T034",
+      "rutas_modificadas": 5,
+      "mlu_final_estimada_pct": 27.3,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T035",
+      "rutas_modificadas": 8,
+      "mlu_final_estimada_pct": 20.6,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T036",
+      "rutas_modificadas": 12,
+      "mlu_final_estimada_pct": 27.3,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T037",
+      "rutas_modificadas": 1,
+      "mlu_final_estimada_pct": 22.7,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T038",
+      "rutas_modificadas": 2,
+      "mlu_final_estimada_pct": 20.6,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    },
+    {
+      "target_id": "T039",
+      "rutas_modificadas": 3,
+      "mlu_final_estimada_pct": 20.6,
+      "motivos": [],
+      "estado": "ADMITIDO_PRELIMINAR"
+    }
+  ],
+  "descartados": [],
+  "limitaciones": [
+    "Filtrado preliminar de rutas y capacidad",
+    "Protecciones PS verificadas a nivel de grupos observados y disponibilidad de puertos",
+    "No se garantiza todavia la preservacion de Fast Failover durante una Transition",
+    "Carga de Targets estimada a partir de demandas piloto; no observada directamente",
+    "RS observado no se suma a la carga proyectada para evitar contar dos veces el mismo trafico",
+    "FS, PS y RS son capturas secuenciales",
+    "Peak MLU, dependencias OpenFlow y costo de reconfiguracion pendientes"
+  ]
+}

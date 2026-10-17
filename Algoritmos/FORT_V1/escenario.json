@@ -1,0 +1,52 @@
+
+{
+  "nombre": "Tesis SDN - Target Transition",
+  "protocolo": "OpenFlow13",
+  "capacidad_enlace_mbps": 100,
+  "switches": [
+    "s1",
+    "s2",
+    "s3",
+    "s4",
+    "s5",
+    "s6",
+    "s7",
+    "s8"
+  ],
+  "hosts": [
+    {
+      "nombre": "h1",
+      "ip": "10.0.0.1/24",
+      "switch": "s1"
+    },
+    {
+      "nombre": "h2",
+      "ip": "10.0.0.2/24",
+      "switch": "s2"
+    },
+    {
+      "nombre": "h3",
+      "ip": "10.0.0.3/24",
+      "switch": "s5"
+    },
+    {
+      "nombre": "h4",
+      "ip": "10.0.0.4/24",
+      "switch": "s7"
+    }
+  ],
+  "enlaces": [
+    ["s1", "s2"],
+    ["s1", "s3"],
+    ["s1", "s4"],
+    ["s2", "s4"],
+    ["s2", "s5"],
+    ["s3", "s4"],
+    ["s3", "s6"],
+    ["s4", "s5"],
+    ["s4", "s7"],
+    ["s5", "s8"],
+    ["s6", "s7"],
+    ["s7", "s8"]
+  ]
+}

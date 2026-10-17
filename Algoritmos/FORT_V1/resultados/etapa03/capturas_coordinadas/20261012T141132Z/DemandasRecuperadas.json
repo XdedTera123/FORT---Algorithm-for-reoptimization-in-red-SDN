@@ -1,0 +1,790 @@
+{
+  "tipo": "DemandasRecuperadas_Piloto",
+  "id_captura": "20261012T141132Z",
+  "recuperado_utc": "2026-10-12T14:28:56.757212+00:00",
+  "cantidad_flujos": 6,
+  "flujos_con_receptor_invalido": [
+    "F04"
+  ],
+  "recepcion_completa_validada": false,
+  "nota": "Las tasas enviadas proceden de logs iperf2. Las estadisticas invalidas del receptor se conservan como datos no disponibles. No utilizar esta captura como validacion experimental definitiva.",
+  "flujos": [
+    {
+      "id": "F01",
+      "origen": "h1",
+      "destino": "h2",
+      "protocolo": "TCP",
+      "tasa_solicitada_mbps": 10,
+      "tasa_enviada_bps": 4730000.0,
+      "tasa_recibida_bps": null,
+      "duracion_real_s": 45.5595,
+      "perdida_udp_pct": null,
+      "jitter_udp_ms": null,
+      "intervalos_emisor": [
+        {
+          "inicio_s": 0.0,
+          "fin_s": 2.0,
+          "tasa_bps": 10500000.0
+        },
+        {
+          "inicio_s": 2.0,
+          "fin_s": 4.0,
+          "tasa_bps": 3450000.0
+        },
+        {
+          "inicio_s": 4.0,
+          "fin_s": 6.0,
+          "tasa_bps": 4700000.0
+        },
+        {
+          "inicio_s": 6.0,
+          "fin_s": 8.0,
+          "tasa_bps": 3910000.0
+        },
+        {
+          "inicio_s": 8.0,
+          "fin_s": 10.0,
+          "tasa_bps": 4179999.9999999995
+        },
+        {
+          "inicio_s": 10.0,
+          "fin_s": 12.0,
+          "tasa_bps": 3380000.0
+        },
+        {
+          "inicio_s": 12.0,
+          "fin_s": 14.0,
+          "tasa_bps": 3390000.0
+        },
+        {
+          "inicio_s": 14.0,
+          "fin_s": 16.0,
+          "tasa_bps": 3400000.0
+        },
+        {
+          "inicio_s": 16.0,
+          "fin_s": 18.0,
+          "tasa_bps": 6000000.0
+        },
+        {
+          "inicio_s": 18.0,
+          "fin_s": 20.0,
+          "tasa_bps": 3910000.0
+        },
+        {
+          "inicio_s": 20.0,
+          "fin_s": 22.0,
+          "tasa_bps": 5760000.0
+        },
+        {
+          "inicio_s": 22.0,
+          "fin_s": 24.0,
+          "tasa_bps": 3870000.0
+        },
+        {
+          "inicio_s": 24.0,
+          "fin_s": 26.0,
+          "tasa_bps": 5230000.0
+        },
+        {
+          "inicio_s": 26.0,
+          "fin_s": 28.0,
+          "tasa_bps": 3900000.0
+        },
+        {
+          "inicio_s": 28.0,
+          "fin_s": 30.0,
+          "tasa_bps": 3640000.0
+        },
+        {
+          "inicio_s": 30.0,
+          "fin_s": 32.0,
+          "tasa_bps": 4170000.0
+        },
+        {
+          "inicio_s": 32.0,
+          "fin_s": 34.0,
+          "tasa_bps": 3130000.0
+        },
+        {
+          "inicio_s": 34.0,
+          "fin_s": 36.0,
+          "tasa_bps": 4430000.0
+        },
+        {
+          "inicio_s": 36.0,
+          "fin_s": 38.0,
+          "tasa_bps": 3130000.0
+        },
+        {
+          "inicio_s": 38.0,
+          "fin_s": 40.0,
+          "tasa_bps": 11500000.0
+        },
+        {
+          "inicio_s": 40.0,
+          "fin_s": 42.0,
+          "tasa_bps": 5760000.0
+        },
+        {
+          "inicio_s": 42.0,
+          "fin_s": 44.0,
+          "tasa_bps": 3300000.0
+        },
+        {
+          "inicio_s": 44.0,
+          "fin_s": 45.5595,
+          "tasa_bps": 4030000.0000000005
+        }
+      ],
+      "receptor_valido": true,
+      "observacion": null,
+      "log_original": "resultados/etapa03/capturas_coordinadas/20261012T141132Z/logs/F01.log"
+    },
+    {
+      "id": "F02",
+      "origen": "h2",
+      "destino": "h3",
+      "protocolo": "TCP",
+      "tasa_solicitada_mbps": 12,
+      "tasa_enviada_bps": 4400000.0,
+      "tasa_recibida_bps": null,
+      "duracion_real_s": 45.3986,
+      "perdida_udp_pct": null,
+      "jitter_udp_ms": null,
+      "intervalos_emisor": [
+        {
+          "inicio_s": 0.0,
+          "fin_s": 2.0,
+          "tasa_bps": 9430000.0
+        },
+        {
+          "inicio_s": 2.0,
+          "fin_s": 4.0,
+          "tasa_bps": 2620000.0
+        },
+        {
+          "inicio_s": 4.0,
+          "fin_s": 6.0,
+          "tasa_bps": 1570000.0
+        },
+        {
+          "inicio_s": 6.0,
+          "fin_s": 8.0,
+          "tasa_bps": 2620000.0
+        },
+        {
+          "inicio_s": 8.0,
+          "fin_s": 10.0,
+          "tasa_bps": 6810000.0
+        },
+        {
+          "inicio_s": 10.0,
+          "fin_s": 12.0,
+          "tasa_bps": 2620000.0
+        },
+        {
+          "inicio_s": 12.0,
+          "fin_s": 14.0,
+          "tasa_bps": 1570000.0
+        },
+        {
+          "inicio_s": 14.0,
+          "fin_s": 16.0,
+          "tasa_bps": 3140000.0
+        },
+        {
+          "inicio_s": 16.0,
+          "fin_s": 18.0,
+          "tasa_bps": 3140000.0
+        },
+        {
+          "inicio_s": 18.0,
+          "fin_s": 20.0,
+          "tasa_bps": 3140000.0
+        },
+        {
+          "inicio_s": 20.0,
+          "fin_s": 22.0,
+          "tasa_bps": 3140000.0
+        },
+        {
+          "inicio_s": 22.0,
+          "fin_s": 24.0,
+          "tasa_bps": 4190000.0000000005
+        },
+        {
+          "inicio_s": 24.0,
+          "fin_s": 26.0,
+          "tasa_bps": 2100000.0
+        },
+        {
+          "inicio_s": 26.0,
+          "fin_s": 28.0,
+          "tasa_bps": 1970000.0
+        },
+        {
+          "inicio_s": 28.0,
+          "fin_s": 30.0,
+          "tasa_bps": 2100000.0
+        },
+        {
+          "inicio_s": 30.0,
+          "fin_s": 32.0,
+          "tasa_bps": 1570000.0
+        },
+        {
+          "inicio_s": 32.0,
+          "fin_s": 34.0,
+          "tasa_bps": 1570000.0
+        },
+        {
+          "inicio_s": 34.0,
+          "fin_s": 36.0,
+          "tasa_bps": 1570000.0
+        },
+        {
+          "inicio_s": 36.0,
+          "fin_s": 38.0,
+          "tasa_bps": 2620000.0
+        },
+        {
+          "inicio_s": 38.0,
+          "fin_s": 40.0,
+          "tasa_bps": 13100000.0
+        },
+        {
+          "inicio_s": 40.0,
+          "fin_s": 42.0,
+          "tasa_bps": 17300000.0
+        },
+        {
+          "inicio_s": 42.0,
+          "fin_s": 44.0,
+          "tasa_bps": 6810000.0
+        },
+        {
+          "inicio_s": 44.0,
+          "fin_s": 45.3986,
+          "tasa_bps": 7490000.0
+        }
+      ],
+      "receptor_valido": true,
+      "observacion": null,
+      "log_original": "resultados/etapa03/capturas_coordinadas/20261012T141132Z/logs/F02.log"
+    },
+    {
+      "id": "F03",
+      "origen": "h3",
+      "destino": "h4",
+      "protocolo": "TCP",
+      "tasa_solicitada_mbps": 8,
+      "tasa_enviada_bps": 8400000.0,
+      "tasa_recibida_bps": null,
+      "duracion_real_s": 45.1824,
+      "perdida_udp_pct": null,
+      "jitter_udp_ms": null,
+      "intervalos_emisor": [
+        {
+          "inicio_s": 0.0,
+          "fin_s": 2.0,
+          "tasa_bps": 8380000.000000001
+        },
+        {
+          "inicio_s": 2.0,
+          "fin_s": 4.0,
+          "tasa_bps": 8380000.000000001
+        },
+        {
+          "inicio_s": 4.0,
+          "fin_s": 6.0,
+          "tasa_bps": 8380000.000000001
+        },
+        {
+          "inicio_s": 6.0,
+          "fin_s": 8.0,
+          "tasa_bps": 8380000.000000001
+        },
+        {
+          "inicio_s": 8.0,
+          "fin_s": 10.0,
+          "tasa_bps": 8380000.000000001
+        },
+        {
+          "inicio_s": 10.0,
+          "fin_s": 12.0,
+          "tasa_bps": 8910000.0
+        },
+        {
+          "inicio_s": 12.0,
+          "fin_s": 14.0,
+          "tasa_bps": 8380000.000000001
+        },
+        {
+          "inicio_s": 14.0,
+          "fin_s": 16.0,
+          "tasa_bps": 7860000.0
+        },
+        {
+          "inicio_s": 16.0,
+          "fin_s": 18.0,
+          "tasa_bps": 8380000.000000001
+        },
+        {
+          "inicio_s": 18.0,
+          "fin_s": 20.0,
+          "tasa_bps": 8910000.0
+        },
+        {
+          "inicio_s": 20.0,
+          "fin_s": 22.0,
+          "tasa_bps": 8380000.000000001
+        },
+        {
+          "inicio_s": 22.0,
+          "fin_s": 24.0,
+          "tasa_bps": 7860000.0
+        },
+        {
+          "inicio_s": 24.0,
+          "fin_s": 26.0,
+          "tasa_bps": 8910000.0
+        },
+        {
+          "inicio_s": 26.0,
+          "fin_s": 28.0,
+          "tasa_bps": 8380000.000000001
+        },
+        {
+          "inicio_s": 28.0,
+          "fin_s": 30.0,
+          "tasa_bps": 8380000.000000001
+        },
+        {
+          "inicio_s": 30.0,
+          "fin_s": 32.0,
+          "tasa_bps": 8380000.000000001
+        },
+        {
+          "inicio_s": 32.0,
+          "fin_s": 34.0,
+          "tasa_bps": 8380000.000000001
+        },
+        {
+          "inicio_s": 34.0,
+          "fin_s": 36.0,
+          "tasa_bps": 8380000.000000001
+        },
+        {
+          "inicio_s": 36.0,
+          "fin_s": 38.0,
+          "tasa_bps": 8380000.000000001
+        },
+        {
+          "inicio_s": 38.0,
+          "fin_s": 40.0,
+          "tasa_bps": 8380000.000000001
+        },
+        {
+          "inicio_s": 40.0,
+          "fin_s": 42.0,
+          "tasa_bps": 8380000.000000001
+        },
+        {
+          "inicio_s": 42.0,
+          "fin_s": 44.0,
+          "tasa_bps": 8380000.000000001
+        },
+        {
+          "inicio_s": 44.0,
+          "fin_s": 45.1824,
+          "tasa_bps": 7980000.0
+        }
+      ],
+      "receptor_valido": true,
+      "observacion": null,
+      "log_original": "resultados/etapa03/capturas_coordinadas/20261012T141132Z/logs/F03.log"
+    },
+    {
+      "id": "F04",
+      "origen": "h4",
+      "destino": "h1",
+      "protocolo": "UDP",
+      "tasa_solicitada_mbps": 8,
+      "tasa_enviada_bps": 6370000.0,
+      "tasa_recibida_bps": null,
+      "duracion_real_s": 45.0042,
+      "perdida_udp_pct": null,
+      "jitter_udp_ms": null,
+      "intervalos_emisor": [
+        {
+          "inicio_s": 0.0,
+          "fin_s": 2.0,
+          "tasa_bps": 7970000.0
+        },
+        {
+          "inicio_s": 2.0,
+          "fin_s": 4.0,
+          "tasa_bps": 5200000.0
+        },
+        {
+          "inicio_s": 4.0,
+          "fin_s": 6.0,
+          "tasa_bps": 6070000.0
+        },
+        {
+          "inicio_s": 6.0,
+          "fin_s": 8.0,
+          "tasa_bps": 5430000.0
+        },
+        {
+          "inicio_s": 8.0,
+          "fin_s": 10.0,
+          "tasa_bps": 7080000.0
+        },
+        {
+          "inicio_s": 10.0,
+          "fin_s": 12.0,
+          "tasa_bps": 5060000.0
+        },
+        {
+          "inicio_s": 12.0,
+          "fin_s": 14.0,
+          "tasa_bps": 5120000.0
+        },
+        {
+          "inicio_s": 14.0,
+          "fin_s": 16.0,
+          "tasa_bps": 7080000.0
+        },
+        {
+          "inicio_s": 16.0,
+          "fin_s": 18.0,
+          "tasa_bps": 7030000.0
+        },
+        {
+          "inicio_s": 18.0,
+          "fin_s": 20.0,
+          "tasa_bps": 6170000.0
+        },
+        {
+          "inicio_s": 20.0,
+          "fin_s": 22.0,
+          "tasa_bps": 7730000.0
+        },
+        {
+          "inicio_s": 22.0,
+          "fin_s": 24.0,
+          "tasa_bps": 5270000.0
+        },
+        {
+          "inicio_s": 24.0,
+          "fin_s": 26.0,
+          "tasa_bps": 6230000.0
+        },
+        {
+          "inicio_s": 26.0,
+          "fin_s": 28.0,
+          "tasa_bps": 6390000.0
+        },
+        {
+          "inicio_s": 28.0,
+          "fin_s": 30.0,
+          "tasa_bps": 6150000.0
+        },
+        {
+          "inicio_s": 30.0,
+          "fin_s": 32.0,
+          "tasa_bps": 6840000.0
+        },
+        {
+          "inicio_s": 32.0,
+          "fin_s": 34.0,
+          "tasa_bps": 5440000.0
+        },
+        {
+          "inicio_s": 34.0,
+          "fin_s": 36.0,
+          "tasa_bps": 5450000.0
+        },
+        {
+          "inicio_s": 36.0,
+          "fin_s": 38.0,
+          "tasa_bps": 5080000.0
+        },
+        {
+          "inicio_s": 38.0,
+          "fin_s": 40.0,
+          "tasa_bps": 10300000.0
+        },
+        {
+          "inicio_s": 40.0,
+          "fin_s": 42.0,
+          "tasa_bps": 9080000.0
+        },
+        {
+          "inicio_s": 42.0,
+          "fin_s": 44.0,
+          "tasa_bps": 4540000.0
+        }
+      ],
+      "receptor_valido": false,
+      "observacion": "Falta tasa recibida UDP",
+      "log_original": "resultados/etapa03/capturas_coordinadas/20261012T141132Z/logs/F04.log"
+    },
+    {
+      "id": "F05",
+      "origen": "h1",
+      "destino": "h3",
+      "protocolo": "UDP",
+      "tasa_solicitada_mbps": 10,
+      "tasa_enviada_bps": 5210000.0,
+      "tasa_recibida_bps": 5200000.0,
+      "duracion_real_s": 45.1669,
+      "perdida_udp_pct": 0.0,
+      "jitter_udp_ms": 5.581,
+      "intervalos_emisor": [
+        {
+          "inicio_s": 0.0,
+          "fin_s": 2.0,
+          "tasa_bps": 7800000.0
+        },
+        {
+          "inicio_s": 2.0,
+          "fin_s": 4.0,
+          "tasa_bps": 4660000.0
+        },
+        {
+          "inicio_s": 4.0,
+          "fin_s": 6.0,
+          "tasa_bps": 4960000.0
+        },
+        {
+          "inicio_s": 6.0,
+          "fin_s": 8.0,
+          "tasa_bps": 4130000.0
+        },
+        {
+          "inicio_s": 8.0,
+          "fin_s": 10.0,
+          "tasa_bps": 5670000.0
+        },
+        {
+          "inicio_s": 10.0,
+          "fin_s": 12.0,
+          "tasa_bps": 4540000.0
+        },
+        {
+          "inicio_s": 12.0,
+          "fin_s": 14.0,
+          "tasa_bps": 4250000.0
+        },
+        {
+          "inicio_s": 14.0,
+          "fin_s": 16.0,
+          "tasa_bps": 5330000.0
+        },
+        {
+          "inicio_s": 16.0,
+          "fin_s": 18.0,
+          "tasa_bps": 5670000.0
+        },
+        {
+          "inicio_s": 18.0,
+          "fin_s": 20.0,
+          "tasa_bps": 4950000.0
+        },
+        {
+          "inicio_s": 20.0,
+          "fin_s": 22.0,
+          "tasa_bps": 5310000.0
+        },
+        {
+          "inicio_s": 22.0,
+          "fin_s": 24.0,
+          "tasa_bps": 4360000.0
+        },
+        {
+          "inicio_s": 24.0,
+          "fin_s": 26.0,
+          "tasa_bps": 4510000.0
+        },
+        {
+          "inicio_s": 26.0,
+          "fin_s": 28.0,
+          "tasa_bps": 5110000.0
+        },
+        {
+          "inicio_s": 28.0,
+          "fin_s": 30.0,
+          "tasa_bps": 4950000.0
+        },
+        {
+          "inicio_s": 30.0,
+          "fin_s": 32.0,
+          "tasa_bps": 5130000.0
+        },
+        {
+          "inicio_s": 32.0,
+          "fin_s": 34.0,
+          "tasa_bps": 4120000.0
+        },
+        {
+          "inicio_s": 34.0,
+          "fin_s": 36.0,
+          "tasa_bps": 4720000.0
+        },
+        {
+          "inicio_s": 36.0,
+          "fin_s": 38.0,
+          "tasa_bps": 4300000.0
+        },
+        {
+          "inicio_s": 38.0,
+          "fin_s": 40.0,
+          "tasa_bps": 9140000.0
+        },
+        {
+          "inicio_s": 40.0,
+          "fin_s": 42.0,
+          "tasa_bps": 6830000.0
+        },
+        {
+          "inicio_s": 42.0,
+          "fin_s": 44.0,
+          "tasa_bps": 4440000.0
+        }
+      ],
+      "receptor_valido": true,
+      "observacion": null,
+      "log_original": "resultados/etapa03/capturas_coordinadas/20261012T141132Z/logs/F05.log"
+    },
+    {
+      "id": "F06",
+      "origen": "h2",
+      "destino": "h4",
+      "protocolo": "UDP",
+      "tasa_solicitada_mbps": 6,
+      "tasa_enviada_bps": 5450000.0,
+      "tasa_recibida_bps": 5440000.0,
+      "duracion_real_s": 45.1574,
+      "perdida_udp_pct": 0.0,
+      "jitter_udp_ms": 5.595,
+      "intervalos_emisor": [
+        {
+          "inicio_s": 0.0,
+          "fin_s": 2.0,
+          "tasa_bps": 6150000.0
+        },
+        {
+          "inicio_s": 2.0,
+          "fin_s": 4.0,
+          "tasa_bps": 5560000.0
+        },
+        {
+          "inicio_s": 4.0,
+          "fin_s": 6.0,
+          "tasa_bps": 5050000.0
+        },
+        {
+          "inicio_s": 6.0,
+          "fin_s": 8.0,
+          "tasa_bps": 4710000.0
+        },
+        {
+          "inicio_s": 8.0,
+          "fin_s": 10.0,
+          "tasa_bps": 6300000.0
+        },
+        {
+          "inicio_s": 10.0,
+          "fin_s": 12.0,
+          "tasa_bps": 5430000.0
+        },
+        {
+          "inicio_s": 12.0,
+          "fin_s": 14.0,
+          "tasa_bps": 3910000.0
+        },
+        {
+          "inicio_s": 14.0,
+          "fin_s": 16.0,
+          "tasa_bps": 5840000.0
+        },
+        {
+          "inicio_s": 16.0,
+          "fin_s": 18.0,
+          "tasa_bps": 5610000.0
+        },
+        {
+          "inicio_s": 18.0,
+          "fin_s": 20.0,
+          "tasa_bps": 6200000.0
+        },
+        {
+          "inicio_s": 20.0,
+          "fin_s": 22.0,
+          "tasa_bps": 6040000.0
+        },
+        {
+          "inicio_s": 22.0,
+          "fin_s": 24.0,
+          "tasa_bps": 4750000.0
+        },
+        {
+          "inicio_s": 24.0,
+          "fin_s": 26.0,
+          "tasa_bps": 5640000.0
+        },
+        {
+          "inicio_s": 26.0,
+          "fin_s": 28.0,
+          "tasa_bps": 5670000.0
+        },
+        {
+          "inicio_s": 28.0,
+          "fin_s": 30.0,
+          "tasa_bps": 5790000.0
+        },
+        {
+          "inicio_s": 30.0,
+          "fin_s": 32.0,
+          "tasa_bps": 6330000.0
+        },
+        {
+          "inicio_s": 32.0,
+          "fin_s": 34.0,
+          "tasa_bps": 3710000.0
+        },
+        {
+          "inicio_s": 34.0,
+          "fin_s": 36.0,
+          "tasa_bps": 5060000.0
+        },
+        {
+          "inicio_s": 36.0,
+          "fin_s": 38.0,
+          "tasa_bps": 4460000.0
+        },
+        {
+          "inicio_s": 38.0,
+          "fin_s": 40.0,
+          "tasa_bps": 6830000.0
+        },
+        {
+          "inicio_s": 40.0,
+          "fin_s": 42.0,
+          "tasa_bps": 6320000.0
+        },
+        {
+          "inicio_s": 42.0,
+          "fin_s": 44.0,
+          "tasa_bps": 4770000.0
+        }
+      ],
+      "receptor_valido": true,
+      "observacion": null,
+      "log_original": "resultados/etapa03/capturas_coordinadas/20261012T141132Z/logs/F06.log"
+    }
+  ]
+}

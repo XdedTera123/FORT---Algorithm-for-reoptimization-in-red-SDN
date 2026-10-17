@@ -1,0 +1,30 @@
+------------------------------------------------------------
+Client connecting to 10.0.0.3, TCP port 5802
+TCP window size: 85.3 KByte (default)
+------------------------------------------------------------
+[  1] local 10.0.0.2 port 39840 connected with 10.0.0.3 port 5802 (icwnd/mss/irtt=14/1448/2843)
+[ ID] Interval       Transfer     Bandwidth
+[  1] 0.0000-2.0000 sec  2.25 MBytes  9.43 Mbits/sec
+[  1] 2.0000-4.0000 sec   640 KBytes  2.62 Mbits/sec
+[  1] 4.0000-6.0000 sec   384 KBytes  1.57 Mbits/sec
+[  1] 6.0000-8.0000 sec   640 KBytes  2.62 Mbits/sec
+[  1] 8.0000-10.0000 sec  1.62 MBytes  6.81 Mbits/sec
+[  1] 10.0000-12.0000 sec   640 KBytes  2.62 Mbits/sec
+[  1] 12.0000-14.0000 sec   384 KBytes  1.57 Mbits/sec
+[  1] 14.0000-16.0000 sec   767 KBytes  3.14 Mbits/sec
+[  1] 16.0000-18.0000 sec   767 KBytes  3.14 Mbits/sec
+[  1] 18.0000-20.0000 sec   767 KBytes  3.14 Mbits/sec
+[  1] 20.0000-22.0000 sec   767 KBytes  3.14 Mbits/sec
+[  1] 22.0000-24.0000 sec  1023 KBytes  4.19 Mbits/sec
+[  1] 24.0000-26.0000 sec   512 KBytes  2.10 Mbits/sec
+[  1] 26.0000-28.0000 sec   482 KBytes  1.97 Mbits/sec
+[  1] 28.0000-30.0000 sec   512 KBytes  2.10 Mbits/sec
+[  1] 30.0000-32.0000 sec   384 KBytes  1.57 Mbits/sec
+[  1] 32.0000-34.0000 sec   384 KBytes  1.57 Mbits/sec
+[  1] 34.0000-36.0000 sec   384 KBytes  1.57 Mbits/sec
+[  1] 36.0000-38.0000 sec   640 KBytes  2.62 Mbits/sec
+[  1] 38.0000-40.0000 sec  3.12 MBytes  13.1 Mbits/sec
+[  1] 40.0000-42.0000 sec  4.12 MBytes  17.3 Mbits/sec
+[  1] 42.0000-44.0000 sec  1.62 MBytes  6.81 Mbits/sec
+[  1] 44.0000-45.3986 sec  1.25 MBytes  7.49 Mbits/sec
+[  1] 0.0000-45.3986 sec  23.8 MBytes  4.40 Mbits/sec

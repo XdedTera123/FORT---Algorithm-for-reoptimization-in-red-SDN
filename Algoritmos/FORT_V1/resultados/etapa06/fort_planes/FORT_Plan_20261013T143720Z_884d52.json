@@ -1,0 +1,2017 @@
+{
+  "tipo": "FORT_PLANIFICACION_ETAPAS_04_05_PRELIMINAR",
+  "generado_utc": "2026-10-13T14:37:30.811877+00:00",
+  "captura_origen_utc": "2026-10-13T14:37:26.132658+00:00",
+  "enlace_fallado": [
+    "s1",
+    "s2"
+  ],
+  "cantidad_targets_pareto": 9,
+  "cantidad_parejas_modeladas": 23,
+  "cantidad_parejas_admisibles_modelo": 4,
+  "frente_pareto_parejas": [
+    "T00014_TR01_ASC",
+    "T00014_TR02_DESC",
+    "T00014_TR03_PREPARAR_TODOS",
+    "T00006_TR01_ASC"
+  ],
+  "mlufs_modelada_pct": 21.255532,
+  "mlufs_observada_pct": 21.13203,
+  "pareja_preferida_preliminar": {
+    "target_id": "T00014",
+    "transition_id": "T00014_TR01_ASC",
+    "estrategia": "TR01_ASC",
+    "final_mlu_pct": 12.646261,
+    "peak_mlu_pct": 21.255532,
+    "mensajes_modificacion": 16,
+    "barreras": 9,
+    "verificaciones": 2,
+    "switches_modificados": 6
+  },
+  "pareja_definitivamente_factible": null,
+  "ejecucion_openflow_autorizada": false,
+  "razon_pendiente": "La captura FORT aun no conserva prioridades, matches IP/ARP y acciones OpenFlow completas por salto. No se pueden validar FlowMod/GroupMod ni la proteccion extremo a extremo.",
+  "limitaciones": [
+    "Las Transitions son ordenes logicos, no operaciones OpenFlow ejecutables.",
+    "Peak MLU modela cambios de rutas completas, no estados transitorios OpenFlow.",
+    "Los conteos de modificaciones y barreras son estimaciones del plan anterior.",
+    "No se mide todavia la MLU posterior a instalar el Target.",
+    "El primer salto compartido queda bloqueado preventivamente."
+  ],
+  "targets": [
+    {
+      "target_id": "T00014",
+      "rutas_modificadas": 2,
+      "final_mlu_pct": 12.646261,
+      "operaciones_cambio_estimadas": {
+        "mensajes_modificacion": 16,
+        "barreras": 9,
+        "verificaciones": 2,
+        "switches_modificados": 6,
+        "flowmod_estimados": 14,
+        "groupmod_estimados": 2,
+        "tipo": "ESTIMACION_DE_OPERACIONES_NO_EJECUTABLE"
+      },
+      "planes_por_comunicacion": [
+        {
+          "origen": "h1",
+          "destino": "h3",
+          "ruta_fs": [
+            "h1",
+            "s1",
+            "s4",
+            "s2",
+            "s5",
+            "h3"
+          ],
+          "ruta_target": [
+            "h1",
+            "s1",
+            "s3",
+            "s4",
+            "s5",
+            "h3"
+          ],
+          "puerto_ingreso_fs": 4,
+          "puerto_ingreso_target": 3,
+          "grupos_ff_existentes_en_ingreso": [
+            1000,
+            1001,
+            1003
+          ],
+          "tramo_a_preparar": [
+            "s3",
+            "s4",
+            "s5"
+          ],
+          "switches_afectados": [
+            "s1",
+            "s3",
+            "s4",
+            "s5"
+          ],
+          "diferencias_siguiente_salto": [
+            {
+              "switch": "s1",
+              "tipo": "SIGUIENTE_SALTO_MODIFICADO",
+              "siguiente_salto_fs": "s4",
+              "siguiente_salto_target": "s3"
+            },
+            {
+              "switch": "s2",
+              "tipo": "RETIRADO_DE_RUTA",
+              "siguiente_salto_fs": "s5",
+              "siguiente_salto_target": null
+            },
+            {
+              "switch": "s3",
+              "tipo": "INCORPORADO_A_RUTA",
+              "siguiente_salto_fs": null,
+              "siguiente_salto_target": "s4"
+            },
+            {
+              "switch": "s4",
+              "tipo": "SIGUIENTE_SALTO_MODIFICADO",
+              "siguiente_salto_fs": "s2",
+              "siguiente_salto_target": "s5"
+            }
+          ],
+          "operaciones_ipv4_arp_estimadas": 8,
+          "grupo_ff_nuevo_estimado": 1,
+          "estado": "PROPUESTA_SIN_VALIDACION_OPENFLOW"
+        },
+        {
+          "origen": "h3",
+          "destino": "h4",
+          "ruta_fs": [
+            "h3",
+            "s5",
+            "s4",
+            "s7",
+            "h4"
+          ],
+          "ruta_target": [
+            "h3",
+            "s5",
+            "s8",
+            "s7",
+            "h4"
+          ],
+          "puerto_ingreso_fs": 3,
+          "puerto_ingreso_target": 4,
+          "grupos_ff_existentes_en_ingreso": [
+            1009,
+            1011,
+            1012
+          ],
+          "tramo_a_preparar": [
+            "s8",
+            "s7"
+          ],
+          "switches_afectados": [
+            "s5",
+            "s7",
+            "s8"
+          ],
+          "diferencias_siguiente_salto": [
+            {
+              "switch": "s4",
+              "tipo": "RETIRADO_DE_RUTA",
+              "siguiente_salto_fs": "s7",
+              "siguiente_salto_target": null
+            },
+            {
+              "switch": "s5",
+              "tipo": "SIGUIENTE_SALTO_MODIFICADO",
+              "siguiente_salto_fs": "s4",
+              "siguiente_salto_target": "s8"
+            },
+            {
+              "switch": "s8",
+              "tipo": "INCORPORADO_A_RUTA",
+              "siguiente_salto_fs": null,
+              "siguiente_salto_target": "s7"
+            }
+          ],
+          "operaciones_ipv4_arp_estimadas": 6,
+          "grupo_ff_nuevo_estimado": 1,
+          "estado": "PROPUESTA_SIN_VALIDACION_OPENFLOW"
+        }
+      ],
+      "transitions_preliminares": [
+        "T00014_TR01_ASC",
+        "T00014_TR02_DESC",
+        "T00014_TR03_PREPARAR_TODOS"
+      ],
+      "bloqueos": []
+    },
+    {
+      "target_id": "T00016",
+      "rutas_modificadas": 2,
+      "final_mlu_pct": 12.646261,
+      "operaciones_cambio_estimadas": {
+        "mensajes_modificacion": 19,
+        "barreras": 11,
+        "verificaciones": 2,
+        "switches_modificados": 6,
+        "flowmod_estimados": 18,
+        "groupmod_estimados": 1,
+        "tipo": "ESTIMACION_DE_OPERACIONES_NO_EJECUTABLE"
+      },
+      "planes_por_comunicacion": [
+        {
+          "origen": "h1",
+          "destino": "h3",
+          "ruta_fs": [
+            "h1",
+            "s1",
+            "s4",
+            "s2",
+            "s5",
+            "h3"
+          ],
+          "ruta_target": [
+            "h1",
+            "s1",
+            "s3",
+            "s4",
+            "s5",
+            "h3"
+          ],
+          "puerto_ingreso_fs": 4,
+          "puerto_ingreso_target": 3,
+          "grupos_ff_existentes_en_ingreso": [
+            1000,
+            1001,
+            1003
+          ],
+          "tramo_a_preparar": [
+            "s3",
+            "s4",
+            "s5"
+          ],
+          "switches_afectados": [
+            "s1",
+            "s3",
+            "s4",
+            "s5"
+          ],
+          "diferencias_siguiente_salto": [
+            {
+              "switch": "s1",
+              "tipo": "SIGUIENTE_SALTO_MODIFICADO",
+              "siguiente_salto_fs": "s4",
+              "siguiente_salto_target": "s3"
+            },
+            {
+              "switch": "s2",
+              "tipo": "RETIRADO_DE_RUTA",
+              "siguiente_salto_fs": "s5",
+              "siguiente_salto_target": null
+            },
+            {
+              "switch": "s3",
+              "tipo": "INCORPORADO_A_RUTA",
+              "siguiente_salto_fs": null,
+              "siguiente_salto_target": "s4"
+            },
+            {
+              "switch": "s4",
+              "tipo": "SIGUIENTE_SALTO_MODIFICADO",
+              "siguiente_salto_fs": "s2",
+              "siguiente_salto_target": "s5"
+            }
+          ],
+          "operaciones_ipv4_arp_estimadas": 8,
+          "grupo_ff_nuevo_estimado": 1,
+          "estado": "PROPUESTA_SIN_VALIDACION_OPENFLOW"
+        },
+        {
+          "origen": "h3",
+          "destino": "h4",
+          "ruta_fs": [
+            "h3",
+            "s5",
+            "s4",
+            "s7",
+            "h4"
+          ],
+          "ruta_target": [
+            "h3",
+            "s5",
+            "s4",
+            "s3",
+            "s6",
+            "s7",
+            "h4"
+          ],
+          "puerto_ingreso_fs": 3,
+          "puerto_ingreso_target": 3,
+          "grupos_ff_existentes_en_ingreso": [
+            1009,
+            1011,
+            1012
+          ],
+          "tramo_a_preparar": [
+            "s4",
+            "s3",
+            "s6",
+            "s7"
+          ],
+          "switches_afectados": [
+            "s3",
+            "s4",
+            "s5",
+            "s6",
+            "s7"
+          ],
+          "diferencias_siguiente_salto": [
+            {
+              "switch": "s3",
+              "tipo": "INCORPORADO_A_RUTA",
+              "siguiente_salto_fs": null,
+              "siguiente_salto_target": "s6"
+            },
+            {
+              "switch": "s4",
+              "tipo": "SIGUIENTE_SALTO_MODIFICADO",
+              "siguiente_salto_fs": "s7",
+              "siguiente_salto_target": "s3"
+            },
+            {
+              "switch": "s6",
+              "tipo": "INCORPORADO_A_RUTA",
+              "siguiente_salto_fs": null,
+              "siguiente_salto_target": "s7"
+            }
+          ],
+          "operaciones_ipv4_arp_estimadas": 10,
+          "grupo_ff_nuevo_estimado": 0,
+          "estado": "PROPUESTA_SIN_VALIDACION_OPENFLOW"
+        }
+      ],
+      "transitions_preliminares": [
+        "T00016_TR01_ASC",
+        "T00016_TR02_DESC",
+        "T00016_TR03_PREPARAR_TODOS"
+      ],
+      "bloqueos": [
+        "h3->h4: primer salto compartido; requiere mecanismo adicional de activacion"
+      ]
+    },
+    {
+      "target_id": "T00022",
+      "rutas_modificadas": 2,
+      "final_mlu_pct": 12.646261,
+      "operaciones_cambio_estimadas": {
+        "mensajes_modificacion": 19,
+        "barreras": 11,
+        "verificaciones": 2,
+        "switches_modificados": 7,
+        "flowmod_estimados": 18,
+        "groupmod_estimados": 1,
+        "tipo": "ESTIMACION_DE_OPERACIONES_NO_EJECUTABLE"
+      },
+      "planes_por_comunicacion": [
+        {
+          "origen": "h1",
+          "destino": "h3",
+          "ruta_fs": [
+            "h1",
+            "s1",
+            "s4",
+            "s2",
+            "s5",
+            "h3"
+          ],
+          "ruta_target": [
+            "h1",
+            "s1",
+            "s3",
+            "s4",
+            "s5",
+            "h3"
+          ],
+          "puerto_ingreso_fs": 4,
+          "puerto_ingreso_target": 3,
+          "grupos_ff_existentes_en_ingreso": [
+            1000,
+            1001,
+            1003
+          ],
+          "tramo_a_preparar": [
+            "s3",
+            "s4",
+            "s5"
+          ],
+          "switches_afectados": [
+            "s1",
+            "s3",
+            "s4",
+            "s5"
+          ],
+          "diferencias_siguiente_salto": [
+            {
+              "switch": "s1",
+              "tipo": "SIGUIENTE_SALTO_MODIFICADO",
+              "siguiente_salto_fs": "s4",
+              "siguiente_salto_target": "s3"
+            },
+            {
+              "switch": "s2",
+              "tipo": "RETIRADO_DE_RUTA",
+              "siguiente_salto_fs": "s5",
+              "siguiente_salto_target": null
+            },
+            {
+              "switch": "s3",
+              "tipo": "INCORPORADO_A_RUTA",
+              "siguiente_salto_fs": null,
+              "siguiente_salto_target": "s4"
+            },
+            {
+              "switch": "s4",
+              "tipo": "SIGUIENTE_SALTO_MODIFICADO",
+              "siguiente_salto_fs": "s2",
+              "siguiente_salto_target": "s5"
+            }
+          ],
+          "operaciones_ipv4_arp_estimadas": 8,
+          "grupo_ff_nuevo_estimado": 1,
+          "estado": "PROPUESTA_SIN_VALIDACION_OPENFLOW"
+        },
+        {
+          "origen": "h2",
+          "destino": "h4",
+          "ruta_fs": [
+            "h2",
+            "s2",
+            "s4",
+            "s7",
+            "h4"
+          ],
+          "ruta_target": [
+            "h2",
+            "s2",
+            "s4",
+            "s3",
+            "s6",
+            "s7",
+            "h4"
+          ],
+          "puerto_ingreso_fs": 3,
+          "puerto_ingreso_target": 3,
+          "grupos_ff_existentes_en_ingreso": [
+            1002,
+            1005,
+            1006,
+            1007,
+            1010
+          ],
+          "tramo_a_preparar": [
+            "s4",
+            "s3",
+            "s6",
+            "s7"
+          ],
+          "switches_afectados": [
+            "s2",
+            "s3",
+            "s4",
+            "s6",
+            "s7"
+          ],
+          "diferencias_siguiente_salto": [
+            {
+              "switch": "s3",
+              "tipo": "INCORPORADO_A_RUTA",
+              "siguiente_salto_fs": null,
+              "siguiente_salto_target": "s6"
+            },
+            {
+              "switch": "s4",
+              "tipo": "SIGUIENTE_SALTO_MODIFICADO",
+              "siguiente_salto_fs": "s7",
+              "siguiente_salto_target": "s3"
+            },
+            {
+              "switch": "s6",
+              "tipo": "INCORPORADO_A_RUTA",
+              "siguiente_salto_fs": null,
+              "siguiente_salto_target": "s7"
+            }
+          ],
+          "operaciones_ipv4_arp_estimadas": 10,
+          "grupo_ff_nuevo_estimado": 0,
+          "estado": "PROPUESTA_SIN_VALIDACION_OPENFLOW"
+        }
+      ],
+      "transitions_preliminares": [
+        "T00022_TR01_ASC",
+        "T00022_TR02_DESC",
+        "T00022_TR03_PREPARAR_TODOS"
+      ],
+      "bloqueos": [
+        "h2->h4: primer salto compartido; requiere mecanismo adicional de activacion"
+      ]
+    },
+    {
+      "target_id": "T00144",
+      "rutas_modificadas": 3,
+      "final_mlu_pct": 12.646261,
+      "operaciones_cambio_estimadas": {
+        "mensajes_modificacion": 20,
+        "barreras": 12,
+        "verificaciones": 3,
+        "switches_modificados": 6,
+        "flowmod_estimados": 18,
+        "groupmod_estimados": 2,
+        "tipo": "ESTIMACION_DE_OPERACIONES_NO_EJECUTABLE"
+      },
+      "planes_por_comunicacion": [
+        {
+          "origen": "h1",
+          "destino": "h2",
+          "ruta_fs": [
+            "h1",
+            "s1",
+            "s4",
+            "s2",
+            "h2"
+          ],
+          "ruta_target": [
+            "h1",
+            "s1",
+            "s3",
+            "s4",
+            "s2",
+            "h2"
+          ],
+          "puerto_ingreso_fs": 4,
+          "puerto_ingreso_target": 3,
+          "grupos_ff_existentes_en_ingreso": [
+            1000,
+            1001,
+            1003
+          ],
+          "tramo_a_preparar": [
+            "s3",
+            "s4"
+          ],
+          "switches_afectados": [
+            "s1",
+            "s3",
+            "s4"
+          ],
+          "diferencias_siguiente_salto": [
+            {
+              "switch": "s1",
+              "tipo": "SIGUIENTE_SALTO_MODIFICADO",
+              "siguiente_salto_fs": "s4",
+              "siguiente_salto_target": "s3"
+            },
+            {
+              "switch": "s3",
+              "tipo": "INCORPORADO_A_RUTA",
+              "siguiente_salto_fs": null,
+              "siguiente_salto_target": "s4"
+            }
+          ],
+          "operaciones_ipv4_arp_estimadas": 6,
+          "grupo_ff_nuevo_estimado": 1,
+          "estado": "PROPUESTA_SIN_VALIDACION_OPENFLOW"
+        },
+        {
+          "origen": "h1",
+          "destino": "h3",
+          "ruta_fs": [
+            "h1",
+            "s1",
+            "s4",
+            "s2",
+            "s5",
+            "h3"
+          ],
+          "ruta_target": [
+            "h1",
+            "s1",
+            "s4",
+            "s5",
+            "h3"
+          ],
+          "puerto_ingreso_fs": 4,
+          "puerto_ingreso_target": 4,
+          "grupos_ff_existentes_en_ingreso": [
+            1000,
+            1001,
+            1003
+          ],
+          "tramo_a_preparar": [
+            "s4",
+            "s5"
+          ],
+          "switches_afectados": [
+            "s1",
+            "s4",
+            "s5"
+          ],
+          "diferencias_siguiente_salto": [
+            {
+              "switch": "s2",
+              "tipo": "RETIRADO_DE_RUTA",
+              "siguiente_salto_fs": "s5",
+              "siguiente_salto_target": null
+            },
+            {
+              "switch": "s4",
+              "tipo": "SIGUIENTE_SALTO_MODIFICADO",
+              "siguiente_salto_fs": "s2",
+              "siguiente_salto_target": "s5"
+            }
+          ],
+          "operaciones_ipv4_arp_estimadas": 6,
+          "grupo_ff_nuevo_estimado": 0,
+          "estado": "PROPUESTA_SIN_VALIDACION_OPENFLOW"
+        },
+        {
+          "origen": "h3",
+          "destino": "h4",
+          "ruta_fs": [
+            "h3",
+            "s5",
+            "s4",
+            "s7",
+            "h4"
+          ],
+          "ruta_target": [
+            "h3",
+            "s5",
+            "s8",
+            "s7",
+            "h4"
+          ],
+          "puerto_ingreso_fs": 3,
+          "puerto_ingreso_target": 4,
+          "grupos_ff_existentes_en_ingreso": [
+            1009,
+            1011,
+            1012
+          ],
+          "tramo_a_preparar": [
+            "s8",
+            "s7"
+          ],
+          "switches_afectados": [
+            "s5",
+            "s7",
+            "s8"
+          ],
+          "diferencias_siguiente_salto": [
+            {
+              "switch": "s4",
+              "tipo": "RETIRADO_DE_RUTA",
+              "siguiente_salto_fs": "s7",
+              "siguiente_salto_target": null
+            },
+            {
+              "switch": "s5",
+              "tipo": "SIGUIENTE_SALTO_MODIFICADO",
+              "siguiente_salto_fs": "s4",
+              "siguiente_salto_target": "s8"
+            },
+            {
+              "switch": "s8",
+              "tipo": "INCORPORADO_A_RUTA",
+              "siguiente_salto_fs": null,
+              "siguiente_salto_target": "s7"
+            }
+          ],
+          "operaciones_ipv4_arp_estimadas": 6,
+          "grupo_ff_nuevo_estimado": 1,
+          "estado": "PROPUESTA_SIN_VALIDACION_OPENFLOW"
+        }
+      ],
+      "transitions_preliminares": [
+        "T00144_TR01_ASC",
+        "T00144_TR02_DESC",
+        "T00144_TR03_PREPARAR_TODOS"
+      ],
+      "bloqueos": [
+        "h1->h3: primer salto compartido; requiere mecanismo adicional de activacion"
+      ]
+    },
+    {
+      "target_id": "T00146",
+      "rutas_modificadas": 3,
+      "final_mlu_pct": 12.646261,
+      "operaciones_cambio_estimadas": {
+        "mensajes_modificacion": 23,
+        "barreras": 14,
+        "verificaciones": 3,
+        "switches_modificados": 6,
+        "flowmod_estimados": 22,
+        "groupmod_estimados": 1,
+        "tipo": "ESTIMACION_DE_OPERACIONES_NO_EJECUTABLE"
+      },
+      "planes_por_comunicacion": [
+        {
+          "origen": "h1",
+          "destino": "h2",
+          "ruta_fs": [
+            "h1",
+            "s1",
+            "s4",
+            "s2",
+            "h2"
+          ],
+          "ruta_target": [
+            "h1",
+            "s1",
+            "s3",
+            "s4",
+            "s2",
+            "h2"
+          ],
+          "puerto_ingreso_fs": 4,
+          "puerto_ingreso_target": 3,
+          "grupos_ff_existentes_en_ingreso": [
+            1000,
+            1001,
+            1003
+          ],
+          "tramo_a_preparar": [
+            "s3",
+            "s4"
+          ],
+          "switches_afectados": [
+            "s1",
+            "s3",
+            "s4"
+          ],
+          "diferencias_siguiente_salto": [
+            {
+              "switch": "s1",
+              "tipo": "SIGUIENTE_SALTO_MODIFICADO",
+              "siguiente_salto_fs": "s4",
+              "siguiente_salto_target": "s3"
+            },
+            {
+              "switch": "s3",
+              "tipo": "INCORPORADO_A_RUTA",
+              "siguiente_salto_fs": null,
+              "siguiente_salto_target": "s4"
+            }
+          ],
+          "operaciones_ipv4_arp_estimadas": 6,
+          "grupo_ff_nuevo_estimado": 1,
+          "estado": "PROPUESTA_SIN_VALIDACION_OPENFLOW"
+        },
+        {
+          "origen": "h1",
+          "destino": "h3",
+          "ruta_fs": [
+            "h1",
+            "s1",
+            "s4",
+            "s2",
+            "s5",
+            "h3"
+          ],
+          "ruta_target": [
+            "h1",
+            "s1",
+            "s4",
+            "s5",
+            "h3"
+          ],
+          "puerto_ingreso_fs": 4,
+          "puerto_ingreso_target": 4,
+          "grupos_ff_existentes_en_ingreso": [
+            1000,
+            1001,
+            1003
+          ],
+          "tramo_a_preparar": [
+            "s4",
+            "s5"
+          ],
+          "switches_afectados": [
+            "s1",
+            "s4",
+            "s5"
+          ],
+          "diferencias_siguiente_salto": [
+            {
+              "switch": "s2",
+              "tipo": "RETIRADO_DE_RUTA",
+              "siguiente_salto_fs": "s5",
+              "siguiente_salto_target": null
+            },
+            {
+              "switch": "s4",
+              "tipo": "SIGUIENTE_SALTO_MODIFICADO",
+              "siguiente_salto_fs": "s2",
+              "siguiente_salto_target": "s5"
+            }
+          ],
+          "operaciones_ipv4_arp_estimadas": 6,
+          "grupo_ff_nuevo_estimado": 0,
+          "estado": "PROPUESTA_SIN_VALIDACION_OPENFLOW"
+        },
+        {
+          "origen": "h3",
+          "destino": "h4",
+          "ruta_fs": [
+            "h3",
+            "s5",
+            "s4",
+            "s7",
+            "h4"
+          ],
+          "ruta_target": [
+            "h3",
+            "s5",
+            "s4",
+            "s3",
+            "s6",
+            "s7",
+            "h4"
+          ],
+          "puerto_ingreso_fs": 3,
+          "puerto_ingreso_target": 3,
+          "grupos_ff_existentes_en_ingreso": [
+            1009,
+            1011,
+            1012
+          ],
+          "tramo_a_preparar": [
+            "s4",
+            "s3",
+            "s6",
+            "s7"
+          ],
+          "switches_afectados": [
+            "s3",
+            "s4",
+            "s5",
+            "s6",
+            "s7"
+          ],
+          "diferencias_siguiente_salto": [
+            {
+              "switch": "s3",
+              "tipo": "INCORPORADO_A_RUTA",
+              "siguiente_salto_fs": null,
+              "siguiente_salto_target": "s6"
+            },
+            {
+              "switch": "s4",
+              "tipo": "SIGUIENTE_SALTO_MODIFICADO",
+              "siguiente_salto_fs": "s7",
+              "siguiente_salto_target": "s3"
+            },
+            {
+              "switch": "s6",
+              "tipo": "INCORPORADO_A_RUTA",
+              "siguiente_salto_fs": null,
+              "siguiente_salto_target": "s7"
+            }
+          ],
+          "operaciones_ipv4_arp_estimadas": 10,
+          "grupo_ff_nuevo_estimado": 0,
+          "estado": "PROPUESTA_SIN_VALIDACION_OPENFLOW"
+        }
+      ],
+      "transitions_preliminares": [
+        "T00146_TR01_ASC",
+        "T00146_TR02_DESC",
+        "T00146_TR03_PREPARAR_TODOS"
+      ],
+      "bloqueos": [
+        "h1->h3: primer salto compartido; requiere mecanismo adicional de activacion",
+        "h3->h4: primer salto compartido; requiere mecanismo adicional de activacion"
+      ]
+    },
+    {
+      "target_id": "T00152",
+      "rutas_modificadas": 3,
+      "final_mlu_pct": 12.646261,
+      "operaciones_cambio_estimadas": {
+        "mensajes_modificacion": 23,
+        "barreras": 14,
+        "verificaciones": 3,
+        "switches_modificados": 7,
+        "flowmod_estimados": 22,
+        "groupmod_estimados": 1,
+        "tipo": "ESTIMACION_DE_OPERACIONES_NO_EJECUTABLE"
+      },
+      "planes_por_comunicacion": [
+        {
+          "origen": "h1",
+          "destino": "h2",
+          "ruta_fs": [
+            "h1",
+            "s1",
+            "s4",
+            "s2",
+            "h2"
+          ],
+          "ruta_target": [
+            "h1",
+            "s1",
+            "s3",
+            "s4",
+            "s2",
+            "h2"
+          ],
+          "puerto_ingreso_fs": 4,
+          "puerto_ingreso_target": 3,
+          "grupos_ff_existentes_en_ingreso": [
+            1000,
+            1001,
+            1003
+          ],
+          "tramo_a_preparar": [
+            "s3",
+            "s4"
+          ],
+          "switches_afectados": [
+            "s1",
+            "s3",
+            "s4"
+          ],
+          "diferencias_siguiente_salto": [
+            {
+              "switch": "s1",
+              "tipo": "SIGUIENTE_SALTO_MODIFICADO",
+              "siguiente_salto_fs": "s4",
+              "siguiente_salto_target": "s3"
+            },
+            {
+              "switch": "s3",
+              "tipo": "INCORPORADO_A_RUTA",
+              "siguiente_salto_fs": null,
+              "siguiente_salto_target": "s4"
+            }
+          ],
+          "operaciones_ipv4_arp_estimadas": 6,
+          "grupo_ff_nuevo_estimado": 1,
+          "estado": "PROPUESTA_SIN_VALIDACION_OPENFLOW"
+        },
+        {
+          "origen": "h1",
+          "destino": "h3",
+          "ruta_fs": [
+            "h1",
+            "s1",
+            "s4",
+            "s2",
+            "s5",
+            "h3"
+          ],
+          "ruta_target": [
+            "h1",
+            "s1",
+            "s4",
+            "s5",
+            "h3"
+          ],
+          "puerto_ingreso_fs": 4,
+          "puerto_ingreso_target": 4,
+          "grupos_ff_existentes_en_ingreso": [
+            1000,
+            1001,
+            1003
+          ],
+          "tramo_a_preparar": [
+            "s4",
+            "s5"
+          ],
+          "switches_afectados": [
+            "s1",
+            "s4",
+            "s5"
+          ],
+          "diferencias_siguiente_salto": [
+            {
+              "switch": "s2",
+              "tipo": "RETIRADO_DE_RUTA",
+              "siguiente_salto_fs": "s5",
+              "siguiente_salto_target": null
+            },
+            {
+              "switch": "s4",
+              "tipo": "SIGUIENTE_SALTO_MODIFICADO",
+              "siguiente_salto_fs": "s2",
+              "siguiente_salto_target": "s5"
+            }
+          ],
+          "operaciones_ipv4_arp_estimadas": 6,
+          "grupo_ff_nuevo_estimado": 0,
+          "estado": "PROPUESTA_SIN_VALIDACION_OPENFLOW"
+        },
+        {
+          "origen": "h2",
+          "destino": "h4",
+          "ruta_fs": [
+            "h2",
+            "s2",
+            "s4",
+            "s7",
+            "h4"
+          ],
+          "ruta_target": [
+            "h2",
+            "s2",
+            "s4",
+            "s3",
+            "s6",
+            "s7",
+            "h4"
+          ],
+          "puerto_ingreso_fs": 3,
+          "puerto_ingreso_target": 3,
+          "grupos_ff_existentes_en_ingreso": [
+            1002,
+            1005,
+            1006,
+            1007,
+            1010
+          ],
+          "tramo_a_preparar": [
+            "s4",
+            "s3",
+            "s6",
+            "s7"
+          ],
+          "switches_afectados": [
+            "s2",
+            "s3",
+            "s4",
+            "s6",
+            "s7"
+          ],
+          "diferencias_siguiente_salto": [
+            {
+              "switch": "s3",
+              "tipo": "INCORPORADO_A_RUTA",
+              "siguiente_salto_fs": null,
+              "siguiente_salto_target": "s6"
+            },
+            {
+              "switch": "s4",
+              "tipo": "SIGUIENTE_SALTO_MODIFICADO",
+              "siguiente_salto_fs": "s7",
+              "siguiente_salto_target": "s3"
+            },
+            {
+              "switch": "s6",
+              "tipo": "INCORPORADO_A_RUTA",
+              "siguiente_salto_fs": null,
+              "siguiente_salto_target": "s7"
+            }
+          ],
+          "operaciones_ipv4_arp_estimadas": 10,
+          "grupo_ff_nuevo_estimado": 0,
+          "estado": "PROPUESTA_SIN_VALIDACION_OPENFLOW"
+        }
+      ],
+      "transitions_preliminares": [
+        "T00152_TR01_ASC",
+        "T00152_TR02_DESC",
+        "T00152_TR03_PREPARAR_TODOS"
+      ],
+      "bloqueos": [
+        "h1->h3: primer salto compartido; requiere mecanismo adicional de activacion",
+        "h2->h4: primer salto compartido; requiere mecanismo adicional de activacion"
+      ]
+    },
+    {
+      "target_id": "T00006",
+      "rutas_modificadas": 1,
+      "final_mlu_pct": 14.755432,
+      "operaciones_cambio_estimadas": {
+        "mensajes_modificacion": 9,
+        "barreras": 5,
+        "verificaciones": 1,
+        "switches_modificados": 4,
+        "flowmod_estimados": 8,
+        "groupmod_estimados": 1,
+        "tipo": "ESTIMACION_DE_OPERACIONES_NO_EJECUTABLE"
+      },
+      "planes_por_comunicacion": [
+        {
+          "origen": "h1",
+          "destino": "h3",
+          "ruta_fs": [
+            "h1",
+            "s1",
+            "s4",
+            "s2",
+            "s5",
+            "h3"
+          ],
+          "ruta_target": [
+            "h1",
+            "s1",
+            "s3",
+            "s4",
+            "s5",
+            "h3"
+          ],
+          "puerto_ingreso_fs": 4,
+          "puerto_ingreso_target": 3,
+          "grupos_ff_existentes_en_ingreso": [
+            1000,
+            1001,
+            1003
+          ],
+          "tramo_a_preparar": [
+            "s3",
+            "s4",
+            "s5"
+          ],
+          "switches_afectados": [
+            "s1",
+            "s3",
+            "s4",
+            "s5"
+          ],
+          "diferencias_siguiente_salto": [
+            {
+              "switch": "s1",
+              "tipo": "SIGUIENTE_SALTO_MODIFICADO",
+              "siguiente_salto_fs": "s4",
+              "siguiente_salto_target": "s3"
+            },
+            {
+              "switch": "s2",
+              "tipo": "RETIRADO_DE_RUTA",
+              "siguiente_salto_fs": "s5",
+              "siguiente_salto_target": null
+            },
+            {
+              "switch": "s3",
+              "tipo": "INCORPORADO_A_RUTA",
+              "siguiente_salto_fs": null,
+              "siguiente_salto_target": "s4"
+            },
+            {
+              "switch": "s4",
+              "tipo": "SIGUIENTE_SALTO_MODIFICADO",
+              "siguiente_salto_fs": "s2",
+              "siguiente_salto_target": "s5"
+            }
+          ],
+          "operaciones_ipv4_arp_estimadas": 8,
+          "grupo_ff_nuevo_estimado": 1,
+          "estado": "PROPUESTA_SIN_VALIDACION_OPENFLOW"
+        }
+      ],
+      "transitions_preliminares": [
+        "T00006_TR01_ASC"
+      ],
+      "bloqueos": []
+    },
+    {
+      "target_id": "T00040",
+      "rutas_modificadas": 2,
+      "final_mlu_pct": 14.755432,
+      "operaciones_cambio_estimadas": {
+        "mensajes_modificacion": 13,
+        "barreras": 8,
+        "verificaciones": 2,
+        "switches_modificados": 4,
+        "flowmod_estimados": 12,
+        "groupmod_estimados": 1,
+        "tipo": "ESTIMACION_DE_OPERACIONES_NO_EJECUTABLE"
+      },
+      "planes_por_comunicacion": [
+        {
+          "origen": "h1",
+          "destino": "h2",
+          "ruta_fs": [
+            "h1",
+            "s1",
+            "s4",
+            "s2",
+            "h2"
+          ],
+          "ruta_target": [
+            "h1",
+            "s1",
+            "s3",
+            "s4",
+            "s2",
+            "h2"
+          ],
+          "puerto_ingreso_fs": 4,
+          "puerto_ingreso_target": 3,
+          "grupos_ff_existentes_en_ingreso": [
+            1000,
+            1001,
+            1003
+          ],
+          "tramo_a_preparar": [
+            "s3",
+            "s4"
+          ],
+          "switches_afectados": [
+            "s1",
+            "s3",
+            "s4"
+          ],
+          "diferencias_siguiente_salto": [
+            {
+              "switch": "s1",
+              "tipo": "SIGUIENTE_SALTO_MODIFICADO",
+              "siguiente_salto_fs": "s4",
+              "siguiente_salto_target": "s3"
+            },
+            {
+              "switch": "s3",
+              "tipo": "INCORPORADO_A_RUTA",
+              "siguiente_salto_fs": null,
+              "siguiente_salto_target": "s4"
+            }
+          ],
+          "operaciones_ipv4_arp_estimadas": 6,
+          "grupo_ff_nuevo_estimado": 1,
+          "estado": "PROPUESTA_SIN_VALIDACION_OPENFLOW"
+        },
+        {
+          "origen": "h1",
+          "destino": "h3",
+          "ruta_fs": [
+            "h1",
+            "s1",
+            "s4",
+            "s2",
+            "s5",
+            "h3"
+          ],
+          "ruta_target": [
+            "h1",
+            "s1",
+            "s4",
+            "s5",
+            "h3"
+          ],
+          "puerto_ingreso_fs": 4,
+          "puerto_ingreso_target": 4,
+          "grupos_ff_existentes_en_ingreso": [
+            1000,
+            1001,
+            1003
+          ],
+          "tramo_a_preparar": [
+            "s4",
+            "s5"
+          ],
+          "switches_afectados": [
+            "s1",
+            "s4",
+            "s5"
+          ],
+          "diferencias_siguiente_salto": [
+            {
+              "switch": "s2",
+              "tipo": "RETIRADO_DE_RUTA",
+              "siguiente_salto_fs": "s5",
+              "siguiente_salto_target": null
+            },
+            {
+              "switch": "s4",
+              "tipo": "SIGUIENTE_SALTO_MODIFICADO",
+              "siguiente_salto_fs": "s2",
+              "siguiente_salto_target": "s5"
+            }
+          ],
+          "operaciones_ipv4_arp_estimadas": 6,
+          "grupo_ff_nuevo_estimado": 0,
+          "estado": "PROPUESTA_SIN_VALIDACION_OPENFLOW"
+        }
+      ],
+      "transitions_preliminares": [
+        "T00040_TR01_ASC",
+        "T00040_TR02_DESC",
+        "T00040_TR03_PREPARAR_TODOS"
+      ],
+      "bloqueos": [
+        "h1->h3: primer salto compartido; requiere mecanismo adicional de activacion"
+      ]
+    },
+    {
+      "target_id": "T00005",
+      "rutas_modificadas": 1,
+      "final_mlu_pct": 16.663092,
+      "operaciones_cambio_estimadas": {
+        "mensajes_modificacion": 6,
+        "barreras": 4,
+        "verificaciones": 1,
+        "switches_modificados": 3,
+        "flowmod_estimados": 6,
+        "groupmod_estimados": 0,
+        "tipo": "ESTIMACION_DE_OPERACIONES_NO_EJECUTABLE"
+      },
+      "planes_por_comunicacion": [
+        {
+          "origen": "h1",
+          "destino": "h3",
+          "ruta_fs": [
+            "h1",
+            "s1",
+            "s4",
+            "s2",
+            "s5",
+            "h3"
+          ],
+          "ruta_target": [
+            "h1",
+            "s1",
+            "s4",
+            "s5",
+            "h3"
+          ],
+          "puerto_ingreso_fs": 4,
+          "puerto_ingreso_target": 4,
+          "grupos_ff_existentes_en_ingreso": [
+            1000,
+            1001,
+            1003
+          ],
+          "tramo_a_preparar": [
+            "s4",
+            "s5"
+          ],
+          "switches_afectados": [
+            "s1",
+            "s4",
+            "s5"
+          ],
+          "diferencias_siguiente_salto": [
+            {
+              "switch": "s2",
+              "tipo": "RETIRADO_DE_RUTA",
+              "siguiente_salto_fs": "s5",
+              "siguiente_salto_target": null
+            },
+            {
+              "switch": "s4",
+              "tipo": "SIGUIENTE_SALTO_MODIFICADO",
+              "siguiente_salto_fs": "s2",
+              "siguiente_salto_target": "s5"
+            }
+          ],
+          "operaciones_ipv4_arp_estimadas": 6,
+          "grupo_ff_nuevo_estimado": 0,
+          "estado": "PROPUESTA_SIN_VALIDACION_OPENFLOW"
+        }
+      ],
+      "transitions_preliminares": [
+        "T00005_TR01_ASC"
+      ],
+      "bloqueos": [
+        "h1->h3: primer salto compartido; requiere mecanismo adicional de activacion"
+      ]
+    }
+  ],
+  "parejas": [
+    {
+      "target_id": "T00014",
+      "transition_id": "T00014_TR01_ASC",
+      "estrategia": "TR01_ASC",
+      "orden_activacion_logica": [
+        "h1->h3",
+        "h3->h4"
+      ],
+      "final_mlu_pct": 12.646261,
+      "peak_mlu_pct": 21.255532,
+      "incremento_peak_sobre_fs_pp": 0.0,
+      "serie_estados_logicos_mlu_pct": [
+        21.255532,
+        14.755432,
+        12.646261
+      ],
+      "mensajes_modificacion": 16,
+      "barreras": 9,
+      "verificaciones": 2,
+      "switches_modificados": 6,
+      "bloqueos": [],
+      "admisibilidad_modelo": true,
+      "seguridad_openflow_demostrada": false,
+      "ejecutable": false,
+      "estado": "PRELIMINAR_PENDIENTE_OPENFLOW"
+    },
+    {
+      "target_id": "T00014",
+      "transition_id": "T00014_TR02_DESC",
+      "estrategia": "TR02_DESC",
+      "orden_activacion_logica": [
+        "h3->h4",
+        "h1->h3"
+      ],
+      "final_mlu_pct": 12.646261,
+      "peak_mlu_pct": 21.255532,
+      "incremento_peak_sobre_fs_pp": 0.0,
+      "serie_estados_logicos_mlu_pct": [
+        21.255532,
+        21.255532,
+        12.646261
+      ],
+      "mensajes_modificacion": 16,
+      "barreras": 9,
+      "verificaciones": 2,
+      "switches_modificados": 6,
+      "bloqueos": [],
+      "admisibilidad_modelo": true,
+      "seguridad_openflow_demostrada": false,
+      "ejecutable": false,
+      "estado": "PRELIMINAR_PENDIENTE_OPENFLOW"
+    },
+    {
+      "target_id": "T00014",
+      "transition_id": "T00014_TR03_PREPARAR_TODOS",
+      "estrategia": "TR03_PREPARAR_TODOS",
+      "orden_activacion_logica": [
+        "h1->h3",
+        "h3->h4"
+      ],
+      "final_mlu_pct": 12.646261,
+      "peak_mlu_pct": 21.255532,
+      "incremento_peak_sobre_fs_pp": 0.0,
+      "serie_estados_logicos_mlu_pct": [
+        21.255532,
+        14.755432,
+        12.646261
+      ],
+      "mensajes_modificacion": 16,
+      "barreras": 9,
+      "verificaciones": 2,
+      "switches_modificados": 6,
+      "bloqueos": [],
+      "admisibilidad_modelo": true,
+      "seguridad_openflow_demostrada": false,
+      "ejecutable": false,
+      "estado": "PRELIMINAR_PENDIENTE_OPENFLOW"
+    },
+    {
+      "target_id": "T00016",
+      "transition_id": "T00016_TR01_ASC",
+      "estrategia": "TR01_ASC",
+      "orden_activacion_logica": [
+        "h1->h3",
+        "h3->h4"
+      ],
+      "final_mlu_pct": 12.646261,
+      "peak_mlu_pct": 21.255532,
+      "incremento_peak_sobre_fs_pp": 0.0,
+      "serie_estados_logicos_mlu_pct": [
+        21.255532,
+        14.755432,
+        12.646261
+      ],
+      "mensajes_modificacion": 19,
+      "barreras": 11,
+      "verificaciones": 2,
+      "switches_modificados": 6,
+      "bloqueos": [
+        "h3->h4: primer salto compartido; requiere mecanismo adicional de activacion"
+      ],
+      "admisibilidad_modelo": false,
+      "seguridad_openflow_demostrada": false,
+      "ejecutable": false,
+      "estado": "BLOQUEADA_MODELO"
+    },
+    {
+      "target_id": "T00016",
+      "transition_id": "T00016_TR02_DESC",
+      "estrategia": "TR02_DESC",
+      "orden_activacion_logica": [
+        "h3->h4",
+        "h1->h3"
+      ],
+      "final_mlu_pct": 12.646261,
+      "peak_mlu_pct": 21.255532,
+      "incremento_peak_sobre_fs_pp": 0.0,
+      "serie_estados_logicos_mlu_pct": [
+        21.255532,
+        21.255532,
+        12.646261
+      ],
+      "mensajes_modificacion": 19,
+      "barreras": 11,
+      "verificaciones": 2,
+      "switches_modificados": 6,
+      "bloqueos": [
+        "h3->h4: primer salto compartido; requiere mecanismo adicional de activacion"
+      ],
+      "admisibilidad_modelo": false,
+      "seguridad_openflow_demostrada": false,
+      "ejecutable": false,
+      "estado": "BLOQUEADA_MODELO"
+    },
+    {
+      "target_id": "T00016",
+      "transition_id": "T00016_TR03_PREPARAR_TODOS",
+      "estrategia": "TR03_PREPARAR_TODOS",
+      "orden_activacion_logica": [
+        "h1->h3",
+        "h3->h4"
+      ],
+      "final_mlu_pct": 12.646261,
+      "peak_mlu_pct": 21.255532,
+      "incremento_peak_sobre_fs_pp": 0.0,
+      "serie_estados_logicos_mlu_pct": [
+        21.255532,
+        14.755432,
+        12.646261
+      ],
+      "mensajes_modificacion": 19,
+      "barreras": 11,
+      "verificaciones": 2,
+      "switches_modificados": 6,
+      "bloqueos": [
+        "h3->h4: primer salto compartido; requiere mecanismo adicional de activacion"
+      ],
+      "admisibilidad_modelo": false,
+      "seguridad_openflow_demostrada": false,
+      "ejecutable": false,
+      "estado": "BLOQUEADA_MODELO"
+    },
+    {
+      "target_id": "T00022",
+      "transition_id": "T00022_TR01_ASC",
+      "estrategia": "TR01_ASC",
+      "orden_activacion_logica": [
+        "h1->h3",
+        "h2->h4"
+      ],
+      "final_mlu_pct": 12.646261,
+      "peak_mlu_pct": 21.255532,
+      "incremento_peak_sobre_fs_pp": 0.0,
+      "serie_estados_logicos_mlu_pct": [
+        21.255532,
+        14.755432,
+        12.646261
+      ],
+      "mensajes_modificacion": 19,
+      "barreras": 11,
+      "verificaciones": 2,
+      "switches_modificados": 7,
+      "bloqueos": [
+        "h2->h4: primer salto compartido; requiere mecanismo adicional de activacion"
+      ],
+      "admisibilidad_modelo": false,
+      "seguridad_openflow_demostrada": false,
+      "ejecutable": false,
+      "estado": "BLOQUEADA_MODELO"
+    },
+    {
+      "target_id": "T00022",
+      "transition_id": "T00022_TR02_DESC",
+      "estrategia": "TR02_DESC",
+      "orden_activacion_logica": [
+        "h2->h4",
+        "h1->h3"
+      ],
+      "final_mlu_pct": 12.646261,
+      "peak_mlu_pct": 21.255532,
+      "incremento_peak_sobre_fs_pp": 0.0,
+      "serie_estados_logicos_mlu_pct": [
+        21.255532,
+        21.255532,
+        12.646261
+      ],
+      "mensajes_modificacion": 19,
+      "barreras": 11,
+      "verificaciones": 2,
+      "switches_modificados": 7,
+      "bloqueos": [
+        "h2->h4: primer salto compartido; requiere mecanismo adicional de activacion"
+      ],
+      "admisibilidad_modelo": false,
+      "seguridad_openflow_demostrada": false,
+      "ejecutable": false,
+      "estado": "BLOQUEADA_MODELO"
+    },
+    {
+      "target_id": "T00022",
+      "transition_id": "T00022_TR03_PREPARAR_TODOS",
+      "estrategia": "TR03_PREPARAR_TODOS",
+      "orden_activacion_logica": [
+        "h1->h3",
+        "h2->h4"
+      ],
+      "final_mlu_pct": 12.646261,
+      "peak_mlu_pct": 21.255532,
+      "incremento_peak_sobre_fs_pp": 0.0,
+      "serie_estados_logicos_mlu_pct": [
+        21.255532,
+        14.755432,
+        12.646261
+      ],
+      "mensajes_modificacion": 19,
+      "barreras": 11,
+      "verificaciones": 2,
+      "switches_modificados": 7,
+      "bloqueos": [
+        "h2->h4: primer salto compartido; requiere mecanismo adicional de activacion"
+      ],
+      "admisibilidad_modelo": false,
+      "seguridad_openflow_demostrada": false,
+      "ejecutable": false,
+      "estado": "BLOQUEADA_MODELO"
+    },
+    {
+      "target_id": "T00144",
+      "transition_id": "T00144_TR01_ASC",
+      "estrategia": "TR01_ASC",
+      "orden_activacion_logica": [
+        "h1->h2",
+        "h1->h3",
+        "h3->h4"
+      ],
+      "final_mlu_pct": 12.646261,
+      "peak_mlu_pct": 21.255532,
+      "incremento_peak_sobre_fs_pp": 0.0,
+      "serie_estados_logicos_mlu_pct": [
+        21.255532,
+        21.255532,
+        14.755432,
+        12.646261
+      ],
+      "mensajes_modificacion": 20,
+      "barreras": 12,
+      "verificaciones": 3,
+      "switches_modificados": 6,
+      "bloqueos": [
+        "h1->h3: primer salto compartido; requiere mecanismo adicional de activacion"
+      ],
+      "admisibilidad_modelo": false,
+      "seguridad_openflow_demostrada": false,
+      "ejecutable": false,
+      "estado": "BLOQUEADA_MODELO"
+    },
+    {
+      "target_id": "T00144",
+      "transition_id": "T00144_TR02_DESC",
+      "estrategia": "TR02_DESC",
+      "orden_activacion_logica": [
+        "h3->h4",
+        "h1->h3",
+        "h1->h2"
+      ],
+      "final_mlu_pct": 12.646261,
+      "peak_mlu_pct": 21.255532,
+      "incremento_peak_sobre_fs_pp": 0.0,
+      "serie_estados_logicos_mlu_pct": [
+        21.255532,
+        21.255532,
+        16.663092,
+        12.646261
+      ],
+      "mensajes_modificacion": 20,
+      "barreras": 12,
+      "verificaciones": 3,
+      "switches_modificados": 6,
+      "bloqueos": [
+        "h1->h3: primer salto compartido; requiere mecanismo adicional de activacion"
+      ],
+      "admisibilidad_modelo": false,
+      "seguridad_openflow_demostrada": false,
+      "ejecutable": false,
+      "estado": "BLOQUEADA_MODELO"
+    },
+    {
+      "target_id": "T00144",
+      "transition_id": "T00144_TR03_PREPARAR_TODOS",
+      "estrategia": "TR03_PREPARAR_TODOS",
+      "orden_activacion_logica": [
+        "h1->h2",
+        "h1->h3",
+        "h3->h4"
+      ],
+      "final_mlu_pct": 12.646261,
+      "peak_mlu_pct": 21.255532,
+      "incremento_peak_sobre_fs_pp": 0.0,
+      "serie_estados_logicos_mlu_pct": [
+        21.255532,
+        21.255532,
+        14.755432,
+        12.646261
+      ],
+      "mensajes_modificacion": 20,
+      "barreras": 12,
+      "verificaciones": 3,
+      "switches_modificados": 6,
+      "bloqueos": [
+        "h1->h3: primer salto compartido; requiere mecanismo adicional de activacion"
+      ],
+      "admisibilidad_modelo": false,
+      "seguridad_openflow_demostrada": false,
+      "ejecutable": false,
+      "estado": "BLOQUEADA_MODELO"
+    },
+    {
+      "target_id": "T00146",
+      "transition_id": "T00146_TR01_ASC",
+      "estrategia": "TR01_ASC",
+      "orden_activacion_logica": [
+        "h1->h2",
+        "h1->h3",
+        "h3->h4"
+      ],
+      "final_mlu_pct": 12.646261,
+      "peak_mlu_pct": 21.255532,
+      "incremento_peak_sobre_fs_pp": 0.0,
+      "serie_estados_logicos_mlu_pct": [
+        21.255532,
+        21.255532,
+        14.755432,
+        12.646261
+      ],
+      "mensajes_modificacion": 23,
+      "barreras": 14,
+      "verificaciones": 3,
+      "switches_modificados": 6,
+      "bloqueos": [
+        "h1->h3: primer salto compartido; requiere mecanismo adicional de activacion",
+        "h3->h4: primer salto compartido; requiere mecanismo adicional de activacion"
+      ],
+      "admisibilidad_modelo": false,
+      "seguridad_openflow_demostrada": false,
+      "ejecutable": false,
+      "estado": "BLOQUEADA_MODELO"
+    },
+    {
+      "target_id": "T00146",
+      "transition_id": "T00146_TR02_DESC",
+      "estrategia": "TR02_DESC",
+      "orden_activacion_logica": [
+        "h3->h4",
+        "h1->h3",
+        "h1->h2"
+      ],
+      "final_mlu_pct": 12.646261,
+      "peak_mlu_pct": 21.255532,
+      "incremento_peak_sobre_fs_pp": 0.0,
+      "serie_estados_logicos_mlu_pct": [
+        21.255532,
+        21.255532,
+        16.663092,
+        12.646261
+      ],
+      "mensajes_modificacion": 23,
+      "barreras": 14,
+      "verificaciones": 3,
+      "switches_modificados": 6,
+      "bloqueos": [
+        "h1->h3: primer salto compartido; requiere mecanismo adicional de activacion",
+        "h3->h4: primer salto compartido; requiere mecanismo adicional de activacion"
+      ],
+      "admisibilidad_modelo": false,
+      "seguridad_openflow_demostrada": false,
+      "ejecutable": false,
+      "estado": "BLOQUEADA_MODELO"
+    },
+    {
+      "target_id": "T00146",
+      "transition_id": "T00146_TR03_PREPARAR_TODOS",
+      "estrategia": "TR03_PREPARAR_TODOS",
+      "orden_activacion_logica": [
+        "h1->h2",
+        "h1->h3",
+        "h3->h4"
+      ],
+      "final_mlu_pct": 12.646261,
+      "peak_mlu_pct": 21.255532,
+      "incremento_peak_sobre_fs_pp": 0.0,
+      "serie_estados_logicos_mlu_pct": [
+        21.255532,
+        21.255532,
+        14.755432,
+        12.646261
+      ],
+      "mensajes_modificacion": 23,
+      "barreras": 14,
+      "verificaciones": 3,
+      "switches_modificados": 6,
+      "bloqueos": [
+        "h1->h3: primer salto compartido; requiere mecanismo adicional de activacion",
+        "h3->h4: primer salto compartido; requiere mecanismo adicional de activacion"
+      ],
+      "admisibilidad_modelo": false,
+      "seguridad_openflow_demostrada": false,
+      "ejecutable": false,
+      "estado": "BLOQUEADA_MODELO"
+    },
+    {
+      "target_id": "T00152",
+      "transition_id": "T00152_TR01_ASC",
+      "estrategia": "TR01_ASC",
+      "orden_activacion_logica": [
+        "h1->h2",
+        "h1->h3",
+        "h2->h4"
+      ],
+      "final_mlu_pct": 12.646261,
+      "peak_mlu_pct": 21.255532,
+      "incremento_peak_sobre_fs_pp": 0.0,
+      "serie_estados_logicos_mlu_pct": [
+        21.255532,
+        21.255532,
+        14.755432,
+        12.646261
+      ],
+      "mensajes_modificacion": 23,
+      "barreras": 14,
+      "verificaciones": 3,
+      "switches_modificados": 7,
+      "bloqueos": [
+        "h1->h3: primer salto compartido; requiere mecanismo adicional de activacion",
+        "h2->h4: primer salto compartido; requiere mecanismo adicional de activacion"
+      ],
+      "admisibilidad_modelo": false,
+      "seguridad_openflow_demostrada": false,
+      "ejecutable": false,
+      "estado": "BLOQUEADA_MODELO"
+    },
+    {
+      "target_id": "T00152",
+      "transition_id": "T00152_TR02_DESC",
+      "estrategia": "TR02_DESC",
+      "orden_activacion_logica": [
+        "h2->h4",
+        "h1->h3",
+        "h1->h2"
+      ],
+      "final_mlu_pct": 12.646261,
+      "peak_mlu_pct": 21.255532,
+      "incremento_peak_sobre_fs_pp": 0.0,
+      "serie_estados_logicos_mlu_pct": [
+        21.255532,
+        21.255532,
+        16.663092,
+        12.646261
+      ],
+      "mensajes_modificacion": 23,
+      "barreras": 14,
+      "verificaciones": 3,
+      "switches_modificados": 7,
+      "bloqueos": [
+        "h1->h3: primer salto compartido; requiere mecanismo adicional de activacion",
+        "h2->h4: primer salto compartido; requiere mecanismo adicional de activacion"
+      ],
+      "admisibilidad_modelo": false,
+      "seguridad_openflow_demostrada": false,
+      "ejecutable": false,
+      "estado": "BLOQUEADA_MODELO"
+    },
+    {
+      "target_id": "T00152",
+      "transition_id": "T00152_TR03_PREPARAR_TODOS",
+      "estrategia": "TR03_PREPARAR_TODOS",
+      "orden_activacion_logica": [
+        "h1->h2",
+        "h1->h3",
+        "h2->h4"
+      ],
+      "final_mlu_pct": 12.646261,
+      "peak_mlu_pct": 21.255532,
+      "incremento_peak_sobre_fs_pp": 0.0,
+      "serie_estados_logicos_mlu_pct": [
+        21.255532,
+        21.255532,
+        14.755432,
+        12.646261
+      ],
+      "mensajes_modificacion": 23,
+      "barreras": 14,
+      "verificaciones": 3,
+      "switches_modificados": 7,
+      "bloqueos": [
+        "h1->h3: primer salto compartido; requiere mecanismo adicional de activacion",
+        "h2->h4: primer salto compartido; requiere mecanismo adicional de activacion"
+      ],
+      "admisibilidad_modelo": false,
+      "seguridad_openflow_demostrada": false,
+      "ejecutable": false,
+      "estado": "BLOQUEADA_MODELO"
+    },
+    {
+      "target_id": "T00006",
+      "transition_id": "T00006_TR01_ASC",
+      "estrategia": "TR01_ASC",
+      "orden_activacion_logica": [
+        "h1->h3"
+      ],
+      "final_mlu_pct": 14.755432,
+      "peak_mlu_pct": 21.255532,
+      "incremento_peak_sobre_fs_pp": 0.0,
+      "serie_estados_logicos_mlu_pct": [
+        21.255532,
+        14.755432
+      ],
+      "mensajes_modificacion": 9,
+      "barreras": 5,
+      "verificaciones": 1,
+      "switches_modificados": 4,
+      "bloqueos": [],
+      "admisibilidad_modelo": true,
+      "seguridad_openflow_demostrada": false,
+      "ejecutable": false,
+      "estado": "PRELIMINAR_PENDIENTE_OPENFLOW"
+    },
+    {
+      "target_id": "T00040",
+      "transition_id": "T00040_TR01_ASC",
+      "estrategia": "TR01_ASC",
+      "orden_activacion_logica": [
+        "h1->h2",
+        "h1->h3"
+      ],
+      "final_mlu_pct": 14.755432,
+      "peak_mlu_pct": 21.255532,
+      "incremento_peak_sobre_fs_pp": 0.0,
+      "serie_estados_logicos_mlu_pct": [
+        21.255532,
+        21.255532,
+        14.755432
+      ],
+      "mensajes_modificacion": 13,
+      "barreras": 8,
+      "verificaciones": 2,
+      "switches_modificados": 4,
+      "bloqueos": [
+        "h1->h3: primer salto compartido; requiere mecanismo adicional de activacion"
+      ],
+      "admisibilidad_modelo": false,
+      "seguridad_openflow_demostrada": false,
+      "ejecutable": false,
+      "estado": "BLOQUEADA_MODELO"
+    },
+    {
+      "target_id": "T00040",
+      "transition_id": "T00040_TR02_DESC",
+      "estrategia": "TR02_DESC",
+      "orden_activacion_logica": [
+        "h1->h3",
+        "h1->h2"
+      ],
+      "final_mlu_pct": 14.755432,
+      "peak_mlu_pct": 21.255532,
+      "incremento_peak_sobre_fs_pp": 0.0,
+      "serie_estados_logicos_mlu_pct": [
+        21.255532,
+        16.663092,
+        14.755432
+      ],
+      "mensajes_modificacion": 13,
+      "barreras": 8,
+      "verificaciones": 2,
+      "switches_modificados": 4,
+      "bloqueos": [
+        "h1->h3: primer salto compartido; requiere mecanismo adicional de activacion"
+      ],
+      "admisibilidad_modelo": false,
+      "seguridad_openflow_demostrada": false,
+      "ejecutable": false,
+      "estado": "BLOQUEADA_MODELO"
+    },
+    {
+      "target_id": "T00040",
+      "transition_id": "T00040_TR03_PREPARAR_TODOS",
+      "estrategia": "TR03_PREPARAR_TODOS",
+      "orden_activacion_logica": [
+        "h1->h2",
+        "h1->h3"
+      ],
+      "final_mlu_pct": 14.755432,
+      "peak_mlu_pct": 21.255532,
+      "incremento_peak_sobre_fs_pp": 0.0,
+      "serie_estados_logicos_mlu_pct": [
+        21.255532,
+        21.255532,
+        14.755432
+      ],
+      "mensajes_modificacion": 13,
+      "barreras": 8,
+      "verificaciones": 2,
+      "switches_modificados": 4,
+      "bloqueos": [
+        "h1->h3: primer salto compartido; requiere mecanismo adicional de activacion"
+      ],
+      "admisibilidad_modelo": false,
+      "seguridad_openflow_demostrada": false,
+      "ejecutable": false,
+      "estado": "BLOQUEADA_MODELO"
+    },
+    {
+      "target_id": "T00005",
+      "transition_id": "T00005_TR01_ASC",
+      "estrategia": "TR01_ASC",
+      "orden_activacion_logica": [
+        "h1->h3"
+      ],
+      "final_mlu_pct": 16.663092,
+      "peak_mlu_pct": 21.255532,
+      "incremento_peak_sobre_fs_pp": 0.0,
+      "serie_estados_logicos_mlu_pct": [
+        21.255532,
+        16.663092
+      ],
+      "mensajes_modificacion": 6,
+      "barreras": 4,
+      "verificaciones": 1,
+      "switches_modificados": 3,
+      "bloqueos": [
+        "h1->h3: primer salto compartido; requiere mecanismo adicional de activacion"
+      ],
+      "admisibilidad_modelo": false,
+      "seguridad_openflow_demostrada": false,
+      "ejecutable": false,
+      "estado": "BLOQUEADA_MODELO"
+    }
+  ]
+}

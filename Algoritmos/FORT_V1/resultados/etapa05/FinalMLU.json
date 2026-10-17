@@ -1,0 +1,890 @@
+{
+  "tipo": "FinalMLU_Estimada_Piloto",
+  "generado_utc": "2026-10-12T20:10:46.828746+00:00",
+  "enlace_fallado": [
+    "s1",
+    "s2"
+  ],
+  "referencia_fs": "T000",
+  "final_mlu_fs_pct": 22.7,
+  "targets_evaluados": 40,
+  "targets_mejoran_fs": 9,
+  "targets_igualan_fs": 19,
+  "targets_empeoran_fs": 12,
+  "parejas_evaluadas": 24,
+  "parejas_pasan_estructura": 24,
+  "mejor_target_por_final_mlu": "T013",
+  "mejor_pareja_con_validacion_estructural": {
+    "target_id": "T013",
+    "transition_id": "T013_TR01",
+    "estrategia": "SECUENCIAL_ASC",
+    "final_mlu_pct": 14.7,
+    "comparacion_con_fs": "MEJORA_FS",
+    "diferencia_fs_puntos_pct": -8.0,
+    "factibilidad_preliminar": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+    "seguridad_definitiva_demostrada": false
+  },
+  "tiempo_calculo_s": 0.015683,
+  "modificaciones_ejecutadas_en_ovs": 0,
+  "limitaciones": [
+    "Final MLU modelada con demandas enviadas observadas y capacidades RS.",
+    "No es una medicion directa del Target instalado en OVS.",
+    "Las Transitions de un mismo Target comparten Final MLU, pero pueden tener distinto Peak MLU y costo.",
+    "Superar la estructura no demuestra seguridad definitiva.",
+    "No se han evaluado Peak MLU ni costos de reconfiguracion."
+  ],
+  "targets": [
+    {
+      "target_id": "T000",
+      "final_mlu_pct": 22.7,
+      "enlaces_criticos": [
+        {
+          "origen": "s2",
+          "destino": "s5",
+          "utilizacion_pct": 22.7
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "IGUAL_A_FS",
+      "diferencia_fs_puntos_pct": 0.0
+    },
+    {
+      "target_id": "T001",
+      "final_mlu_pct": 22.7,
+      "enlaces_criticos": [
+        {
+          "origen": "s2",
+          "destino": "s5",
+          "utilizacion_pct": 22.7
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "IGUAL_A_FS",
+      "diferencia_fs_puntos_pct": 0.0
+    },
+    {
+      "target_id": "T002",
+      "final_mlu_pct": 22.7,
+      "enlaces_criticos": [
+        {
+          "origen": "s2",
+          "destino": "s5",
+          "utilizacion_pct": 22.7
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "IGUAL_A_FS",
+      "diferencia_fs_puntos_pct": 0.0
+    },
+    {
+      "target_id": "T003",
+      "final_mlu_pct": 22.7,
+      "enlaces_criticos": [
+        {
+          "origen": "s2",
+          "destino": "s5",
+          "utilizacion_pct": 22.7
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "IGUAL_A_FS",
+      "diferencia_fs_puntos_pct": 0.0
+    },
+    {
+      "target_id": "T004",
+      "final_mlu_pct": 22.7,
+      "enlaces_criticos": [
+        {
+          "origen": "s2",
+          "destino": "s5",
+          "utilizacion_pct": 22.7
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "IGUAL_A_FS",
+      "diferencia_fs_puntos_pct": 0.0
+    },
+    {
+      "target_id": "T005",
+      "final_mlu_pct": 28.99,
+      "enlaces_criticos": [
+        {
+          "origen": "s4",
+          "destino": "s7",
+          "utilizacion_pct": 28.99
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "EMPEORA_FS",
+      "diferencia_fs_puntos_pct": 6.29
+    },
+    {
+      "target_id": "T006",
+      "final_mlu_pct": 26.89,
+      "enlaces_criticos": [
+        {
+          "origen": "s4",
+          "destino": "s5",
+          "utilizacion_pct": 26.89
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "EMPEORA_FS",
+      "diferencia_fs_puntos_pct": 4.19
+    },
+    {
+      "target_id": "T007",
+      "final_mlu_pct": 22.7,
+      "enlaces_criticos": [
+        {
+          "origen": "s2",
+          "destino": "s5",
+          "utilizacion_pct": 22.7
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "IGUAL_A_FS",
+      "diferencia_fs_puntos_pct": 0.0
+    },
+    {
+      "target_id": "T008",
+      "final_mlu_pct": 22.7,
+      "enlaces_criticos": [
+        {
+          "origen": "s2",
+          "destino": "s5",
+          "utilizacion_pct": 22.7
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "IGUAL_A_FS",
+      "diferencia_fs_puntos_pct": 0.0
+    },
+    {
+      "target_id": "T009",
+      "final_mlu_pct": 22.7,
+      "enlaces_criticos": [
+        {
+          "origen": "s2",
+          "destino": "s5",
+          "utilizacion_pct": 22.7
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "IGUAL_A_FS",
+      "diferencia_fs_puntos_pct": 0.0
+    },
+    {
+      "target_id": "T010",
+      "final_mlu_pct": 29.39,
+      "enlaces_criticos": [
+        {
+          "origen": "s3",
+          "destino": "s6",
+          "utilizacion_pct": 29.39
+        },
+        {
+          "origen": "s6",
+          "destino": "s7",
+          "utilizacion_pct": 29.39
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "EMPEORA_FS",
+      "diferencia_fs_puntos_pct": 6.69
+    },
+    {
+      "target_id": "T011",
+      "final_mlu_pct": 39.49,
+      "enlaces_criticos": [
+        {
+          "origen": "s4",
+          "destino": "s5",
+          "utilizacion_pct": 39.49
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "EMPEORA_FS",
+      "diferencia_fs_puntos_pct": 16.79
+    },
+    {
+      "target_id": "T012",
+      "final_mlu_pct": 27.3,
+      "enlaces_criticos": [
+        {
+          "origen": "s2",
+          "destino": "s4",
+          "utilizacion_pct": 27.3
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "EMPEORA_FS",
+      "diferencia_fs_puntos_pct": 4.6
+    },
+    {
+      "target_id": "T013",
+      "final_mlu_pct": 14.7,
+      "enlaces_criticos": [
+        {
+          "origen": "s4",
+          "destino": "s7",
+          "utilizacion_pct": 14.7
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "MEJORA_FS",
+      "diferencia_fs_puntos_pct": -8.0
+    },
+    {
+      "target_id": "T014",
+      "final_mlu_pct": 22.7,
+      "enlaces_criticos": [
+        {
+          "origen": "s2",
+          "destino": "s5",
+          "utilizacion_pct": 22.7
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "IGUAL_A_FS",
+      "diferencia_fs_puntos_pct": 0.0
+    },
+    {
+      "target_id": "T015",
+      "final_mlu_pct": 22.7,
+      "enlaces_criticos": [
+        {
+          "origen": "s2",
+          "destino": "s5",
+          "utilizacion_pct": 22.7
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "IGUAL_A_FS",
+      "diferencia_fs_puntos_pct": 0.0
+    },
+    {
+      "target_id": "T016",
+      "final_mlu_pct": 20.6,
+      "enlaces_criticos": [
+        {
+          "origen": "s1",
+          "destino": "s4",
+          "utilizacion_pct": 20.6
+        },
+        {
+          "origen": "s4",
+          "destino": "s2",
+          "utilizacion_pct": 20.6
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "MEJORA_FS",
+      "diferencia_fs_puntos_pct": -2.1
+    },
+    {
+      "target_id": "T017",
+      "final_mlu_pct": 23.1,
+      "enlaces_criticos": [
+        {
+          "origen": "s4",
+          "destino": "s5",
+          "utilizacion_pct": 23.1
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "EMPEORA_FS",
+      "diferencia_fs_puntos_pct": 0.4
+    },
+    {
+      "target_id": "T018",
+      "final_mlu_pct": 22.7,
+      "enlaces_criticos": [
+        {
+          "origen": "s4",
+          "destino": "s7",
+          "utilizacion_pct": 22.7
+        },
+        {
+          "origen": "s7",
+          "destino": "s8",
+          "utilizacion_pct": 22.7
+        },
+        {
+          "origen": "s8",
+          "destino": "s5",
+          "utilizacion_pct": 22.7
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "IGUAL_A_FS",
+      "diferencia_fs_puntos_pct": 0.0
+    },
+    {
+      "target_id": "T019",
+      "final_mlu_pct": 22.7,
+      "enlaces_criticos": [
+        {
+          "origen": "s2",
+          "destino": "s5",
+          "utilizacion_pct": 22.7
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "IGUAL_A_FS",
+      "diferencia_fs_puntos_pct": 0.0
+    },
+    {
+      "target_id": "T020",
+      "final_mlu_pct": 28.99,
+      "enlaces_criticos": [
+        {
+          "origen": "s2",
+          "destino": "s5",
+          "utilizacion_pct": 28.99
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "EMPEORA_FS",
+      "diferencia_fs_puntos_pct": 6.29
+    },
+    {
+      "target_id": "T021",
+      "final_mlu_pct": 24.8,
+      "enlaces_criticos": [
+        {
+          "origen": "s4",
+          "destino": "s7",
+          "utilizacion_pct": 24.8
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "EMPEORA_FS",
+      "diferencia_fs_puntos_pct": 2.1
+    },
+    {
+      "target_id": "T022",
+      "final_mlu_pct": 22.7,
+      "enlaces_criticos": [
+        {
+          "origen": "s2",
+          "destino": "s5",
+          "utilizacion_pct": 22.7
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "IGUAL_A_FS",
+      "diferencia_fs_puntos_pct": 0.0
+    },
+    {
+      "target_id": "T023",
+      "final_mlu_pct": 23.1,
+      "enlaces_criticos": [
+        {
+          "origen": "s3",
+          "destino": "s6",
+          "utilizacion_pct": 23.1
+        },
+        {
+          "origen": "s6",
+          "destino": "s7",
+          "utilizacion_pct": 23.1
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "EMPEORA_FS",
+      "diferencia_fs_puntos_pct": 0.4
+    },
+    {
+      "target_id": "T024",
+      "final_mlu_pct": 27.3,
+      "enlaces_criticos": [
+        {
+          "origen": "s2",
+          "destino": "s4",
+          "utilizacion_pct": 27.3
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "EMPEORA_FS",
+      "diferencia_fs_puntos_pct": 4.6
+    },
+    {
+      "target_id": "T025",
+      "final_mlu_pct": 22.7,
+      "enlaces_criticos": [
+        {
+          "origen": "s2",
+          "destino": "s5",
+          "utilizacion_pct": 22.7
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "IGUAL_A_FS",
+      "diferencia_fs_puntos_pct": 0.0
+    },
+    {
+      "target_id": "T026",
+      "final_mlu_pct": 22.7,
+      "enlaces_criticos": [
+        {
+          "origen": "s2",
+          "destino": "s5",
+          "utilizacion_pct": 22.7
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "IGUAL_A_FS",
+      "diferencia_fs_puntos_pct": 0.0
+    },
+    {
+      "target_id": "T027",
+      "final_mlu_pct": 22.7,
+      "enlaces_criticos": [
+        {
+          "origen": "s2",
+          "destino": "s5",
+          "utilizacion_pct": 22.7
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "IGUAL_A_FS",
+      "diferencia_fs_puntos_pct": 0.0
+    },
+    {
+      "target_id": "T028",
+      "final_mlu_pct": 20.6,
+      "enlaces_criticos": [
+        {
+          "origen": "s1",
+          "destino": "s4",
+          "utilizacion_pct": 20.6
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "MEJORA_FS",
+      "diferencia_fs_puntos_pct": -2.1
+    },
+    {
+      "target_id": "T029",
+      "final_mlu_pct": 22.7,
+      "enlaces_criticos": [
+        {
+          "origen": "s2",
+          "destino": "s5",
+          "utilizacion_pct": 22.7
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "IGUAL_A_FS",
+      "diferencia_fs_puntos_pct": 0.0
+    },
+    {
+      "target_id": "T030",
+      "final_mlu_pct": 21.01,
+      "enlaces_criticos": [
+        {
+          "origen": "s3",
+          "destino": "s6",
+          "utilizacion_pct": 21.01
+        },
+        {
+          "origen": "s4",
+          "destino": "s3",
+          "utilizacion_pct": 21.01
+        },
+        {
+          "origen": "s6",
+          "destino": "s7",
+          "utilizacion_pct": 21.01
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "MEJORA_FS",
+      "diferencia_fs_puntos_pct": -1.69
+    },
+    {
+      "target_id": "T031",
+      "final_mlu_pct": 20.6,
+      "enlaces_criticos": [
+        {
+          "origen": "s1",
+          "destino": "s4",
+          "utilizacion_pct": 20.6
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "MEJORA_FS",
+      "diferencia_fs_puntos_pct": -2.1
+    },
+    {
+      "target_id": "T032",
+      "final_mlu_pct": 20.6,
+      "enlaces_criticos": [
+        {
+          "origen": "s1",
+          "destino": "s4",
+          "utilizacion_pct": 20.6
+        },
+        {
+          "origen": "s4",
+          "destino": "s2",
+          "utilizacion_pct": 20.6
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "MEJORA_FS",
+      "diferencia_fs_puntos_pct": -2.1
+    },
+    {
+      "target_id": "T033",
+      "final_mlu_pct": 22.7,
+      "enlaces_criticos": [
+        {
+          "origen": "s2",
+          "destino": "s5",
+          "utilizacion_pct": 22.7
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "IGUAL_A_FS",
+      "diferencia_fs_puntos_pct": 0.0
+    },
+    {
+      "target_id": "T034",
+      "final_mlu_pct": 27.3,
+      "enlaces_criticos": [
+        {
+          "origen": "s4",
+          "destino": "s7",
+          "utilizacion_pct": 27.3
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "EMPEORA_FS",
+      "diferencia_fs_puntos_pct": 4.6
+    },
+    {
+      "target_id": "T035",
+      "final_mlu_pct": 20.6,
+      "enlaces_criticos": [
+        {
+          "origen": "s1",
+          "destino": "s3",
+          "utilizacion_pct": 20.6
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "MEJORA_FS",
+      "diferencia_fs_puntos_pct": -2.1
+    },
+    {
+      "target_id": "T036",
+      "final_mlu_pct": 27.3,
+      "enlaces_criticos": [
+        {
+          "origen": "s2",
+          "destino": "s4",
+          "utilizacion_pct": 27.3
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "EMPEORA_FS",
+      "diferencia_fs_puntos_pct": 4.6
+    },
+    {
+      "target_id": "T037",
+      "final_mlu_pct": 22.7,
+      "enlaces_criticos": [
+        {
+          "origen": "s2",
+          "destino": "s5",
+          "utilizacion_pct": 22.7
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "IGUAL_A_FS",
+      "diferencia_fs_puntos_pct": 0.0
+    },
+    {
+      "target_id": "T038",
+      "final_mlu_pct": 20.6,
+      "enlaces_criticos": [
+        {
+          "origen": "s1",
+          "destino": "s4",
+          "utilizacion_pct": 20.6
+        },
+        {
+          "origen": "s4",
+          "destino": "s2",
+          "utilizacion_pct": 20.6
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "MEJORA_FS",
+      "diferencia_fs_puntos_pct": -2.1
+    },
+    {
+      "target_id": "T039",
+      "final_mlu_pct": 20.6,
+      "enlaces_criticos": [
+        {
+          "origen": "s1",
+          "destino": "s4",
+          "utilizacion_pct": 20.6
+        },
+        {
+          "origen": "s4",
+          "destino": "s2",
+          "utilizacion_pct": 20.6
+        }
+      ],
+      "direcciones_evaluadas": 22,
+      "comparacion_con_fs": "MEJORA_FS",
+      "diferencia_fs_puntos_pct": -2.1
+    }
+  ],
+  "parejas_target_transition": [
+    {
+      "target_id": "T001",
+      "transition_id": "T001_TR01",
+      "estrategia": "SECUENCIAL_ASC",
+      "final_mlu_pct": 22.7,
+      "comparacion_con_fs": "IGUAL_A_FS",
+      "diferencia_fs_puntos_pct": 0.0,
+      "factibilidad_preliminar": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+      "seguridad_definitiva_demostrada": false
+    },
+    {
+      "target_id": "T002",
+      "transition_id": "T002_TR01",
+      "estrategia": "SECUENCIAL_ASC",
+      "final_mlu_pct": 22.7,
+      "comparacion_con_fs": "IGUAL_A_FS",
+      "diferencia_fs_puntos_pct": 0.0,
+      "factibilidad_preliminar": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+      "seguridad_definitiva_demostrada": false
+    },
+    {
+      "target_id": "T002",
+      "transition_id": "T002_TR02",
+      "estrategia": "SECUENCIAL_DESC",
+      "final_mlu_pct": 22.7,
+      "comparacion_con_fs": "IGUAL_A_FS",
+      "diferencia_fs_puntos_pct": 0.0,
+      "factibilidad_preliminar": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+      "seguridad_definitiva_demostrada": false
+    },
+    {
+      "target_id": "T002",
+      "transition_id": "T002_TR03",
+      "estrategia": "PREPARAR_TODOS_LUEGO_ACTIVAR",
+      "final_mlu_pct": 22.7,
+      "comparacion_con_fs": "IGUAL_A_FS",
+      "diferencia_fs_puntos_pct": 0.0,
+      "factibilidad_preliminar": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+      "seguridad_definitiva_demostrada": false
+    },
+    {
+      "target_id": "T007",
+      "transition_id": "T007_TR01",
+      "estrategia": "SECUENCIAL_ASC",
+      "final_mlu_pct": 22.7,
+      "comparacion_con_fs": "IGUAL_A_FS",
+      "diferencia_fs_puntos_pct": 0.0,
+      "factibilidad_preliminar": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+      "seguridad_definitiva_demostrada": false
+    },
+    {
+      "target_id": "T013",
+      "transition_id": "T013_TR01",
+      "estrategia": "SECUENCIAL_ASC",
+      "final_mlu_pct": 14.7,
+      "comparacion_con_fs": "MEJORA_FS",
+      "diferencia_fs_puntos_pct": -8.0,
+      "factibilidad_preliminar": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+      "seguridad_definitiva_demostrada": false
+    },
+    {
+      "target_id": "T017",
+      "transition_id": "T017_TR01",
+      "estrategia": "SECUENCIAL_ASC",
+      "final_mlu_pct": 23.1,
+      "comparacion_con_fs": "EMPEORA_FS",
+      "diferencia_fs_puntos_pct": 0.4,
+      "factibilidad_preliminar": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+      "seguridad_definitiva_demostrada": false
+    },
+    {
+      "target_id": "T017",
+      "transition_id": "T017_TR02",
+      "estrategia": "SECUENCIAL_DESC",
+      "final_mlu_pct": 23.1,
+      "comparacion_con_fs": "EMPEORA_FS",
+      "diferencia_fs_puntos_pct": 0.4,
+      "factibilidad_preliminar": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+      "seguridad_definitiva_demostrada": false
+    },
+    {
+      "target_id": "T017",
+      "transition_id": "T017_TR03",
+      "estrategia": "PREPARAR_TODOS_LUEGO_ACTIVAR",
+      "final_mlu_pct": 23.1,
+      "comparacion_con_fs": "EMPEORA_FS",
+      "diferencia_fs_puntos_pct": 0.4,
+      "factibilidad_preliminar": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+      "seguridad_definitiva_demostrada": false
+    },
+    {
+      "target_id": "T020",
+      "transition_id": "T020_TR01",
+      "estrategia": "SECUENCIAL_ASC",
+      "final_mlu_pct": 28.99,
+      "comparacion_con_fs": "EMPEORA_FS",
+      "diferencia_fs_puntos_pct": 6.29,
+      "factibilidad_preliminar": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+      "seguridad_definitiva_demostrada": false
+    },
+    {
+      "target_id": "T020",
+      "transition_id": "T020_TR02",
+      "estrategia": "SECUENCIAL_DESC",
+      "final_mlu_pct": 28.99,
+      "comparacion_con_fs": "EMPEORA_FS",
+      "diferencia_fs_puntos_pct": 6.29,
+      "factibilidad_preliminar": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+      "seguridad_definitiva_demostrada": false
+    },
+    {
+      "target_id": "T020",
+      "transition_id": "T020_TR03",
+      "estrategia": "PREPARAR_TODOS_LUEGO_ACTIVAR",
+      "final_mlu_pct": 28.99,
+      "comparacion_con_fs": "EMPEORA_FS",
+      "diferencia_fs_puntos_pct": 6.29,
+      "factibilidad_preliminar": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+      "seguridad_definitiva_demostrada": false
+    },
+    {
+      "target_id": "T026",
+      "transition_id": "T026_TR01",
+      "estrategia": "SECUENCIAL_ASC",
+      "final_mlu_pct": 22.7,
+      "comparacion_con_fs": "IGUAL_A_FS",
+      "diferencia_fs_puntos_pct": 0.0,
+      "factibilidad_preliminar": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+      "seguridad_definitiva_demostrada": false
+    },
+    {
+      "target_id": "T026",
+      "transition_id": "T026_TR02",
+      "estrategia": "SECUENCIAL_DESC",
+      "final_mlu_pct": 22.7,
+      "comparacion_con_fs": "IGUAL_A_FS",
+      "diferencia_fs_puntos_pct": 0.0,
+      "factibilidad_preliminar": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+      "seguridad_definitiva_demostrada": false
+    },
+    {
+      "target_id": "T026",
+      "transition_id": "T026_TR03",
+      "estrategia": "PREPARAR_TODOS_LUEGO_ACTIVAR",
+      "final_mlu_pct": 22.7,
+      "comparacion_con_fs": "IGUAL_A_FS",
+      "diferencia_fs_puntos_pct": 0.0,
+      "factibilidad_preliminar": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+      "seguridad_definitiva_demostrada": false
+    },
+    {
+      "target_id": "T032",
+      "transition_id": "T032_TR01",
+      "estrategia": "SECUENCIAL_ASC",
+      "final_mlu_pct": 20.6,
+      "comparacion_con_fs": "MEJORA_FS",
+      "diferencia_fs_puntos_pct": -2.1,
+      "factibilidad_preliminar": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+      "seguridad_definitiva_demostrada": false
+    },
+    {
+      "target_id": "T032",
+      "transition_id": "T032_TR02",
+      "estrategia": "SECUENCIAL_DESC",
+      "final_mlu_pct": 20.6,
+      "comparacion_con_fs": "MEJORA_FS",
+      "diferencia_fs_puntos_pct": -2.1,
+      "factibilidad_preliminar": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+      "seguridad_definitiva_demostrada": false
+    },
+    {
+      "target_id": "T032",
+      "transition_id": "T032_TR03",
+      "estrategia": "PREPARAR_TODOS_LUEGO_ACTIVAR",
+      "final_mlu_pct": 20.6,
+      "comparacion_con_fs": "MEJORA_FS",
+      "diferencia_fs_puntos_pct": -2.1,
+      "factibilidad_preliminar": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+      "seguridad_definitiva_demostrada": false
+    },
+    {
+      "target_id": "T033",
+      "transition_id": "T033_TR01",
+      "estrategia": "SECUENCIAL_ASC",
+      "final_mlu_pct": 22.7,
+      "comparacion_con_fs": "IGUAL_A_FS",
+      "diferencia_fs_puntos_pct": 0.0,
+      "factibilidad_preliminar": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+      "seguridad_definitiva_demostrada": false
+    },
+    {
+      "target_id": "T033",
+      "transition_id": "T033_TR02",
+      "estrategia": "SECUENCIAL_DESC",
+      "final_mlu_pct": 22.7,
+      "comparacion_con_fs": "IGUAL_A_FS",
+      "diferencia_fs_puntos_pct": 0.0,
+      "factibilidad_preliminar": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+      "seguridad_definitiva_demostrada": false
+    },
+    {
+      "target_id": "T033",
+      "transition_id": "T033_TR03",
+      "estrategia": "PREPARAR_TODOS_LUEGO_ACTIVAR",
+      "final_mlu_pct": 22.7,
+      "comparacion_con_fs": "IGUAL_A_FS",
+      "diferencia_fs_puntos_pct": 0.0,
+      "factibilidad_preliminar": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+      "seguridad_definitiva_demostrada": false
+    },
+    {
+      "target_id": "T038",
+      "transition_id": "T038_TR01",
+      "estrategia": "SECUENCIAL_ASC",
+      "final_mlu_pct": 20.6,
+      "comparacion_con_fs": "MEJORA_FS",
+      "diferencia_fs_puntos_pct": -2.1,
+      "factibilidad_preliminar": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+      "seguridad_definitiva_demostrada": false
+    },
+    {
+      "target_id": "T038",
+      "transition_id": "T038_TR02",
+      "estrategia": "SECUENCIAL_DESC",
+      "final_mlu_pct": 20.6,
+      "comparacion_con_fs": "MEJORA_FS",
+      "diferencia_fs_puntos_pct": -2.1,
+      "factibilidad_preliminar": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+      "seguridad_definitiva_demostrada": false
+    },
+    {
+      "target_id": "T038",
+      "transition_id": "T038_TR03",
+      "estrategia": "PREPARAR_TODOS_LUEGO_ACTIVAR",
+      "final_mlu_pct": 20.6,
+      "comparacion_con_fs": "MEJORA_FS",
+      "diferencia_fs_puntos_pct": -2.1,
+      "factibilidad_preliminar": "PASA_ESTRUCTURA_PENDIENTE_SEGURIDAD",
+      "seguridad_definitiva_demostrada": false
+    }
+  ]
+}

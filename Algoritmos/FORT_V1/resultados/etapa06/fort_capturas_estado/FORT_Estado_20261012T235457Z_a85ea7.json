@@ -1,0 +1,1243 @@
+{
+  "tipo": "FORT_ESTADO_POST_FF_DINAMICO",
+  "fecha_utc": "2026-10-12T23:55:02.152846+00:00",
+  "fallo": "s1-s2",
+  "inicio_utc": "2026-10-12T23:54:57.066985+00:00",
+  "captura_atomica": false,
+  "fs": {
+    "comunicaciones": [
+      {
+        "origen": "h1",
+        "destino": "h2",
+        "ruta_seleccionada": [
+          "h1",
+          "s1",
+          "s4",
+          "s2",
+          "h2"
+        ],
+        "grupos_ff": [
+          {
+            "switch": "s1",
+            "grupo": 1000,
+            "bucket_indice": 1,
+            "modo_inferido": "RESPALDO",
+            "watch_port": 4
+          }
+        ]
+      },
+      {
+        "origen": "h1",
+        "destino": "h3",
+        "ruta_seleccionada": [
+          "h1",
+          "s1",
+          "s4",
+          "s2",
+          "s5",
+          "h3"
+        ],
+        "grupos_ff": [
+          {
+            "switch": "s1",
+            "grupo": 1001,
+            "bucket_indice": 1,
+            "modo_inferido": "RESPALDO",
+            "watch_port": 4
+          },
+          {
+            "switch": "s2",
+            "grupo": 1002,
+            "bucket_indice": 0,
+            "modo_inferido": "PRINCIPAL",
+            "watch_port": 4
+          }
+        ]
+      },
+      {
+        "origen": "h1",
+        "destino": "h4",
+        "ruta_seleccionada": [
+          "h1",
+          "s1",
+          "s4",
+          "s7",
+          "h4"
+        ],
+        "grupos_ff": [
+          {
+            "switch": "s1",
+            "grupo": 1003,
+            "bucket_indice": 0,
+            "modo_inferido": "PRINCIPAL",
+            "watch_port": 4
+          },
+          {
+            "switch": "s4",
+            "grupo": 1004,
+            "bucket_indice": 0,
+            "modo_inferido": "PRINCIPAL",
+            "watch_port": 5
+          }
+        ]
+      },
+      {
+        "origen": "h2",
+        "destino": "h1",
+        "ruta_seleccionada": [
+          "h2",
+          "s2",
+          "s4",
+          "s1",
+          "h1"
+        ],
+        "grupos_ff": [
+          {
+            "switch": "s2",
+            "grupo": 1005,
+            "bucket_indice": 1,
+            "modo_inferido": "RESPALDO",
+            "watch_port": 3
+          }
+        ]
+      },
+      {
+        "origen": "h2",
+        "destino": "h3",
+        "ruta_seleccionada": [
+          "h2",
+          "s2",
+          "s5",
+          "h3"
+        ],
+        "grupos_ff": [
+          {
+            "switch": "s2",
+            "grupo": 1006,
+            "bucket_indice": 0,
+            "modo_inferido": "PRINCIPAL",
+            "watch_port": 4
+          }
+        ]
+      },
+      {
+        "origen": "h2",
+        "destino": "h4",
+        "ruta_seleccionada": [
+          "h2",
+          "s2",
+          "s4",
+          "s7",
+          "h4"
+        ],
+        "grupos_ff": [
+          {
+            "switch": "s2",
+            "grupo": 1007,
+            "bucket_indice": 0,
+            "modo_inferido": "PRINCIPAL",
+            "watch_port": 3
+          },
+          {
+            "switch": "s4",
+            "grupo": 1008,
+            "bucket_indice": 0,
+            "modo_inferido": "PRINCIPAL",
+            "watch_port": 5
+          }
+        ]
+      },
+      {
+        "origen": "h3",
+        "destino": "h1",
+        "ruta_seleccionada": [
+          "h3",
+          "s5",
+          "s2",
+          "s4",
+          "s1",
+          "h1"
+        ],
+        "grupos_ff": [
+          {
+            "switch": "s5",
+            "grupo": 1009,
+            "bucket_indice": 0,
+            "modo_inferido": "PRINCIPAL",
+            "watch_port": 2
+          },
+          {
+            "switch": "s2",
+            "grupo": 1010,
+            "bucket_indice": 1,
+            "modo_inferido": "RESPALDO",
+            "watch_port": 3
+          }
+        ]
+      },
+      {
+        "origen": "h3",
+        "destino": "h2",
+        "ruta_seleccionada": [
+          "h3",
+          "s5",
+          "s2",
+          "h2"
+        ],
+        "grupos_ff": [
+          {
+            "switch": "s5",
+            "grupo": 1011,
+            "bucket_indice": 0,
+            "modo_inferido": "PRINCIPAL",
+            "watch_port": 2
+          }
+        ]
+      },
+      {
+        "origen": "h3",
+        "destino": "h4",
+        "ruta_seleccionada": [
+          "h3",
+          "s5",
+          "s4",
+          "s7",
+          "h4"
+        ],
+        "grupos_ff": [
+          {
+            "switch": "s5",
+            "grupo": 1012,
+            "bucket_indice": 0,
+            "modo_inferido": "PRINCIPAL",
+            "watch_port": 3
+          },
+          {
+            "switch": "s4",
+            "grupo": 1013,
+            "bucket_indice": 0,
+            "modo_inferido": "PRINCIPAL",
+            "watch_port": 5
+          }
+        ]
+      },
+      {
+        "origen": "h4",
+        "destino": "h1",
+        "ruta_seleccionada": [
+          "h4",
+          "s7",
+          "s4",
+          "s1",
+          "h1"
+        ],
+        "grupos_ff": [
+          {
+            "switch": "s7",
+            "grupo": 1014,
+            "bucket_indice": 0,
+            "modo_inferido": "PRINCIPAL",
+            "watch_port": 2
+          },
+          {
+            "switch": "s4",
+            "grupo": 1015,
+            "bucket_indice": 0,
+            "modo_inferido": "PRINCIPAL",
+            "watch_port": 1
+          }
+        ]
+      },
+      {
+        "origen": "h4",
+        "destino": "h2",
+        "ruta_seleccionada": [
+          "h4",
+          "s7",
+          "s4",
+          "s2",
+          "h2"
+        ],
+        "grupos_ff": [
+          {
+            "switch": "s7",
+            "grupo": 1016,
+            "bucket_indice": 0,
+            "modo_inferido": "PRINCIPAL",
+            "watch_port": 2
+          },
+          {
+            "switch": "s4",
+            "grupo": 1017,
+            "bucket_indice": 0,
+            "modo_inferido": "PRINCIPAL",
+            "watch_port": 2
+          }
+        ]
+      },
+      {
+        "origen": "h4",
+        "destino": "h3",
+        "ruta_seleccionada": [
+          "h4",
+          "s7",
+          "s4",
+          "s5",
+          "h3"
+        ],
+        "grupos_ff": [
+          {
+            "switch": "s7",
+            "grupo": 1018,
+            "bucket_indice": 0,
+            "modo_inferido": "PRINCIPAL",
+            "watch_port": 2
+          },
+          {
+            "switch": "s4",
+            "grupo": 1019,
+            "bucket_indice": 0,
+            "modo_inferido": "PRINCIPAL",
+            "watch_port": 4
+          }
+        ]
+      }
+    ],
+    "cantidad": 12
+  },
+  "ps": {
+    "grupos_ff": [
+      {
+        "switch": "s1",
+        "group_id": 1003,
+        "buckets": [
+          {
+            "indice": 0,
+            "watch_port": 4,
+            "activo": true,
+            "acciones": [
+              "OFPActionOutput(len=16,max_len=65509,port=4,type=0)"
+            ]
+          },
+          {
+            "indice": 1,
+            "watch_port": 2,
+            "activo": false,
+            "acciones": [
+              "OFPActionPushVlan(ethertype=33024,len=8,type=17)",
+              "OFPActionSetField(vlan_vid=4199)",
+              "OFPActionOutput(len=16,max_len=65509,port=2,type=0)"
+            ]
+          }
+        ],
+        "bucket_seleccionado_inferido": 0
+      },
+      {
+        "switch": "s1",
+        "group_id": 1000,
+        "buckets": [
+          {
+            "indice": 0,
+            "watch_port": 2,
+            "activo": false,
+            "acciones": [
+              "OFPActionOutput(len=16,max_len=65509,port=2,type=0)"
+            ]
+          },
+          {
+            "indice": 1,
+            "watch_port": 4,
+            "activo": true,
+            "acciones": [
+              "OFPActionPushVlan(ethertype=33024,len=8,type=17)",
+              "OFPActionSetField(vlan_vid=4196)",
+              "OFPActionOutput(len=16,max_len=65509,port=4,type=0)"
+            ]
+          }
+        ],
+        "bucket_seleccionado_inferido": 1
+      },
+      {
+        "switch": "s1",
+        "group_id": 1001,
+        "buckets": [
+          {
+            "indice": 0,
+            "watch_port": 2,
+            "activo": false,
+            "acciones": [
+              "OFPActionOutput(len=16,max_len=65509,port=2,type=0)"
+            ]
+          },
+          {
+            "indice": 1,
+            "watch_port": 4,
+            "activo": true,
+            "acciones": [
+              "OFPActionPushVlan(ethertype=33024,len=8,type=17)",
+              "OFPActionSetField(vlan_vid=4197)",
+              "OFPActionOutput(len=16,max_len=65509,port=4,type=0)"
+            ]
+          }
+        ],
+        "bucket_seleccionado_inferido": 1
+      },
+      {
+        "switch": "s2",
+        "group_id": 1006,
+        "buckets": [
+          {
+            "indice": 0,
+            "watch_port": 4,
+            "activo": true,
+            "acciones": [
+              "OFPActionOutput(len=16,max_len=65509,port=4,type=0)"
+            ]
+          },
+          {
+            "indice": 1,
+            "watch_port": 3,
+            "activo": true,
+            "acciones": [
+              "OFPActionPushVlan(ethertype=33024,len=8,type=17)",
+              "OFPActionSetField(vlan_vid=4202)",
+              "OFPActionOutput(len=16,max_len=65509,port=3,type=0)"
+            ]
+          }
+        ],
+        "bucket_seleccionado_inferido": 0
+      },
+      {
+        "switch": "s2",
+        "group_id": 1002,
+        "buckets": [
+          {
+            "indice": 0,
+            "watch_port": 4,
+            "activo": true,
+            "acciones": [
+              "OFPActionOutput(len=16,max_len=65509,port=4,type=0)"
+            ]
+          },
+          {
+            "indice": 1,
+            "watch_port": 3,
+            "activo": true,
+            "acciones": [
+              "OFPActionPushVlan(ethertype=33024,len=8,type=17)",
+              "OFPActionSetField(vlan_vid=4198)",
+              "OFPActionOutput(len=16,max_len=65509,port=3,type=0)"
+            ]
+          }
+        ],
+        "bucket_seleccionado_inferido": 0
+      },
+      {
+        "switch": "s2",
+        "group_id": 1005,
+        "buckets": [
+          {
+            "indice": 0,
+            "watch_port": 2,
+            "activo": false,
+            "acciones": [
+              "OFPActionOutput(len=16,max_len=65509,port=2,type=0)"
+            ]
+          },
+          {
+            "indice": 1,
+            "watch_port": 3,
+            "activo": true,
+            "acciones": [
+              "OFPActionPushVlan(ethertype=33024,len=8,type=17)",
+              "OFPActionSetField(vlan_vid=4201)",
+              "OFPActionOutput(len=16,max_len=65509,port=3,type=0)"
+            ]
+          }
+        ],
+        "bucket_seleccionado_inferido": 1
+      },
+      {
+        "switch": "s2",
+        "group_id": 1007,
+        "buckets": [
+          {
+            "indice": 0,
+            "watch_port": 3,
+            "activo": true,
+            "acciones": [
+              "OFPActionOutput(len=16,max_len=65509,port=3,type=0)"
+            ]
+          },
+          {
+            "indice": 1,
+            "watch_port": 2,
+            "activo": false,
+            "acciones": [
+              "OFPActionPushVlan(ethertype=33024,len=8,type=17)",
+              "OFPActionSetField(vlan_vid=4203)",
+              "OFPActionOutput(len=16,max_len=65509,port=2,type=0)"
+            ]
+          }
+        ],
+        "bucket_seleccionado_inferido": 0
+      },
+      {
+        "switch": "s2",
+        "group_id": 1010,
+        "buckets": [
+          {
+            "indice": 0,
+            "watch_port": 2,
+            "activo": false,
+            "acciones": [
+              "OFPActionOutput(len=16,max_len=65509,port=2,type=0)"
+            ]
+          },
+          {
+            "indice": 1,
+            "watch_port": 3,
+            "activo": true,
+            "acciones": [
+              "OFPActionPushVlan(ethertype=33024,len=8,type=17)",
+              "OFPActionSetField(vlan_vid=4206)",
+              "OFPActionOutput(len=16,max_len=65509,port=3,type=0)"
+            ]
+          }
+        ],
+        "bucket_seleccionado_inferido": 1
+      },
+      {
+        "switch": "s4",
+        "group_id": 1019,
+        "buckets": [
+          {
+            "indice": 0,
+            "watch_port": 4,
+            "activo": true,
+            "acciones": [
+              "OFPActionOutput(len=16,max_len=65509,port=4,type=0)"
+            ]
+          },
+          {
+            "indice": 1,
+            "watch_port": 2,
+            "activo": true,
+            "acciones": [
+              "OFPActionPushVlan(ethertype=33024,len=8,type=17)",
+              "OFPActionSetField(vlan_vid=4215)",
+              "OFPActionOutput(len=16,max_len=65509,port=2,type=0)"
+            ]
+          }
+        ],
+        "bucket_seleccionado_inferido": 0
+      },
+      {
+        "switch": "s4",
+        "group_id": 1008,
+        "buckets": [
+          {
+            "indice": 0,
+            "watch_port": 5,
+            "activo": true,
+            "acciones": [
+              "OFPActionOutput(len=16,max_len=65509,port=5,type=0)"
+            ]
+          },
+          {
+            "indice": 1,
+            "watch_port": 3,
+            "activo": true,
+            "acciones": [
+              "OFPActionPushVlan(ethertype=33024,len=8,type=17)",
+              "OFPActionSetField(vlan_vid=4204)",
+              "OFPActionOutput(len=16,max_len=65509,port=3,type=0)"
+            ]
+          }
+        ],
+        "bucket_seleccionado_inferido": 0
+      },
+      {
+        "switch": "s4",
+        "group_id": 1004,
+        "buckets": [
+          {
+            "indice": 0,
+            "watch_port": 5,
+            "activo": true,
+            "acciones": [
+              "OFPActionOutput(len=16,max_len=65509,port=5,type=0)"
+            ]
+          },
+          {
+            "indice": 1,
+            "watch_port": 3,
+            "activo": true,
+            "acciones": [
+              "OFPActionPushVlan(ethertype=33024,len=8,type=17)",
+              "OFPActionSetField(vlan_vid=4200)",
+              "OFPActionOutput(len=16,max_len=65509,port=3,type=0)"
+            ]
+          }
+        ],
+        "bucket_seleccionado_inferido": 0
+      },
+      {
+        "switch": "s4",
+        "group_id": 1013,
+        "buckets": [
+          {
+            "indice": 0,
+            "watch_port": 5,
+            "activo": true,
+            "acciones": [
+              "OFPActionOutput(len=16,max_len=65509,port=5,type=0)"
+            ]
+          },
+          {
+            "indice": 1,
+            "watch_port": 3,
+            "activo": true,
+            "acciones": [
+              "OFPActionPushVlan(ethertype=33024,len=8,type=17)",
+              "OFPActionSetField(vlan_vid=4209)",
+              "OFPActionOutput(len=16,max_len=65509,port=3,type=0)"
+            ]
+          }
+        ],
+        "bucket_seleccionado_inferido": 0
+      },
+      {
+        "switch": "s4",
+        "group_id": 1015,
+        "buckets": [
+          {
+            "indice": 0,
+            "watch_port": 1,
+            "activo": true,
+            "acciones": [
+              "OFPActionOutput(len=16,max_len=65509,port=1,type=0)"
+            ]
+          },
+          {
+            "indice": 1,
+            "watch_port": 2,
+            "activo": true,
+            "acciones": [
+              "OFPActionPushVlan(ethertype=33024,len=8,type=17)",
+              "OFPActionSetField(vlan_vid=4211)",
+              "OFPActionOutput(len=16,max_len=65509,port=2,type=0)"
+            ]
+          }
+        ],
+        "bucket_seleccionado_inferido": 0
+      },
+      {
+        "switch": "s4",
+        "group_id": 1017,
+        "buckets": [
+          {
+            "indice": 0,
+            "watch_port": 2,
+            "activo": true,
+            "acciones": [
+              "OFPActionOutput(len=16,max_len=65509,port=2,type=0)"
+            ]
+          },
+          {
+            "indice": 1,
+            "watch_port": 1,
+            "activo": true,
+            "acciones": [
+              "OFPActionPushVlan(ethertype=33024,len=8,type=17)",
+              "OFPActionSetField(vlan_vid=4213)",
+              "OFPActionOutput(len=16,max_len=65509,port=1,type=0)"
+            ]
+          }
+        ],
+        "bucket_seleccionado_inferido": 0
+      },
+      {
+        "switch": "s5",
+        "group_id": 1009,
+        "buckets": [
+          {
+            "indice": 0,
+            "watch_port": 2,
+            "activo": true,
+            "acciones": [
+              "OFPActionOutput(len=16,max_len=65509,port=2,type=0)"
+            ]
+          },
+          {
+            "indice": 1,
+            "watch_port": 3,
+            "activo": true,
+            "acciones": [
+              "OFPActionPushVlan(ethertype=33024,len=8,type=17)",
+              "OFPActionSetField(vlan_vid=4205)",
+              "OFPActionOutput(len=16,max_len=65509,port=3,type=0)"
+            ]
+          }
+        ],
+        "bucket_seleccionado_inferido": 0
+      },
+      {
+        "switch": "s5",
+        "group_id": 1012,
+        "buckets": [
+          {
+            "indice": 0,
+            "watch_port": 3,
+            "activo": true,
+            "acciones": [
+              "OFPActionOutput(len=16,max_len=65509,port=3,type=0)"
+            ]
+          },
+          {
+            "indice": 1,
+            "watch_port": 2,
+            "activo": true,
+            "acciones": [
+              "OFPActionPushVlan(ethertype=33024,len=8,type=17)",
+              "OFPActionSetField(vlan_vid=4208)",
+              "OFPActionOutput(len=16,max_len=65509,port=2,type=0)"
+            ]
+          }
+        ],
+        "bucket_seleccionado_inferido": 0
+      },
+      {
+        "switch": "s5",
+        "group_id": 1011,
+        "buckets": [
+          {
+            "indice": 0,
+            "watch_port": 2,
+            "activo": true,
+            "acciones": [
+              "OFPActionOutput(len=16,max_len=65509,port=2,type=0)"
+            ]
+          },
+          {
+            "indice": 1,
+            "watch_port": 3,
+            "activo": true,
+            "acciones": [
+              "OFPActionPushVlan(ethertype=33024,len=8,type=17)",
+              "OFPActionSetField(vlan_vid=4207)",
+              "OFPActionOutput(len=16,max_len=65509,port=3,type=0)"
+            ]
+          }
+        ],
+        "bucket_seleccionado_inferido": 0
+      },
+      {
+        "switch": "s7",
+        "group_id": 1016,
+        "buckets": [
+          {
+            "indice": 0,
+            "watch_port": 2,
+            "activo": true,
+            "acciones": [
+              "OFPActionOutput(len=16,max_len=65509,port=2,type=0)"
+            ]
+          },
+          {
+            "indice": 1,
+            "watch_port": 3,
+            "activo": true,
+            "acciones": [
+              "OFPActionPushVlan(ethertype=33024,len=8,type=17)",
+              "OFPActionSetField(vlan_vid=4212)",
+              "OFPActionOutput(len=16,max_len=65509,port=3,type=0)"
+            ]
+          }
+        ],
+        "bucket_seleccionado_inferido": 0
+      },
+      {
+        "switch": "s7",
+        "group_id": 1014,
+        "buckets": [
+          {
+            "indice": 0,
+            "watch_port": 2,
+            "activo": true,
+            "acciones": [
+              "OFPActionOutput(len=16,max_len=65509,port=2,type=0)"
+            ]
+          },
+          {
+            "indice": 1,
+            "watch_port": 3,
+            "activo": true,
+            "acciones": [
+              "OFPActionPushVlan(ethertype=33024,len=8,type=17)",
+              "OFPActionSetField(vlan_vid=4210)",
+              "OFPActionOutput(len=16,max_len=65509,port=3,type=0)"
+            ]
+          }
+        ],
+        "bucket_seleccionado_inferido": 0
+      },
+      {
+        "switch": "s7",
+        "group_id": 1018,
+        "buckets": [
+          {
+            "indice": 0,
+            "watch_port": 2,
+            "activo": true,
+            "acciones": [
+              "OFPActionOutput(len=16,max_len=65509,port=2,type=0)"
+            ]
+          },
+          {
+            "indice": 1,
+            "watch_port": 3,
+            "activo": true,
+            "acciones": [
+              "OFPActionPushVlan(ethertype=33024,len=8,type=17)",
+              "OFPActionSetField(vlan_vid=4214)",
+              "OFPActionOutput(len=16,max_len=65509,port=3,type=0)"
+            ]
+          }
+        ],
+        "bucket_seleccionado_inferido": 0
+      }
+    ],
+    "cantidad_grupos_ff": 20,
+    "cantidad_buckets_ff": 40,
+    "grupos_con_respaldo_inferido": 4,
+    "reglas_openflow_totales": 156,
+    "nota": "Bucket seleccionado inferido por estado del watch_port"
+  },
+  "rs": {
+    "cantidad_direcciones": 24,
+    "cantidad_direcciones_operativas": 22,
+    "capacidad_fuente": "escenario.json: capacidad nominal, no verificacion tc",
+    "maxima_utilizacion_observada_pct": 23.56592,
+    "direcciones": [
+      {
+        "origen": "s1",
+        "destino": "s2",
+        "puerto": 2,
+        "activo": false,
+        "tx_bytes_delta": 0,
+        "intervalo_s": 5.02643,
+        "tasa_tx_bps": 0.0,
+        "capacidad_configurada_bps": 100000000.0,
+        "utilizacion_observada_pct": 0.0,
+        "capacidad_residual_estimada_bps": 0.0,
+        "advertencia": null
+      },
+      {
+        "origen": "s2",
+        "destino": "s1",
+        "puerto": 2,
+        "activo": false,
+        "tx_bytes_delta": 0,
+        "intervalo_s": 5.02544,
+        "tasa_tx_bps": 0.0,
+        "capacidad_configurada_bps": 100000000.0,
+        "utilizacion_observada_pct": 0.0,
+        "capacidad_residual_estimada_bps": 0.0,
+        "advertencia": null
+      },
+      {
+        "origen": "s1",
+        "destino": "s3",
+        "puerto": 3,
+        "activo": true,
+        "tx_bytes_delta": 0,
+        "intervalo_s": 5.02643,
+        "tasa_tx_bps": 0.0,
+        "capacidad_configurada_bps": 100000000.0,
+        "utilizacion_observada_pct": 0.0,
+        "capacidad_residual_estimada_bps": 100000000.0,
+        "advertencia": null
+      },
+      {
+        "origen": "s3",
+        "destino": "s1",
+        "puerto": 1,
+        "activo": true,
+        "tx_bytes_delta": 0,
+        "intervalo_s": 5.02045,
+        "tasa_tx_bps": 0.0,
+        "capacidad_configurada_bps": 100000000.0,
+        "utilizacion_observada_pct": 0.0,
+        "capacidad_residual_estimada_bps": 100000000.0,
+        "advertencia": null
+      },
+      {
+        "origen": "s1",
+        "destino": "s4",
+        "puerto": 4,
+        "activo": true,
+        "tx_bytes_delta": 13498878,
+        "intervalo_s": 5.02643,
+        "tasa_tx_bps": 21484632.833,
+        "capacidad_configurada_bps": 100000000.0,
+        "utilizacion_observada_pct": 21.48463,
+        "capacidad_residual_estimada_bps": 78515367.16724735,
+        "advertencia": null
+      },
+      {
+        "origen": "s4",
+        "destino": "s1",
+        "puerto": 1,
+        "activo": true,
+        "tx_bytes_delta": 5456760,
+        "intervalo_s": 5.01595,
+        "tasa_tx_bps": 8703050.394,
+        "capacidad_configurada_bps": 100000000.0,
+        "utilizacion_observada_pct": 8.70305,
+        "capacidad_residual_estimada_bps": 91296949.60624355,
+        "advertencia": null
+      },
+      {
+        "origen": "s2",
+        "destino": "s4",
+        "puerto": 3,
+        "activo": true,
+        "tx_bytes_delta": 4102008,
+        "intervalo_s": 5.02544,
+        "tasa_tx_bps": 6529984.96,
+        "capacidad_configurada_bps": 100000000.0,
+        "utilizacion_observada_pct": 6.52998,
+        "capacidad_residual_estimada_bps": 93470015.040225,
+        "advertencia": null
+      },
+      {
+        "origen": "s4",
+        "destino": "s2",
+        "puerto": 2,
+        "activo": true,
+        "tx_bytes_delta": 13480734,
+        "intervalo_s": 5.01595,
+        "tasa_tx_bps": 21500580.445,
+        "capacidad_configurada_bps": 100000000.0,
+        "utilizacion_observada_pct": 21.50058,
+        "capacidad_residual_estimada_bps": 78499419.5554091,
+        "advertencia": null
+      },
+      {
+        "origen": "s2",
+        "destino": "s5",
+        "puerto": 4,
+        "activo": true,
+        "tx_bytes_delta": 14803644,
+        "intervalo_s": 5.02544,
+        "tasa_tx_bps": 23565915.198,
+        "capacidad_configurada_bps": 100000000.0,
+        "utilizacion_observada_pct": 23.56592,
+        "capacidad_residual_estimada_bps": 76434084.80191569,
+        "advertencia": null
+      },
+      {
+        "origen": "s5",
+        "destino": "s2",
+        "puerto": 2,
+        "activo": true,
+        "tx_bytes_delta": 11844,
+        "intervalo_s": 5.01594,
+        "tasa_tx_bps": 18890.189,
+        "capacidad_configurada_bps": 100000000.0,
+        "utilizacion_observada_pct": 0.01889,
+        "capacidad_residual_estimada_bps": 99981109.8105596,
+        "advertencia": null
+      },
+      {
+        "origen": "s3",
+        "destino": "s4",
+        "puerto": 2,
+        "activo": true,
+        "tx_bytes_delta": 0,
+        "intervalo_s": 5.02045,
+        "tasa_tx_bps": 0.0,
+        "capacidad_configurada_bps": 100000000.0,
+        "utilizacion_observada_pct": 0.0,
+        "capacidad_residual_estimada_bps": 100000000.0,
+        "advertencia": null
+      },
+      {
+        "origen": "s4",
+        "destino": "s3",
+        "puerto": 3,
+        "activo": true,
+        "tx_bytes_delta": 0,
+        "intervalo_s": 5.01595,
+        "tasa_tx_bps": 0.0,
+        "capacidad_configurada_bps": 100000000.0,
+        "utilizacion_observada_pct": 0.0,
+        "capacidad_residual_estimada_bps": 100000000.0,
+        "advertencia": null
+      },
+      {
+        "origen": "s3",
+        "destino": "s6",
+        "puerto": 3,
+        "activo": true,
+        "tx_bytes_delta": 0,
+        "intervalo_s": 5.02045,
+        "tasa_tx_bps": 0.0,
+        "capacidad_configurada_bps": 100000000.0,
+        "utilizacion_observada_pct": 0.0,
+        "capacidad_residual_estimada_bps": 100000000.0,
+        "advertencia": null
+      },
+      {
+        "origen": "s6",
+        "destino": "s3",
+        "puerto": 1,
+        "activo": true,
+        "tx_bytes_delta": 0,
+        "intervalo_s": 5.02042,
+        "tasa_tx_bps": 0.0,
+        "capacidad_configurada_bps": 100000000.0,
+        "utilizacion_observada_pct": 0.0,
+        "capacidad_residual_estimada_bps": 100000000.0,
+        "advertencia": null
+      },
+      {
+        "origen": "s4",
+        "destino": "s5",
+        "puerto": 4,
+        "activo": true,
+        "tx_bytes_delta": 7962,
+        "intervalo_s": 5.01595,
+        "tasa_tx_bps": 12698.687,
+        "capacidad_configurada_bps": 100000000.0,
+        "utilizacion_observada_pct": 0.0127,
+        "capacidad_residual_estimada_bps": 99987301.31300715,
+        "advertencia": null
+      },
+      {
+        "origen": "s5",
+        "destino": "s4",
+        "puerto": 3,
+        "activo": true,
+        "tx_bytes_delta": 5247888,
+        "intervalo_s": 5.01594,
+        "tasa_tx_bps": 8369942.459,
+        "capacidad_configurada_bps": 100000000.0,
+        "utilizacion_observada_pct": 8.36994,
+        "capacidad_residual_estimada_bps": 91630057.5412016,
+        "advertencia": null
+      },
+      {
+        "origen": "s4",
+        "destino": "s7",
+        "puerto": 5,
+        "activo": true,
+        "tx_bytes_delta": 9391062,
+        "intervalo_s": 5.01595,
+        "tasa_tx_bps": 14977914.703,
+        "capacidad_configurada_bps": 100000000.0,
+        "utilizacion_observada_pct": 14.97791,
+        "capacidad_residual_estimada_bps": 85022085.2966062,
+        "advertencia": null
+      },
+      {
+        "origen": "s7",
+        "destino": "s4",
+        "puerto": 2,
+        "activo": true,
+        "tx_bytes_delta": 5442174,
+        "intervalo_s": 5.02545,
+        "tasa_tx_bps": 8663380.992,
+        "capacidad_configurada_bps": 100000000.0,
+        "utilizacion_observada_pct": 8.66338,
+        "capacidad_residual_estimada_bps": 91336619.00801018,
+        "advertencia": null
+      },
+      {
+        "origen": "s5",
+        "destino": "s8",
+        "puerto": 4,
+        "activo": true,
+        "tx_bytes_delta": 0,
+        "intervalo_s": 5.01594,
+        "tasa_tx_bps": 0.0,
+        "capacidad_configurada_bps": 100000000.0,
+        "utilizacion_observada_pct": 0.0,
+        "capacidad_residual_estimada_bps": 100000000.0,
+        "advertencia": null
+      },
+      {
+        "origen": "s8",
+        "destino": "s5",
+        "puerto": 1,
+        "activo": true,
+        "tx_bytes_delta": 0,
+        "intervalo_s": 5.02546,
+        "tasa_tx_bps": 0.0,
+        "capacidad_configurada_bps": 100000000.0,
+        "utilizacion_observada_pct": 0.0,
+        "capacidad_residual_estimada_bps": 100000000.0,
+        "advertencia": null
+      },
+      {
+        "origen": "s6",
+        "destino": "s7",
+        "puerto": 2,
+        "activo": true,
+        "tx_bytes_delta": 0,
+        "intervalo_s": 5.02042,
+        "tasa_tx_bps": 0.0,
+        "capacidad_configurada_bps": 100000000.0,
+        "utilizacion_observada_pct": 0.0,
+        "capacidad_residual_estimada_bps": 100000000.0,
+        "advertencia": null
+      },
+      {
+        "origen": "s7",
+        "destino": "s6",
+        "puerto": 3,
+        "activo": true,
+        "tx_bytes_delta": 0,
+        "intervalo_s": 5.02545,
+        "tasa_tx_bps": 0.0,
+        "capacidad_configurada_bps": 100000000.0,
+        "utilizacion_observada_pct": 0.0,
+        "capacidad_residual_estimada_bps": 100000000.0,
+        "advertencia": null
+      },
+      {
+        "origen": "s7",
+        "destino": "s8",
+        "puerto": 4,
+        "activo": true,
+        "tx_bytes_delta": 0,
+        "intervalo_s": 5.02545,
+        "tasa_tx_bps": 0.0,
+        "capacidad_configurada_bps": 100000000.0,
+        "utilizacion_observada_pct": 0.0,
+        "capacidad_residual_estimada_bps": 100000000.0,
+        "advertencia": null
+      },
+      {
+        "origen": "s8",
+        "destino": "s7",
+        "puerto": 2,
+        "activo": true,
+        "tx_bytes_delta": 0,
+        "intervalo_s": 5.02546,
+        "tasa_tx_bps": 0.0,
+        "capacidad_configurada_bps": 100000000.0,
+        "utilizacion_observada_pct": 0.0,
+        "capacidad_residual_estimada_bps": 100000000.0,
+        "advertencia": null
+      }
+    ]
+  },
+  "demandas": {
+    "fuente": "FlowStats de reglas IPv4 en switches de ingreso",
+    "tipo": "DEMANDAS_IP_OBSERVADAS_EN_VENTANA",
+    "nota": "No separa TCP/UDP ni ARP. Sin trafico, las tasas pueden ser cero",
+    "comunicaciones": [
+      {
+        "origen": "h1",
+        "destino": "h2",
+        "tasa_ipv4_observada_bps": 11099449.404,
+        "bytes_delta": 6973834,
+        "intervalo_s": 5.02644,
+        "protocolo": "IP_AGREGADO"
+      },
+      {
+        "origen": "h1",
+        "destino": "h3",
+        "tasa_ipv4_observada_bps": 10829144.162,
+        "bytes_delta": 6804000,
+        "intervalo_s": 5.02644,
+        "protocolo": "IP_AGREGADO"
+      },
+      {
+        "origen": "h1",
+        "destino": "h4",
+        "tasa_ipv4_observada_bps": 0.0,
+        "bytes_delta": 0,
+        "intervalo_s": 5.02644,
+        "protocolo": "IP_AGREGADO"
+      },
+      {
+        "origen": "h2",
+        "destino": "h1",
+        "tasa_ipv4_observada_bps": 44232.444,
+        "bytes_delta": 27786,
+        "intervalo_s": 5.02545,
+        "protocolo": "IP_AGREGADO"
+      },
+      {
+        "origen": "h2",
+        "destino": "h3",
+        "tasa_ipv4_observada_bps": 12738132.082,
+        "bytes_delta": 8001858,
+        "intervalo_s": 5.02545,
+        "protocolo": "IP_AGREGADO"
+      },
+      {
+        "origen": "h2",
+        "destino": "h4",
+        "tasa_ipv4_observada_bps": 6486724.725,
+        "bytes_delta": 4074840,
+        "intervalo_s": 5.02545,
+        "protocolo": "IP_AGREGADO"
+      },
+      {
+        "origen": "h3",
+        "destino": "h1",
+        "tasa_ipv4_observada_bps": 0.0,
+        "bytes_delta": 0,
+        "intervalo_s": 5.01595,
+        "protocolo": "IP_AGREGADO"
+      },
+      {
+        "origen": "h3",
+        "destino": "h2",
+        "tasa_ipv4_observada_bps": 18756.169,
+        "bytes_delta": 11760,
+        "intervalo_s": 5.01595,
+        "protocolo": "IP_AGREGADO"
+      },
+      {
+        "origen": "h3",
+        "destino": "h4",
+        "tasa_ipv4_observada_bps": 8368696.513,
+        "bytes_delta": 5247120,
+        "intervalo_s": 5.01595,
+        "protocolo": "IP_AGREGADO"
+      },
+      {
+        "origen": "h4",
+        "destino": "h1",
+        "tasa_ipv4_observada_bps": 8652965.295,
+        "bytes_delta": 5435640,
+        "intervalo_s": 5.02546,
+        "protocolo": "IP_AGREGADO"
+      },
+      {
+        "origen": "h4",
+        "destino": "h2",
+        "tasa_ipv4_observada_bps": 0.0,
+        "bytes_delta": 0,
+        "intervalo_s": 5.02546,
+        "protocolo": "IP_AGREGADO"
+      },
+      {
+        "origen": "h4",
+        "destino": "h3",
+        "tasa_ipv4_observada_bps": 12502.739,
+        "bytes_delta": 7854,
+        "intervalo_s": 5.02546,
+        "protocolo": "IP_AGREGADO"
+      }
+    ],
+    "comunicaciones_con_trafico": 9
+  },
+  "reoptimizacion_ejecutada": false,
+  "nota": "Captura coordinada no atomica con intervalos reales de contadores OpenFlow"
+}

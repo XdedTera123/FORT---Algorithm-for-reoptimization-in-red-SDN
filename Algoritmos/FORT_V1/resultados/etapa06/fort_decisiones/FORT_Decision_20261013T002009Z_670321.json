@@ -1,0 +1,14 @@
+{
+  "tipo": "FORT_DECISION_DINAMICA",
+  "estado": "SIN_CARGA_SUFICIENTE",
+  "generado_utc": "2026-10-13T00:20:14.606179+00:00",
+  "fallo": [
+    "s1",
+    "s2"
+  ],
+  "demanda_total_observada_bps": 0.0,
+  "mlu_fs_observada_pct": 0.0,
+  "pareja_preferida_modelo": null,
+  "mejora_real_observada_pct": null,
+  "ejecucion_openflow_autorizada": false
+}

@@ -1,0 +1,143 @@
+{
+  "tipo": "FORT_EJECUCION_V1",
+  "inicio_utc": "2026-10-13T14:07:37.590555+00:00",
+  "captura_origen_utc": "2026-10-13T14:07:30.785261+00:00",
+  "fallo": "s1-s2",
+  "ejecucion_habilitada": true,
+  "estado": "PILOTO_APLICADO_Y_REVERTIDO",
+  "etapas": [
+    "PRECONDICIONES_VERIFICADAS",
+    "REGLAS_PREPARADAS_VERIFICADAS",
+    "GRUPOS_FF_PREPARADOS_VERIFICADOS",
+    "RUTAS_INGRESO_ACTIVADAS_VERIFICADAS"
+  ],
+  "mlu_ff_observada_pct": 23.37048,
+  "mlu_post_fort_observada_pct": 12.642493,
+  "mejora_observada_pp": 10.727987,
+  "transition_id": "T00014_TR01_ASC",
+  "orden_aplicado": [
+    "h1->h3",
+    "h3->h4"
+  ],
+  "direccion_mlu_post": [
+    {
+      "origen": "s1",
+      "destino": "s4",
+      "utilizacion_pct": 10.248932
+    },
+    {
+      "origen": "s4",
+      "destino": "s1",
+      "utilizacion_pct": 8.633805
+    },
+    {
+      "origen": "s3",
+      "destino": "s6",
+      "utilizacion_pct": 0.0
+    },
+    {
+      "origen": "s6",
+      "destino": "s3",
+      "utilizacion_pct": 0.0
+    },
+    {
+      "origen": "s8",
+      "destino": "s7",
+      "utilizacion_pct": 8.471943
+    },
+    {
+      "origen": "s7",
+      "destino": "s8",
+      "utilizacion_pct": 0.0
+    },
+    {
+      "origen": "s6",
+      "destino": "s7",
+      "utilizacion_pct": 0.0
+    },
+    {
+      "origen": "s7",
+      "destino": "s6",
+      "utilizacion_pct": 0.0
+    },
+    {
+      "origen": "s2",
+      "destino": "s5",
+      "utilizacion_pct": 12.642493
+    },
+    {
+      "origen": "s5",
+      "destino": "s2",
+      "utilizacion_pct": 0.03711
+    },
+    {
+      "origen": "s1",
+      "destino": "s3",
+      "utilizacion_pct": 8.675274
+    },
+    {
+      "origen": "s3",
+      "destino": "s1",
+      "utilizacion_pct": 0.0
+    },
+    {
+      "origen": "s4",
+      "destino": "s7",
+      "utilizacion_pct": 6.473476
+    },
+    {
+      "origen": "s7",
+      "destino": "s4",
+      "utilizacion_pct": 8.640087
+    },
+    {
+      "origen": "s4",
+      "destino": "s3",
+      "utilizacion_pct": 0.0
+    },
+    {
+      "origen": "s3",
+      "destino": "s4",
+      "utilizacion_pct": 8.66568
+    },
+    {
+      "origen": "s5",
+      "destino": "s8",
+      "utilizacion_pct": 8.545341
+    },
+    {
+      "origen": "s8",
+      "destino": "s5",
+      "utilizacion_pct": 0.0
+    },
+    {
+      "origen": "s4",
+      "destino": "s5",
+      "utilizacion_pct": 8.678462
+    },
+    {
+      "origen": "s5",
+      "destino": "s4",
+      "utilizacion_pct": 0.0
+    },
+    {
+      "origen": "s2",
+      "destino": "s4",
+      "utilizacion_pct": 6.487172
+    },
+    {
+      "origen": "s4",
+      "destino": "s2",
+      "utilizacion_pct": 10.380067
+    }
+  ],
+  "comparabilidad": "MEDICION_PILOTO_NO_CONTROLADA: el trafico ofrecido puede variar entre ambas ventanas",
+  "operaciones": {
+    "flowmods_add": 10,
+    "groupmods_add": 2,
+    "comunicaciones_activadas": 2
+  },
+  "rollback_piloto": "VERIFICADO_POR_BARRERAS",
+  "errores_rollback_piloto": [],
+  "fin_utc": "2026-10-13T14:07:43.550996+00:00"
+}

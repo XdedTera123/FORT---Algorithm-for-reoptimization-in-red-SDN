@@ -1,0 +1,1794 @@
+{
+  "tipo": "PS_post_Fast_Failover",
+  "fecha_utc": "2026-10-12T14:36:28.014983+00:00",
+  "fuente": "OpenFlow 1.3: dump-groups, dump-ports-desc y dump-flows",
+  "nota": "El bucket seleccionado se infiere del orden de buckets FF y del estado observado de los puertos.",
+  "enlaces_fallados_observados": [
+    {
+      "extremo_a": "s1",
+      "extremo_b": "s2",
+      "puerto_a": 2,
+      "puerto_b": 2,
+      "activo_a": false,
+      "activo_b": false
+    }
+  ],
+  "cantidad_switches": 8,
+  "cantidad_grupos_ff": 20,
+  "cantidad_buckets_ff": 40,
+  "cantidad_reglas_proteccion": 132,
+  "switches": {
+    "s1": {
+      "puertos": [
+        {
+          "numero": 1,
+          "nombre": "s1-eth1",
+          "config": "0",
+          "state": "LIVE",
+          "activo": true
+        },
+        {
+          "numero": 2,
+          "nombre": "s1-eth2",
+          "config": "PORT_DOWN",
+          "state": "LINK_DOWN",
+          "activo": false
+        },
+        {
+          "numero": 3,
+          "nombre": "s1-eth3",
+          "config": "0",
+          "state": "LIVE",
+          "activo": true
+        },
+        {
+          "numero": 4,
+          "nombre": "s1-eth4",
+          "config": "0",
+          "state": "LIVE",
+          "activo": true
+        }
+      ],
+      "grupos_fast_failover": [
+        {
+          "group_id": 1003,
+          "tipo": "ff",
+          "buckets": [
+            {
+              "indice": 0,
+              "watch_port": "4",
+              "puerto_activo": true,
+              "config_puerto": "0",
+              "estado_puerto": "LIVE",
+              "acciones": "output:4"
+            },
+            {
+              "indice": 1,
+              "watch_port": "2",
+              "puerto_activo": false,
+              "config_puerto": "PORT_DOWN",
+              "estado_puerto": "LINK_DOWN",
+              "acciones": "push_vlan:0x8100,set_field:4199->vlan_vid,output:2"
+            }
+          ],
+          "bucket_seleccionado_inferido": 0,
+          "modo_inferido": "principal"
+        },
+        {
+          "group_id": 1000,
+          "tipo": "ff",
+          "buckets": [
+            {
+              "indice": 0,
+              "watch_port": "2",
+              "puerto_activo": false,
+              "config_puerto": "PORT_DOWN",
+              "estado_puerto": "LINK_DOWN",
+              "acciones": "output:2"
+            },
+            {
+              "indice": 1,
+              "watch_port": "4",
+              "puerto_activo": true,
+              "config_puerto": "0",
+              "estado_puerto": "LIVE",
+              "acciones": "push_vlan:0x8100,set_field:4196->vlan_vid,output:4"
+            }
+          ],
+          "bucket_seleccionado_inferido": 1,
+          "modo_inferido": "respaldo"
+        },
+        {
+          "group_id": 1001,
+          "tipo": "ff",
+          "buckets": [
+            {
+              "indice": 0,
+              "watch_port": "2",
+              "puerto_activo": false,
+              "config_puerto": "PORT_DOWN",
+              "estado_puerto": "LINK_DOWN",
+              "acciones": "output:2"
+            },
+            {
+              "indice": 1,
+              "watch_port": "4",
+              "puerto_activo": true,
+              "config_puerto": "0",
+              "estado_puerto": "LIVE",
+              "acciones": "push_vlan:0x8100,set_field:4197->vlan_vid,output:4"
+            }
+          ],
+          "bucket_seleccionado_inferido": 1,
+          "modo_inferido": "respaldo"
+        }
+      ],
+      "reglas_openflow_proteccion": [
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=105,nw_src=10.0.0.2,nw_dst=10.0.0.1",
+          "acciones": "pop_vlan,output:1",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=105,arp_spa=10.0.0.2,arp_tpa=10.0.0.1",
+          "acciones": "pop_vlan,output:1",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=107,nw_src=10.0.0.2,nw_dst=10.0.0.4",
+          "acciones": "output:4",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=107,arp_spa=10.0.0.2,arp_tpa=10.0.0.4",
+          "acciones": "output:4",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=110,nw_src=10.0.0.3,nw_dst=10.0.0.1",
+          "acciones": "pop_vlan,output:1",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=110,arp_spa=10.0.0.3,arp_tpa=10.0.0.1",
+          "acciones": "pop_vlan,output:1",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=115,nw_src=10.0.0.4,nw_dst=10.0.0.1",
+          "acciones": "pop_vlan,output:1",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=115,arp_spa=10.0.0.4,arp_tpa=10.0.0.1",
+          "acciones": "pop_vlan,output:1",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=117,nw_src=10.0.0.4,nw_dst=10.0.0.2",
+          "acciones": "output:2",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=117,arp_spa=10.0.0.4,arp_tpa=10.0.0.2",
+          "acciones": "output:2",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,ip,nw_src=10.0.0.1,nw_dst=10.0.0.2",
+          "acciones": "group:1000",
+          "grupos_referenciados": [
+            1000
+          ],
+          "usa_vlan": false
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,arp,arp_spa=10.0.0.1,arp_tpa=10.0.0.2",
+          "acciones": "group:1000",
+          "grupos_referenciados": [
+            1000
+          ],
+          "usa_vlan": false
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,ip,nw_src=10.0.0.1,nw_dst=10.0.0.3",
+          "acciones": "group:1001",
+          "grupos_referenciados": [
+            1001
+          ],
+          "usa_vlan": false
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,arp,arp_spa=10.0.0.1,arp_tpa=10.0.0.3",
+          "acciones": "group:1001",
+          "grupos_referenciados": [
+            1001
+          ],
+          "usa_vlan": false
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,ip,nw_src=10.0.0.1,nw_dst=10.0.0.4",
+          "acciones": "group:1003",
+          "grupos_referenciados": [
+            1003
+          ],
+          "usa_vlan": false
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,arp,arp_spa=10.0.0.1,arp_tpa=10.0.0.4",
+          "acciones": "group:1003",
+          "grupos_referenciados": [
+            1003
+          ],
+          "usa_vlan": false
+        }
+      ]
+    },
+    "s2": {
+      "puertos": [
+        {
+          "numero": 1,
+          "nombre": "s2-eth1",
+          "config": "0",
+          "state": "LIVE",
+          "activo": true
+        },
+        {
+          "numero": 2,
+          "nombre": "s2-eth2",
+          "config": "PORT_DOWN",
+          "state": "LINK_DOWN",
+          "activo": false
+        },
+        {
+          "numero": 3,
+          "nombre": "s2-eth3",
+          "config": "0",
+          "state": "LIVE",
+          "activo": true
+        },
+        {
+          "numero": 4,
+          "nombre": "s2-eth4",
+          "config": "0",
+          "state": "LIVE",
+          "activo": true
+        }
+      ],
+      "grupos_fast_failover": [
+        {
+          "group_id": 1002,
+          "tipo": "ff",
+          "buckets": [
+            {
+              "indice": 0,
+              "watch_port": "4",
+              "puerto_activo": true,
+              "config_puerto": "0",
+              "estado_puerto": "LIVE",
+              "acciones": "output:4"
+            },
+            {
+              "indice": 1,
+              "watch_port": "3",
+              "puerto_activo": true,
+              "config_puerto": "0",
+              "estado_puerto": "LIVE",
+              "acciones": "push_vlan:0x8100,set_field:4198->vlan_vid,output:3"
+            }
+          ],
+          "bucket_seleccionado_inferido": 0,
+          "modo_inferido": "principal"
+        },
+        {
+          "group_id": 1006,
+          "tipo": "ff",
+          "buckets": [
+            {
+              "indice": 0,
+              "watch_port": "4",
+              "puerto_activo": true,
+              "config_puerto": "0",
+              "estado_puerto": "LIVE",
+              "acciones": "output:4"
+            },
+            {
+              "indice": 1,
+              "watch_port": "3",
+              "puerto_activo": true,
+              "config_puerto": "0",
+              "estado_puerto": "LIVE",
+              "acciones": "push_vlan:0x8100,set_field:4202->vlan_vid,output:3"
+            }
+          ],
+          "bucket_seleccionado_inferido": 0,
+          "modo_inferido": "principal"
+        },
+        {
+          "group_id": 1010,
+          "tipo": "ff",
+          "buckets": [
+            {
+              "indice": 0,
+              "watch_port": "2",
+              "puerto_activo": false,
+              "config_puerto": "PORT_DOWN",
+              "estado_puerto": "LINK_DOWN",
+              "acciones": "output:2"
+            },
+            {
+              "indice": 1,
+              "watch_port": "3",
+              "puerto_activo": true,
+              "config_puerto": "0",
+              "estado_puerto": "LIVE",
+              "acciones": "push_vlan:0x8100,set_field:4206->vlan_vid,output:3"
+            }
+          ],
+          "bucket_seleccionado_inferido": 1,
+          "modo_inferido": "respaldo"
+        },
+        {
+          "group_id": 1005,
+          "tipo": "ff",
+          "buckets": [
+            {
+              "indice": 0,
+              "watch_port": "2",
+              "puerto_activo": false,
+              "config_puerto": "PORT_DOWN",
+              "estado_puerto": "LINK_DOWN",
+              "acciones": "output:2"
+            },
+            {
+              "indice": 1,
+              "watch_port": "3",
+              "puerto_activo": true,
+              "config_puerto": "0",
+              "estado_puerto": "LIVE",
+              "acciones": "push_vlan:0x8100,set_field:4201->vlan_vid,output:3"
+            }
+          ],
+          "bucket_seleccionado_inferido": 1,
+          "modo_inferido": "respaldo"
+        },
+        {
+          "group_id": 1007,
+          "tipo": "ff",
+          "buckets": [
+            {
+              "indice": 0,
+              "watch_port": "3",
+              "puerto_activo": true,
+              "config_puerto": "0",
+              "estado_puerto": "LIVE",
+              "acciones": "output:3"
+            },
+            {
+              "indice": 1,
+              "watch_port": "2",
+              "puerto_activo": false,
+              "config_puerto": "PORT_DOWN",
+              "estado_puerto": "LINK_DOWN",
+              "acciones": "push_vlan:0x8100,set_field:4203->vlan_vid,output:2"
+            }
+          ],
+          "bucket_seleccionado_inferido": 0,
+          "modo_inferido": "principal"
+        }
+      ],
+      "reglas_openflow_proteccion": [
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=100,nw_src=10.0.0.1,nw_dst=10.0.0.2",
+          "acciones": "pop_vlan,output:1",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=100,arp_spa=10.0.0.1,arp_tpa=10.0.0.2",
+          "acciones": "pop_vlan,output:1",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=101,nw_src=10.0.0.1,nw_dst=10.0.0.3",
+          "acciones": "pop_vlan,group:1002",
+          "grupos_referenciados": [
+            1002
+          ],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=101,arp_spa=10.0.0.1,arp_tpa=10.0.0.3",
+          "acciones": "pop_vlan,group:1002",
+          "grupos_referenciados": [
+            1002
+          ],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=103,nw_src=10.0.0.1,nw_dst=10.0.0.4",
+          "acciones": "output:3",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=103,arp_spa=10.0.0.1,arp_tpa=10.0.0.4",
+          "acciones": "output:3",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=109,nw_src=10.0.0.3,nw_dst=10.0.0.1",
+          "acciones": "pop_vlan,group:1010",
+          "grupos_referenciados": [
+            1010
+          ],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=109,arp_spa=10.0.0.3,arp_tpa=10.0.0.1",
+          "acciones": "pop_vlan,group:1010",
+          "grupos_referenciados": [
+            1010
+          ],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=111,nw_src=10.0.0.3,nw_dst=10.0.0.2",
+          "acciones": "pop_vlan,output:1",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=111,arp_spa=10.0.0.3,arp_tpa=10.0.0.2",
+          "acciones": "pop_vlan,output:1",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=112,nw_src=10.0.0.3,nw_dst=10.0.0.4",
+          "acciones": "output:3",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=112,arp_spa=10.0.0.3,arp_tpa=10.0.0.4",
+          "acciones": "output:3",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=115,nw_src=10.0.0.4,nw_dst=10.0.0.1",
+          "acciones": "output:2",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=115,arp_spa=10.0.0.4,arp_tpa=10.0.0.1",
+          "acciones": "output:2",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=117,nw_src=10.0.0.4,nw_dst=10.0.0.2",
+          "acciones": "pop_vlan,output:1",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=117,arp_spa=10.0.0.4,arp_tpa=10.0.0.2",
+          "acciones": "pop_vlan,output:1",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=119,nw_src=10.0.0.4,nw_dst=10.0.0.3",
+          "acciones": "output:4",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=119,arp_spa=10.0.0.4,arp_tpa=10.0.0.3",
+          "acciones": "output:4",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,ip,nw_src=10.0.0.1,nw_dst=10.0.0.3",
+          "acciones": "group:1002",
+          "grupos_referenciados": [
+            1002
+          ],
+          "usa_vlan": false
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,arp,arp_spa=10.0.0.1,arp_tpa=10.0.0.3",
+          "acciones": "group:1002",
+          "grupos_referenciados": [
+            1002
+          ],
+          "usa_vlan": false
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,ip,nw_src=10.0.0.2,nw_dst=10.0.0.1",
+          "acciones": "group:1005",
+          "grupos_referenciados": [
+            1005
+          ],
+          "usa_vlan": false
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,arp,arp_spa=10.0.0.2,arp_tpa=10.0.0.1",
+          "acciones": "group:1005",
+          "grupos_referenciados": [
+            1005
+          ],
+          "usa_vlan": false
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,ip,nw_src=10.0.0.2,nw_dst=10.0.0.3",
+          "acciones": "group:1006",
+          "grupos_referenciados": [
+            1006
+          ],
+          "usa_vlan": false
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,arp,arp_spa=10.0.0.2,arp_tpa=10.0.0.3",
+          "acciones": "group:1006",
+          "grupos_referenciados": [
+            1006
+          ],
+          "usa_vlan": false
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,ip,nw_src=10.0.0.2,nw_dst=10.0.0.4",
+          "acciones": "group:1007",
+          "grupos_referenciados": [
+            1007
+          ],
+          "usa_vlan": false
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,arp,arp_spa=10.0.0.2,arp_tpa=10.0.0.4",
+          "acciones": "group:1007",
+          "grupos_referenciados": [
+            1007
+          ],
+          "usa_vlan": false
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,ip,nw_src=10.0.0.3,nw_dst=10.0.0.1",
+          "acciones": "group:1010",
+          "grupos_referenciados": [
+            1010
+          ],
+          "usa_vlan": false
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,arp,arp_spa=10.0.0.3,arp_tpa=10.0.0.1",
+          "acciones": "group:1010",
+          "grupos_referenciados": [
+            1010
+          ],
+          "usa_vlan": false
+        }
+      ]
+    },
+    "s3": {
+      "puertos": [
+        {
+          "numero": 1,
+          "nombre": "s3-eth1",
+          "config": "0",
+          "state": "LIVE",
+          "activo": true
+        },
+        {
+          "numero": 2,
+          "nombre": "s3-eth2",
+          "config": "0",
+          "state": "LIVE",
+          "activo": true
+        },
+        {
+          "numero": 3,
+          "nombre": "s3-eth3",
+          "config": "0",
+          "state": "LIVE",
+          "activo": true
+        }
+      ],
+      "grupos_fast_failover": [],
+      "reglas_openflow_proteccion": [
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=104,nw_src=10.0.0.1,nw_dst=10.0.0.4",
+          "acciones": "output:3",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=104,arp_spa=10.0.0.1,arp_tpa=10.0.0.4",
+          "acciones": "output:3",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=108,nw_src=10.0.0.2,nw_dst=10.0.0.4",
+          "acciones": "output:3",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=108,arp_spa=10.0.0.2,arp_tpa=10.0.0.4",
+          "acciones": "output:3",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=113,nw_src=10.0.0.3,nw_dst=10.0.0.4",
+          "acciones": "output:3",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=113,arp_spa=10.0.0.3,arp_tpa=10.0.0.4",
+          "acciones": "output:3",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=114,nw_src=10.0.0.4,nw_dst=10.0.0.1",
+          "acciones": "output:2",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=114,arp_spa=10.0.0.4,arp_tpa=10.0.0.1",
+          "acciones": "output:2",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=116,nw_src=10.0.0.4,nw_dst=10.0.0.2",
+          "acciones": "output:2",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=116,arp_spa=10.0.0.4,arp_tpa=10.0.0.2",
+          "acciones": "output:2",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=118,nw_src=10.0.0.4,nw_dst=10.0.0.3",
+          "acciones": "output:2",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=118,arp_spa=10.0.0.4,arp_tpa=10.0.0.3",
+          "acciones": "output:2",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        }
+      ]
+    },
+    "s4": {
+      "puertos": [
+        {
+          "numero": 1,
+          "nombre": "s4-eth1",
+          "config": "0",
+          "state": "LIVE",
+          "activo": true
+        },
+        {
+          "numero": 2,
+          "nombre": "s4-eth2",
+          "config": "0",
+          "state": "LIVE",
+          "activo": true
+        },
+        {
+          "numero": 3,
+          "nombre": "s4-eth3",
+          "config": "0",
+          "state": "LIVE",
+          "activo": true
+        },
+        {
+          "numero": 4,
+          "nombre": "s4-eth4",
+          "config": "0",
+          "state": "LIVE",
+          "activo": true
+        },
+        {
+          "numero": 5,
+          "nombre": "s4-eth5",
+          "config": "0",
+          "state": "LIVE",
+          "activo": true
+        }
+      ],
+      "grupos_fast_failover": [
+        {
+          "group_id": 1004,
+          "tipo": "ff",
+          "buckets": [
+            {
+              "indice": 0,
+              "watch_port": "5",
+              "puerto_activo": true,
+              "config_puerto": "0",
+              "estado_puerto": "LIVE",
+              "acciones": "output:5"
+            },
+            {
+              "indice": 1,
+              "watch_port": "3",
+              "puerto_activo": true,
+              "config_puerto": "0",
+              "estado_puerto": "LIVE",
+              "acciones": "push_vlan:0x8100,set_field:4200->vlan_vid,output:3"
+            }
+          ],
+          "bucket_seleccionado_inferido": 0,
+          "modo_inferido": "principal"
+        },
+        {
+          "group_id": 1013,
+          "tipo": "ff",
+          "buckets": [
+            {
+              "indice": 0,
+              "watch_port": "5",
+              "puerto_activo": true,
+              "config_puerto": "0",
+              "estado_puerto": "LIVE",
+              "acciones": "output:5"
+            },
+            {
+              "indice": 1,
+              "watch_port": "3",
+              "puerto_activo": true,
+              "config_puerto": "0",
+              "estado_puerto": "LIVE",
+              "acciones": "push_vlan:0x8100,set_field:4209->vlan_vid,output:3"
+            }
+          ],
+          "bucket_seleccionado_inferido": 0,
+          "modo_inferido": "principal"
+        },
+        {
+          "group_id": 1019,
+          "tipo": "ff",
+          "buckets": [
+            {
+              "indice": 0,
+              "watch_port": "4",
+              "puerto_activo": true,
+              "config_puerto": "0",
+              "estado_puerto": "LIVE",
+              "acciones": "output:4"
+            },
+            {
+              "indice": 1,
+              "watch_port": "2",
+              "puerto_activo": true,
+              "config_puerto": "0",
+              "estado_puerto": "LIVE",
+              "acciones": "push_vlan:0x8100,set_field:4215->vlan_vid,output:2"
+            }
+          ],
+          "bucket_seleccionado_inferido": 0,
+          "modo_inferido": "principal"
+        },
+        {
+          "group_id": 1008,
+          "tipo": "ff",
+          "buckets": [
+            {
+              "indice": 0,
+              "watch_port": "5",
+              "puerto_activo": true,
+              "config_puerto": "0",
+              "estado_puerto": "LIVE",
+              "acciones": "output:5"
+            },
+            {
+              "indice": 1,
+              "watch_port": "3",
+              "puerto_activo": true,
+              "config_puerto": "0",
+              "estado_puerto": "LIVE",
+              "acciones": "push_vlan:0x8100,set_field:4204->vlan_vid,output:3"
+            }
+          ],
+          "bucket_seleccionado_inferido": 0,
+          "modo_inferido": "principal"
+        },
+        {
+          "group_id": 1015,
+          "tipo": "ff",
+          "buckets": [
+            {
+              "indice": 0,
+              "watch_port": "1",
+              "puerto_activo": true,
+              "config_puerto": "0",
+              "estado_puerto": "LIVE",
+              "acciones": "output:1"
+            },
+            {
+              "indice": 1,
+              "watch_port": "2",
+              "puerto_activo": true,
+              "config_puerto": "0",
+              "estado_puerto": "LIVE",
+              "acciones": "push_vlan:0x8100,set_field:4211->vlan_vid,output:2"
+            }
+          ],
+          "bucket_seleccionado_inferido": 0,
+          "modo_inferido": "principal"
+        },
+        {
+          "group_id": 1017,
+          "tipo": "ff",
+          "buckets": [
+            {
+              "indice": 0,
+              "watch_port": "2",
+              "puerto_activo": true,
+              "config_puerto": "0",
+              "estado_puerto": "LIVE",
+              "acciones": "output:2"
+            },
+            {
+              "indice": 1,
+              "watch_port": "1",
+              "puerto_activo": true,
+              "config_puerto": "0",
+              "estado_puerto": "LIVE",
+              "acciones": "push_vlan:0x8100,set_field:4213->vlan_vid,output:1"
+            }
+          ],
+          "bucket_seleccionado_inferido": 0,
+          "modo_inferido": "principal"
+        }
+      ],
+      "reglas_openflow_proteccion": [
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=100,nw_src=10.0.0.1,nw_dst=10.0.0.2",
+          "acciones": "output:2",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=100,arp_spa=10.0.0.1,arp_tpa=10.0.0.2",
+          "acciones": "output:2",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=101,nw_src=10.0.0.1,nw_dst=10.0.0.3",
+          "acciones": "output:2",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=101,arp_spa=10.0.0.1,arp_tpa=10.0.0.3",
+          "acciones": "output:2",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=102,nw_src=10.0.0.1,nw_dst=10.0.0.3",
+          "acciones": "output:4",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=102,arp_spa=10.0.0.1,arp_tpa=10.0.0.3",
+          "acciones": "output:4",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=103,nw_src=10.0.0.1,nw_dst=10.0.0.4",
+          "acciones": "pop_vlan,group:1004",
+          "grupos_referenciados": [
+            1004
+          ],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=103,arp_spa=10.0.0.1,arp_tpa=10.0.0.4",
+          "acciones": "pop_vlan,group:1004",
+          "grupos_referenciados": [
+            1004
+          ],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=105,nw_src=10.0.0.2,nw_dst=10.0.0.1",
+          "acciones": "output:1",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=105,arp_spa=10.0.0.2,arp_tpa=10.0.0.1",
+          "acciones": "output:1",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=106,nw_src=10.0.0.2,nw_dst=10.0.0.3",
+          "acciones": "output:4",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=106,arp_spa=10.0.0.2,arp_tpa=10.0.0.3",
+          "acciones": "output:4",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=107,nw_src=10.0.0.2,nw_dst=10.0.0.4",
+          "acciones": "pop_vlan,group:1008",
+          "grupos_referenciados": [
+            1008
+          ],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=107,arp_spa=10.0.0.2,arp_tpa=10.0.0.4",
+          "acciones": "pop_vlan,group:1008",
+          "grupos_referenciados": [
+            1008
+          ],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=109,nw_src=10.0.0.3,nw_dst=10.0.0.1",
+          "acciones": "output:2",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=109,arp_spa=10.0.0.3,arp_tpa=10.0.0.1",
+          "acciones": "output:2",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=110,nw_src=10.0.0.3,nw_dst=10.0.0.1",
+          "acciones": "output:1",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=110,arp_spa=10.0.0.3,arp_tpa=10.0.0.1",
+          "acciones": "output:1",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=111,nw_src=10.0.0.3,nw_dst=10.0.0.2",
+          "acciones": "output:2",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=111,arp_spa=10.0.0.3,arp_tpa=10.0.0.2",
+          "acciones": "output:2",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=112,nw_src=10.0.0.3,nw_dst=10.0.0.4",
+          "acciones": "pop_vlan,group:1013",
+          "grupos_referenciados": [
+            1013
+          ],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=112,arp_spa=10.0.0.3,arp_tpa=10.0.0.4",
+          "acciones": "pop_vlan,group:1013",
+          "grupos_referenciados": [
+            1013
+          ],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=114,nw_src=10.0.0.4,nw_dst=10.0.0.1",
+          "acciones": "pop_vlan,group:1015",
+          "grupos_referenciados": [
+            1015
+          ],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=114,arp_spa=10.0.0.4,arp_tpa=10.0.0.1",
+          "acciones": "pop_vlan,group:1015",
+          "grupos_referenciados": [
+            1015
+          ],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=116,nw_src=10.0.0.4,nw_dst=10.0.0.2",
+          "acciones": "pop_vlan,group:1017",
+          "grupos_referenciados": [
+            1017
+          ],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=116,arp_spa=10.0.0.4,arp_tpa=10.0.0.2",
+          "acciones": "pop_vlan,group:1017",
+          "grupos_referenciados": [
+            1017
+          ],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=118,nw_src=10.0.0.4,nw_dst=10.0.0.3",
+          "acciones": "pop_vlan,group:1019",
+          "grupos_referenciados": [
+            1019
+          ],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=118,arp_spa=10.0.0.4,arp_tpa=10.0.0.3",
+          "acciones": "pop_vlan,group:1019",
+          "grupos_referenciados": [
+            1019
+          ],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,ip,nw_src=10.0.0.1,nw_dst=10.0.0.4",
+          "acciones": "group:1004",
+          "grupos_referenciados": [
+            1004
+          ],
+          "usa_vlan": false
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,arp,arp_spa=10.0.0.1,arp_tpa=10.0.0.4",
+          "acciones": "group:1004",
+          "grupos_referenciados": [
+            1004
+          ],
+          "usa_vlan": false
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,ip,nw_src=10.0.0.2,nw_dst=10.0.0.4",
+          "acciones": "group:1008",
+          "grupos_referenciados": [
+            1008
+          ],
+          "usa_vlan": false
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,arp,arp_spa=10.0.0.2,arp_tpa=10.0.0.4",
+          "acciones": "group:1008",
+          "grupos_referenciados": [
+            1008
+          ],
+          "usa_vlan": false
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,ip,nw_src=10.0.0.3,nw_dst=10.0.0.4",
+          "acciones": "group:1013",
+          "grupos_referenciados": [
+            1013
+          ],
+          "usa_vlan": false
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,arp,arp_spa=10.0.0.3,arp_tpa=10.0.0.4",
+          "acciones": "group:1013",
+          "grupos_referenciados": [
+            1013
+          ],
+          "usa_vlan": false
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,ip,nw_src=10.0.0.4,nw_dst=10.0.0.1",
+          "acciones": "group:1015",
+          "grupos_referenciados": [
+            1015
+          ],
+          "usa_vlan": false
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,arp,arp_spa=10.0.0.4,arp_tpa=10.0.0.1",
+          "acciones": "group:1015",
+          "grupos_referenciados": [
+            1015
+          ],
+          "usa_vlan": false
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,ip,nw_src=10.0.0.4,nw_dst=10.0.0.2",
+          "acciones": "group:1017",
+          "grupos_referenciados": [
+            1017
+          ],
+          "usa_vlan": false
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,arp,arp_spa=10.0.0.4,arp_tpa=10.0.0.2",
+          "acciones": "group:1017",
+          "grupos_referenciados": [
+            1017
+          ],
+          "usa_vlan": false
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,ip,nw_src=10.0.0.4,nw_dst=10.0.0.3",
+          "acciones": "group:1019",
+          "grupos_referenciados": [
+            1019
+          ],
+          "usa_vlan": false
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,arp,arp_spa=10.0.0.4,arp_tpa=10.0.0.3",
+          "acciones": "group:1019",
+          "grupos_referenciados": [
+            1019
+          ],
+          "usa_vlan": false
+        }
+      ]
+    },
+    "s5": {
+      "puertos": [
+        {
+          "numero": 1,
+          "nombre": "s5-eth1",
+          "config": "0",
+          "state": "LIVE",
+          "activo": true
+        },
+        {
+          "numero": 2,
+          "nombre": "s5-eth2",
+          "config": "0",
+          "state": "LIVE",
+          "activo": true
+        },
+        {
+          "numero": 3,
+          "nombre": "s5-eth3",
+          "config": "0",
+          "state": "LIVE",
+          "activo": true
+        },
+        {
+          "numero": 4,
+          "nombre": "s5-eth4",
+          "config": "0",
+          "state": "LIVE",
+          "activo": true
+        }
+      ],
+      "grupos_fast_failover": [
+        {
+          "group_id": 1009,
+          "tipo": "ff",
+          "buckets": [
+            {
+              "indice": 0,
+              "watch_port": "2",
+              "puerto_activo": true,
+              "config_puerto": "0",
+              "estado_puerto": "LIVE",
+              "acciones": "output:2"
+            },
+            {
+              "indice": 1,
+              "watch_port": "3",
+              "puerto_activo": true,
+              "config_puerto": "0",
+              "estado_puerto": "LIVE",
+              "acciones": "push_vlan:0x8100,set_field:4205->vlan_vid,output:3"
+            }
+          ],
+          "bucket_seleccionado_inferido": 0,
+          "modo_inferido": "principal"
+        },
+        {
+          "group_id": 1012,
+          "tipo": "ff",
+          "buckets": [
+            {
+              "indice": 0,
+              "watch_port": "3",
+              "puerto_activo": true,
+              "config_puerto": "0",
+              "estado_puerto": "LIVE",
+              "acciones": "output:3"
+            },
+            {
+              "indice": 1,
+              "watch_port": "2",
+              "puerto_activo": true,
+              "config_puerto": "0",
+              "estado_puerto": "LIVE",
+              "acciones": "push_vlan:0x8100,set_field:4208->vlan_vid,output:2"
+            }
+          ],
+          "bucket_seleccionado_inferido": 0,
+          "modo_inferido": "principal"
+        },
+        {
+          "group_id": 1011,
+          "tipo": "ff",
+          "buckets": [
+            {
+              "indice": 0,
+              "watch_port": "2",
+              "puerto_activo": true,
+              "config_puerto": "0",
+              "estado_puerto": "LIVE",
+              "acciones": "output:2"
+            },
+            {
+              "indice": 1,
+              "watch_port": "3",
+              "puerto_activo": true,
+              "config_puerto": "0",
+              "estado_puerto": "LIVE",
+              "acciones": "push_vlan:0x8100,set_field:4207->vlan_vid,output:3"
+            }
+          ],
+          "bucket_seleccionado_inferido": 0,
+          "modo_inferido": "principal"
+        }
+      ],
+      "reglas_openflow_proteccion": [
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=102,nw_src=10.0.0.1,nw_dst=10.0.0.3",
+          "acciones": "pop_vlan,output:1",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=102,arp_spa=10.0.0.1,arp_tpa=10.0.0.3",
+          "acciones": "pop_vlan,output:1",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=106,nw_src=10.0.0.2,nw_dst=10.0.0.3",
+          "acciones": "pop_vlan,output:1",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=106,arp_spa=10.0.0.2,arp_tpa=10.0.0.3",
+          "acciones": "pop_vlan,output:1",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=119,nw_src=10.0.0.4,nw_dst=10.0.0.3",
+          "acciones": "pop_vlan,output:1",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=119,arp_spa=10.0.0.4,arp_tpa=10.0.0.3",
+          "acciones": "pop_vlan,output:1",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,ip,nw_src=10.0.0.3,nw_dst=10.0.0.1",
+          "acciones": "group:1009",
+          "grupos_referenciados": [
+            1009
+          ],
+          "usa_vlan": false
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,arp,arp_spa=10.0.0.3,arp_tpa=10.0.0.1",
+          "acciones": "group:1009",
+          "grupos_referenciados": [
+            1009
+          ],
+          "usa_vlan": false
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,ip,nw_src=10.0.0.3,nw_dst=10.0.0.2",
+          "acciones": "group:1011",
+          "grupos_referenciados": [
+            1011
+          ],
+          "usa_vlan": false
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,arp,arp_spa=10.0.0.3,arp_tpa=10.0.0.2",
+          "acciones": "group:1011",
+          "grupos_referenciados": [
+            1011
+          ],
+          "usa_vlan": false
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,ip,nw_src=10.0.0.3,nw_dst=10.0.0.4",
+          "acciones": "group:1012",
+          "grupos_referenciados": [
+            1012
+          ],
+          "usa_vlan": false
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,arp,arp_spa=10.0.0.3,arp_tpa=10.0.0.4",
+          "acciones": "group:1012",
+          "grupos_referenciados": [
+            1012
+          ],
+          "usa_vlan": false
+        }
+      ]
+    },
+    "s6": {
+      "puertos": [
+        {
+          "numero": 1,
+          "nombre": "s6-eth1",
+          "config": "0",
+          "state": "LIVE",
+          "activo": true
+        },
+        {
+          "numero": 2,
+          "nombre": "s6-eth2",
+          "config": "0",
+          "state": "LIVE",
+          "activo": true
+        }
+      ],
+      "grupos_fast_failover": [],
+      "reglas_openflow_proteccion": [
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=104,nw_src=10.0.0.1,nw_dst=10.0.0.4",
+          "acciones": "output:2",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=104,arp_spa=10.0.0.1,arp_tpa=10.0.0.4",
+          "acciones": "output:2",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=108,nw_src=10.0.0.2,nw_dst=10.0.0.4",
+          "acciones": "output:2",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=108,arp_spa=10.0.0.2,arp_tpa=10.0.0.4",
+          "acciones": "output:2",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=113,nw_src=10.0.0.3,nw_dst=10.0.0.4",
+          "acciones": "output:2",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=113,arp_spa=10.0.0.3,arp_tpa=10.0.0.4",
+          "acciones": "output:2",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=114,nw_src=10.0.0.4,nw_dst=10.0.0.1",
+          "acciones": "output:1",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=114,arp_spa=10.0.0.4,arp_tpa=10.0.0.1",
+          "acciones": "output:1",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=116,nw_src=10.0.0.4,nw_dst=10.0.0.2",
+          "acciones": "output:1",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=116,arp_spa=10.0.0.4,arp_tpa=10.0.0.2",
+          "acciones": "output:1",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=118,nw_src=10.0.0.4,nw_dst=10.0.0.3",
+          "acciones": "output:1",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=118,arp_spa=10.0.0.4,arp_tpa=10.0.0.3",
+          "acciones": "output:1",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        }
+      ]
+    },
+    "s7": {
+      "puertos": [
+        {
+          "numero": 1,
+          "nombre": "s7-eth1",
+          "config": "0",
+          "state": "LIVE",
+          "activo": true
+        },
+        {
+          "numero": 2,
+          "nombre": "s7-eth2",
+          "config": "0",
+          "state": "LIVE",
+          "activo": true
+        },
+        {
+          "numero": 3,
+          "nombre": "s7-eth3",
+          "config": "0",
+          "state": "LIVE",
+          "activo": true
+        },
+        {
+          "numero": 4,
+          "nombre": "s7-eth4",
+          "config": "0",
+          "state": "LIVE",
+          "activo": true
+        }
+      ],
+      "grupos_fast_failover": [
+        {
+          "group_id": 1016,
+          "tipo": "ff",
+          "buckets": [
+            {
+              "indice": 0,
+              "watch_port": "2",
+              "puerto_activo": true,
+              "config_puerto": "0",
+              "estado_puerto": "LIVE",
+              "acciones": "output:2"
+            },
+            {
+              "indice": 1,
+              "watch_port": "3",
+              "puerto_activo": true,
+              "config_puerto": "0",
+              "estado_puerto": "LIVE",
+              "acciones": "push_vlan:0x8100,set_field:4212->vlan_vid,output:3"
+            }
+          ],
+          "bucket_seleccionado_inferido": 0,
+          "modo_inferido": "principal"
+        },
+        {
+          "group_id": 1014,
+          "tipo": "ff",
+          "buckets": [
+            {
+              "indice": 0,
+              "watch_port": "2",
+              "puerto_activo": true,
+              "config_puerto": "0",
+              "estado_puerto": "LIVE",
+              "acciones": "output:2"
+            },
+            {
+              "indice": 1,
+              "watch_port": "3",
+              "puerto_activo": true,
+              "config_puerto": "0",
+              "estado_puerto": "LIVE",
+              "acciones": "push_vlan:0x8100,set_field:4210->vlan_vid,output:3"
+            }
+          ],
+          "bucket_seleccionado_inferido": 0,
+          "modo_inferido": "principal"
+        },
+        {
+          "group_id": 1018,
+          "tipo": "ff",
+          "buckets": [
+            {
+              "indice": 0,
+              "watch_port": "2",
+              "puerto_activo": true,
+              "config_puerto": "0",
+              "estado_puerto": "LIVE",
+              "acciones": "output:2"
+            },
+            {
+              "indice": 1,
+              "watch_port": "3",
+              "puerto_activo": true,
+              "config_puerto": "0",
+              "estado_puerto": "LIVE",
+              "acciones": "push_vlan:0x8100,set_field:4214->vlan_vid,output:3"
+            }
+          ],
+          "bucket_seleccionado_inferido": 0,
+          "modo_inferido": "principal"
+        }
+      ],
+      "reglas_openflow_proteccion": [
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=104,nw_src=10.0.0.1,nw_dst=10.0.0.4",
+          "acciones": "pop_vlan,output:1",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=104,arp_spa=10.0.0.1,arp_tpa=10.0.0.4",
+          "acciones": "pop_vlan,output:1",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=108,nw_src=10.0.0.2,nw_dst=10.0.0.4",
+          "acciones": "pop_vlan,output:1",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=108,arp_spa=10.0.0.2,arp_tpa=10.0.0.4",
+          "acciones": "pop_vlan,output:1",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,ip,dl_vlan=113,nw_src=10.0.0.3,nw_dst=10.0.0.4",
+          "acciones": "pop_vlan,output:1",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 300,
+          "coincidencia": "priority=300,arp,dl_vlan=113,arp_spa=10.0.0.3,arp_tpa=10.0.0.4",
+          "acciones": "pop_vlan,output:1",
+          "grupos_referenciados": [],
+          "usa_vlan": true
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,ip,nw_src=10.0.0.4,nw_dst=10.0.0.1",
+          "acciones": "group:1014",
+          "grupos_referenciados": [
+            1014
+          ],
+          "usa_vlan": false
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,arp,arp_spa=10.0.0.4,arp_tpa=10.0.0.1",
+          "acciones": "group:1014",
+          "grupos_referenciados": [
+            1014
+          ],
+          "usa_vlan": false
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,ip,nw_src=10.0.0.4,nw_dst=10.0.0.2",
+          "acciones": "group:1016",
+          "grupos_referenciados": [
+            1016
+          ],
+          "usa_vlan": false
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,arp,arp_spa=10.0.0.4,arp_tpa=10.0.0.2",
+          "acciones": "group:1016",
+          "grupos_referenciados": [
+            1016
+          ],
+          "usa_vlan": false
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,ip,nw_src=10.0.0.4,nw_dst=10.0.0.3",
+          "acciones": "group:1018",
+          "grupos_referenciados": [
+            1018
+          ],
+          "usa_vlan": false
+        },
+        {
+          "prioridad": 100,
+          "coincidencia": "priority=100,arp,arp_spa=10.0.0.4,arp_tpa=10.0.0.3",
+          "acciones": "group:1018",
+          "grupos_referenciados": [
+            1018
+          ],
+          "usa_vlan": false
+        }
+      ]
+    },
+    "s8": {
+      "puertos": [
+        {
+          "numero": 1,
+          "nombre": "s8-eth1",
+          "config": "0",
+          "state": "LIVE",
+          "activo": true
+        },
+        {
+          "numero": 2,
+          "nombre": "s8-eth2",
+          "config": "0",
+          "state": "LIVE",
+          "activo": true
+        }
+      ],
+      "grupos_fast_failover": [],
+      "reglas_openflow_proteccion": []
+    }
+  }
+}

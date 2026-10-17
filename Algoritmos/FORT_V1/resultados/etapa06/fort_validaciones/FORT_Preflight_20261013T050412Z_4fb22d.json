@@ -1,0 +1,1333 @@
+{
+  "tipo": "FORT_PREFLIGHT_OPENFLOW",
+  "fecha_utc": "2026-10-13T05:04:22.261797+00:00",
+  "captura_origen_utc": "2026-10-13T05:04:17.608533+00:00",
+  "fallo": "s1-s2",
+  "targets_evaluados": 10,
+  "targets_con_preparacion_compatible": 3,
+  "targets_bloqueados": 7,
+  "seleccion_preliminar": {
+    "target_id": "T00014",
+    "transition_id": "T00014_TR01_ASC",
+    "estrategia": "TR01_ASC",
+    "final_mlu_pct": 12.673366,
+    "peak_mlu_pct": 23.337326,
+    "mensajes_modificacion": 16,
+    "barreras": 9,
+    "verificaciones": 2,
+    "switches_modificados": 6
+  },
+  "pareja_preferida_preflight": {
+    "target_id": "T00014",
+    "transition_id": "T00014_TR01_ASC",
+    "final_mlu_pct": 12.673366,
+    "peak_mlu_pct": 23.337326
+  },
+  "estado": "VALIDACION_ESTRUCTURAL_OPENFLOW_REAL",
+  "ejecucion_openflow_autorizada": false,
+  "limitaciones": [
+    "No se enviaron FlowMod ni GroupMod",
+    "No se demostro seguridad de estados intermedios",
+    "Pendientes barreras, ejecucion y rollback",
+    "Snapshot OpenFlow no atomico"
+  ],
+  "targets": [
+    {
+      "target_id": "T00014",
+      "estado": "PREPARACION_PLAUSIBLE_REQUIERE_PRUEBA_EN_OVS",
+      "bloqueos": [],
+      "comunicaciones": [
+        {
+          "comunicacion": "h1->h3",
+          "ruta_fs": [
+            "h1",
+            "s1",
+            "s4",
+            "s2",
+            "s5",
+            "h3"
+          ],
+          "ruta_target": [
+            "h1",
+            "s1",
+            "s3",
+            "s4",
+            "s5",
+            "h3"
+          ],
+          "switch_ingreso": "s1",
+          "puerto_fs": 4,
+          "puerto_target": 3,
+          "vlan_nueva": 120,
+          "group_id_nuevo": 40000,
+          "reglas_actuales_ingreso": {
+            "ipv4": {
+              "match": {
+                "eth_type": 2048,
+                "ipv4_src": "10.0.0.1",
+                "ipv4_dst": "10.0.0.3"
+              },
+              "cookie": 41219,
+              "prioridad": 100,
+              "acciones_actuales": [
+                "OFPActionGroup(group_id=1001,len=8,type=22)"
+              ],
+              "acciones_respaldo": [
+                "OFPActionPushVlan(ethertype=33024,len=8,type=17)",
+                "OFPActionSetField(vlan_vid=4197)",
+                "OFPActionOutput(len=16,max_len=65509,port=4,type=0)"
+              ]
+            },
+            "arp": {
+              "match": {
+                "eth_type": 2054,
+                "arp_spa": "10.0.0.1",
+                "arp_tpa": "10.0.0.3"
+              },
+              "cookie": 41219,
+              "prioridad": 100,
+              "acciones_actuales": [
+                "OFPActionGroup(group_id=1001,len=8,type=22)"
+              ],
+              "acciones_respaldo": [
+                "OFPActionPushVlan(ethertype=33024,len=8,type=17)",
+                "OFPActionSetField(vlan_vid=4197)",
+                "OFPActionOutput(len=16,max_len=65509,port=4,type=0)"
+              ]
+            }
+          },
+          "respaldo_actual_verificado": [
+            "OFPActionPushVlan(ethertype=33024,len=8,type=17)",
+            "OFPActionSetField(vlan_vid=4197)",
+            "OFPActionOutput(len=16,max_len=65509,port=4,type=0)"
+          ],
+          "flowmods_preparacion": [
+            {
+              "switch": "s3",
+              "protocolo": "ipv4",
+              "match_exacto": {
+                "eth_type": 2048,
+                "ipv4_src": "10.0.0.1",
+                "ipv4_dst": "10.0.0.3",
+                "vlan_vid": 4216
+              },
+              "prioridad": 300,
+              "acciones_propuestas": [
+                "output:2"
+              ],
+              "funcion": "TRANSITO_VLAN"
+            },
+            {
+              "switch": "s3",
+              "protocolo": "arp",
+              "match_exacto": {
+                "eth_type": 2054,
+                "arp_spa": "10.0.0.1",
+                "arp_tpa": "10.0.0.3",
+                "vlan_vid": 4216
+              },
+              "prioridad": 300,
+              "acciones_propuestas": [
+                "output:2"
+              ],
+              "funcion": "TRANSITO_VLAN"
+            },
+            {
+              "switch": "s4",
+              "protocolo": "ipv4",
+              "match_exacto": {
+                "eth_type": 2048,
+                "ipv4_src": "10.0.0.1",
+                "ipv4_dst": "10.0.0.3",
+                "vlan_vid": 4216
+              },
+              "prioridad": 300,
+              "acciones_propuestas": [
+                "output:4"
+              ],
+              "funcion": "TRANSITO_VLAN"
+            },
+            {
+              "switch": "s4",
+              "protocolo": "arp",
+              "match_exacto": {
+                "eth_type": 2054,
+                "arp_spa": "10.0.0.1",
+                "arp_tpa": "10.0.0.3",
+                "vlan_vid": 4216
+              },
+              "prioridad": 300,
+              "acciones_propuestas": [
+                "output:4"
+              ],
+              "funcion": "TRANSITO_VLAN"
+            },
+            {
+              "switch": "s5",
+              "protocolo": "ipv4",
+              "match_exacto": {
+                "eth_type": 2048,
+                "ipv4_src": "10.0.0.1",
+                "ipv4_dst": "10.0.0.3",
+                "vlan_vid": 4216
+              },
+              "prioridad": 300,
+              "acciones_propuestas": [
+                "pop_vlan",
+                "OFPActionOutput(len=16,max_len=65509,port=1,type=0)"
+              ],
+              "funcion": "REINCORPORACION_FS"
+            },
+            {
+              "switch": "s5",
+              "protocolo": "arp",
+              "match_exacto": {
+                "eth_type": 2054,
+                "arp_spa": "10.0.0.1",
+                "arp_tpa": "10.0.0.3",
+                "vlan_vid": 4216
+              },
+              "prioridad": 300,
+              "acciones_propuestas": [
+                "pop_vlan",
+                "OFPActionOutput(len=16,max_len=65509,port=1,type=0)"
+              ],
+              "funcion": "REINCORPORACION_FS"
+            }
+          ],
+          "grupo_ff_propuesto": {
+            "bucket_primario": {
+              "watch_port": 3,
+              "acciones": [
+                "push_vlan",
+                "set_vlan:120",
+                "output:3"
+              ]
+            },
+            "bucket_respaldo": {
+              "watch_port": 4,
+              "acciones": [
+                "OFPActionPushVlan(ethertype=33024,len=8,type=17)",
+                "OFPActionSetField(vlan_vid=4197)",
+                "OFPActionOutput(len=16,max_len=65509,port=4,type=0)"
+              ]
+            }
+          },
+          "activacion_propuesta": "MODIFY_STRICT IPv4/ARP despues de preparar y verificar",
+          "requiere_barreras": true
+        },
+        {
+          "comunicacion": "h3->h4",
+          "ruta_fs": [
+            "h3",
+            "s5",
+            "s4",
+            "s7",
+            "h4"
+          ],
+          "ruta_target": [
+            "h3",
+            "s5",
+            "s8",
+            "s7",
+            "h4"
+          ],
+          "switch_ingreso": "s5",
+          "puerto_fs": 3,
+          "puerto_target": 4,
+          "vlan_nueva": 121,
+          "group_id_nuevo": 40001,
+          "reglas_actuales_ingreso": {
+            "ipv4": {
+              "match": {
+                "eth_type": 2048,
+                "ipv4_src": "10.0.0.3",
+                "ipv4_dst": "10.0.0.4"
+              },
+              "cookie": 41219,
+              "prioridad": 100,
+              "acciones_actuales": [
+                "OFPActionGroup(group_id=1012,len=8,type=22)"
+              ],
+              "acciones_respaldo": [
+                "OFPActionOutput(len=16,max_len=65509,port=3,type=0)"
+              ]
+            },
+            "arp": {
+              "match": {
+                "eth_type": 2054,
+                "arp_spa": "10.0.0.3",
+                "arp_tpa": "10.0.0.4"
+              },
+              "cookie": 41219,
+              "prioridad": 100,
+              "acciones_actuales": [
+                "OFPActionGroup(group_id=1012,len=8,type=22)"
+              ],
+              "acciones_respaldo": [
+                "OFPActionOutput(len=16,max_len=65509,port=3,type=0)"
+              ]
+            }
+          },
+          "respaldo_actual_verificado": [
+            "OFPActionOutput(len=16,max_len=65509,port=3,type=0)"
+          ],
+          "flowmods_preparacion": [
+            {
+              "switch": "s8",
+              "protocolo": "ipv4",
+              "match_exacto": {
+                "eth_type": 2048,
+                "ipv4_src": "10.0.0.3",
+                "ipv4_dst": "10.0.0.4",
+                "vlan_vid": 4217
+              },
+              "prioridad": 300,
+              "acciones_propuestas": [
+                "output:2"
+              ],
+              "funcion": "TRANSITO_VLAN"
+            },
+            {
+              "switch": "s8",
+              "protocolo": "arp",
+              "match_exacto": {
+                "eth_type": 2054,
+                "arp_spa": "10.0.0.3",
+                "arp_tpa": "10.0.0.4",
+                "vlan_vid": 4217
+              },
+              "prioridad": 300,
+              "acciones_propuestas": [
+                "output:2"
+              ],
+              "funcion": "TRANSITO_VLAN"
+            },
+            {
+              "switch": "s7",
+              "protocolo": "ipv4",
+              "match_exacto": {
+                "eth_type": 2048,
+                "ipv4_src": "10.0.0.3",
+                "ipv4_dst": "10.0.0.4",
+                "vlan_vid": 4217
+              },
+              "prioridad": 300,
+              "acciones_propuestas": [
+                "pop_vlan",
+                "OFPActionOutput(len=16,max_len=65509,port=1,type=0)"
+              ],
+              "funcion": "REINCORPORACION_FS"
+            },
+            {
+              "switch": "s7",
+              "protocolo": "arp",
+              "match_exacto": {
+                "eth_type": 2054,
+                "arp_spa": "10.0.0.3",
+                "arp_tpa": "10.0.0.4",
+                "vlan_vid": 4217
+              },
+              "prioridad": 300,
+              "acciones_propuestas": [
+                "pop_vlan",
+                "OFPActionOutput(len=16,max_len=65509,port=1,type=0)"
+              ],
+              "funcion": "REINCORPORACION_FS"
+            }
+          ],
+          "grupo_ff_propuesto": {
+            "bucket_primario": {
+              "watch_port": 4,
+              "acciones": [
+                "push_vlan",
+                "set_vlan:121",
+                "output:4"
+              ]
+            },
+            "bucket_respaldo": {
+              "watch_port": 3,
+              "acciones": [
+                "OFPActionOutput(len=16,max_len=65509,port=3,type=0)"
+              ]
+            }
+          },
+          "activacion_propuesta": "MODIFY_STRICT IPv4/ARP despues de preparar y verificar",
+          "requiere_barreras": true
+        }
+      ],
+      "flowmods_add_propuestos": 10,
+      "flowmods_modify_strict_propuestos": 4,
+      "groupmods_add_propuestos": 2,
+      "ejecucion_openflow_autorizada": false
+    },
+    {
+      "target_id": "T00016",
+      "estado": "BLOQUEADO",
+      "bloqueos": [
+        {
+          "comunicacion": "h3->h4",
+          "motivo": "Primer salto compartido: requiere otra estrategia"
+        }
+      ],
+      "comunicaciones": [
+        {
+          "comunicacion": "h1->h3",
+          "ruta_fs": [
+            "h1",
+            "s1",
+            "s4",
+            "s2",
+            "s5",
+            "h3"
+          ],
+          "ruta_target": [
+            "h1",
+            "s1",
+            "s3",
+            "s4",
+            "s5",
+            "h3"
+          ],
+          "switch_ingreso": "s1",
+          "puerto_fs": 4,
+          "puerto_target": 3,
+          "vlan_nueva": 120,
+          "group_id_nuevo": 40000,
+          "reglas_actuales_ingreso": {
+            "ipv4": {
+              "match": {
+                "eth_type": 2048,
+                "ipv4_src": "10.0.0.1",
+                "ipv4_dst": "10.0.0.3"
+              },
+              "cookie": 41219,
+              "prioridad": 100,
+              "acciones_actuales": [
+                "OFPActionGroup(group_id=1001,len=8,type=22)"
+              ],
+              "acciones_respaldo": [
+                "OFPActionPushVlan(ethertype=33024,len=8,type=17)",
+                "OFPActionSetField(vlan_vid=4197)",
+                "OFPActionOutput(len=16,max_len=65509,port=4,type=0)"
+              ]
+            },
+            "arp": {
+              "match": {
+                "eth_type": 2054,
+                "arp_spa": "10.0.0.1",
+                "arp_tpa": "10.0.0.3"
+              },
+              "cookie": 41219,
+              "prioridad": 100,
+              "acciones_actuales": [
+                "OFPActionGroup(group_id=1001,len=8,type=22)"
+              ],
+              "acciones_respaldo": [
+                "OFPActionPushVlan(ethertype=33024,len=8,type=17)",
+                "OFPActionSetField(vlan_vid=4197)",
+                "OFPActionOutput(len=16,max_len=65509,port=4,type=0)"
+              ]
+            }
+          },
+          "respaldo_actual_verificado": [
+            "OFPActionPushVlan(ethertype=33024,len=8,type=17)",
+            "OFPActionSetField(vlan_vid=4197)",
+            "OFPActionOutput(len=16,max_len=65509,port=4,type=0)"
+          ],
+          "flowmods_preparacion": [
+            {
+              "switch": "s3",
+              "protocolo": "ipv4",
+              "match_exacto": {
+                "eth_type": 2048,
+                "ipv4_src": "10.0.0.1",
+                "ipv4_dst": "10.0.0.3",
+                "vlan_vid": 4216
+              },
+              "prioridad": 300,
+              "acciones_propuestas": [
+                "output:2"
+              ],
+              "funcion": "TRANSITO_VLAN"
+            },
+            {
+              "switch": "s3",
+              "protocolo": "arp",
+              "match_exacto": {
+                "eth_type": 2054,
+                "arp_spa": "10.0.0.1",
+                "arp_tpa": "10.0.0.3",
+                "vlan_vid": 4216
+              },
+              "prioridad": 300,
+              "acciones_propuestas": [
+                "output:2"
+              ],
+              "funcion": "TRANSITO_VLAN"
+            },
+            {
+              "switch": "s4",
+              "protocolo": "ipv4",
+              "match_exacto": {
+                "eth_type": 2048,
+                "ipv4_src": "10.0.0.1",
+                "ipv4_dst": "10.0.0.3",
+                "vlan_vid": 4216
+              },
+              "prioridad": 300,
+              "acciones_propuestas": [
+                "output:4"
+              ],
+              "funcion": "TRANSITO_VLAN"
+            },
+            {
+              "switch": "s4",
+              "protocolo": "arp",
+              "match_exacto": {
+                "eth_type": 2054,
+                "arp_spa": "10.0.0.1",
+                "arp_tpa": "10.0.0.3",
+                "vlan_vid": 4216
+              },
+              "prioridad": 300,
+              "acciones_propuestas": [
+                "output:4"
+              ],
+              "funcion": "TRANSITO_VLAN"
+            },
+            {
+              "switch": "s5",
+              "protocolo": "ipv4",
+              "match_exacto": {
+                "eth_type": 2048,
+                "ipv4_src": "10.0.0.1",
+                "ipv4_dst": "10.0.0.3",
+                "vlan_vid": 4216
+              },
+              "prioridad": 300,
+              "acciones_propuestas": [
+                "pop_vlan",
+                "OFPActionOutput(len=16,max_len=65509,port=1,type=0)"
+              ],
+              "funcion": "REINCORPORACION_FS"
+            },
+            {
+              "switch": "s5",
+              "protocolo": "arp",
+              "match_exacto": {
+                "eth_type": 2054,
+                "arp_spa": "10.0.0.1",
+                "arp_tpa": "10.0.0.3",
+                "vlan_vid": 4216
+              },
+              "prioridad": 300,
+              "acciones_propuestas": [
+                "pop_vlan",
+                "OFPActionOutput(len=16,max_len=65509,port=1,type=0)"
+              ],
+              "funcion": "REINCORPORACION_FS"
+            }
+          ],
+          "grupo_ff_propuesto": {
+            "bucket_primario": {
+              "watch_port": 3,
+              "acciones": [
+                "push_vlan",
+                "set_vlan:120",
+                "output:3"
+              ]
+            },
+            "bucket_respaldo": {
+              "watch_port": 4,
+              "acciones": [
+                "OFPActionPushVlan(ethertype=33024,len=8,type=17)",
+                "OFPActionSetField(vlan_vid=4197)",
+                "OFPActionOutput(len=16,max_len=65509,port=4,type=0)"
+              ]
+            }
+          },
+          "activacion_propuesta": "MODIFY_STRICT IPv4/ARP despues de preparar y verificar",
+          "requiere_barreras": true
+        }
+      ],
+      "flowmods_add_propuestos": 6,
+      "flowmods_modify_strict_propuestos": 2,
+      "groupmods_add_propuestos": 1,
+      "ejecucion_openflow_autorizada": false
+    },
+    {
+      "target_id": "T00022",
+      "estado": "BLOQUEADO",
+      "bloqueos": [
+        {
+          "comunicacion": "h2->h4",
+          "motivo": "Primer salto compartido: requiere otra estrategia"
+        }
+      ],
+      "comunicaciones": [
+        {
+          "comunicacion": "h1->h3",
+          "ruta_fs": [
+            "h1",
+            "s1",
+            "s4",
+            "s2",
+            "s5",
+            "h3"
+          ],
+          "ruta_target": [
+            "h1",
+            "s1",
+            "s3",
+            "s4",
+            "s5",
+            "h3"
+          ],
+          "switch_ingreso": "s1",
+          "puerto_fs": 4,
+          "puerto_target": 3,
+          "vlan_nueva": 120,
+          "group_id_nuevo": 40000,
+          "reglas_actuales_ingreso": {
+            "ipv4": {
+              "match": {
+                "eth_type": 2048,
+                "ipv4_src": "10.0.0.1",
+                "ipv4_dst": "10.0.0.3"
+              },
+              "cookie": 41219,
+              "prioridad": 100,
+              "acciones_actuales": [
+                "OFPActionGroup(group_id=1001,len=8,type=22)"
+              ],
+              "acciones_respaldo": [
+                "OFPActionPushVlan(ethertype=33024,len=8,type=17)",
+                "OFPActionSetField(vlan_vid=4197)",
+                "OFPActionOutput(len=16,max_len=65509,port=4,type=0)"
+              ]
+            },
+            "arp": {
+              "match": {
+                "eth_type": 2054,
+                "arp_spa": "10.0.0.1",
+                "arp_tpa": "10.0.0.3"
+              },
+              "cookie": 41219,
+              "prioridad": 100,
+              "acciones_actuales": [
+                "OFPActionGroup(group_id=1001,len=8,type=22)"
+              ],
+              "acciones_respaldo": [
+                "OFPActionPushVlan(ethertype=33024,len=8,type=17)",
+                "OFPActionSetField(vlan_vid=4197)",
+                "OFPActionOutput(len=16,max_len=65509,port=4,type=0)"
+              ]
+            }
+          },
+          "respaldo_actual_verificado": [
+            "OFPActionPushVlan(ethertype=33024,len=8,type=17)",
+            "OFPActionSetField(vlan_vid=4197)",
+            "OFPActionOutput(len=16,max_len=65509,port=4,type=0)"
+          ],
+          "flowmods_preparacion": [
+            {
+              "switch": "s3",
+              "protocolo": "ipv4",
+              "match_exacto": {
+                "eth_type": 2048,
+                "ipv4_src": "10.0.0.1",
+                "ipv4_dst": "10.0.0.3",
+                "vlan_vid": 4216
+              },
+              "prioridad": 300,
+              "acciones_propuestas": [
+                "output:2"
+              ],
+              "funcion": "TRANSITO_VLAN"
+            },
+            {
+              "switch": "s3",
+              "protocolo": "arp",
+              "match_exacto": {
+                "eth_type": 2054,
+                "arp_spa": "10.0.0.1",
+                "arp_tpa": "10.0.0.3",
+                "vlan_vid": 4216
+              },
+              "prioridad": 300,
+              "acciones_propuestas": [
+                "output:2"
+              ],
+              "funcion": "TRANSITO_VLAN"
+            },
+            {
+              "switch": "s4",
+              "protocolo": "ipv4",
+              "match_exacto": {
+                "eth_type": 2048,
+                "ipv4_src": "10.0.0.1",
+                "ipv4_dst": "10.0.0.3",
+                "vlan_vid": 4216
+              },
+              "prioridad": 300,
+              "acciones_propuestas": [
+                "output:4"
+              ],
+              "funcion": "TRANSITO_VLAN"
+            },
+            {
+              "switch": "s4",
+              "protocolo": "arp",
+              "match_exacto": {
+                "eth_type": 2054,
+                "arp_spa": "10.0.0.1",
+                "arp_tpa": "10.0.0.3",
+                "vlan_vid": 4216
+              },
+              "prioridad": 300,
+              "acciones_propuestas": [
+                "output:4"
+              ],
+              "funcion": "TRANSITO_VLAN"
+            },
+            {
+              "switch": "s5",
+              "protocolo": "ipv4",
+              "match_exacto": {
+                "eth_type": 2048,
+                "ipv4_src": "10.0.0.1",
+                "ipv4_dst": "10.0.0.3",
+                "vlan_vid": 4216
+              },
+              "prioridad": 300,
+              "acciones_propuestas": [
+                "pop_vlan",
+                "OFPActionOutput(len=16,max_len=65509,port=1,type=0)"
+              ],
+              "funcion": "REINCORPORACION_FS"
+            },
+            {
+              "switch": "s5",
+              "protocolo": "arp",
+              "match_exacto": {
+                "eth_type": 2054,
+                "arp_spa": "10.0.0.1",
+                "arp_tpa": "10.0.0.3",
+                "vlan_vid": 4216
+              },
+              "prioridad": 300,
+              "acciones_propuestas": [
+                "pop_vlan",
+                "OFPActionOutput(len=16,max_len=65509,port=1,type=0)"
+              ],
+              "funcion": "REINCORPORACION_FS"
+            }
+          ],
+          "grupo_ff_propuesto": {
+            "bucket_primario": {
+              "watch_port": 3,
+              "acciones": [
+                "push_vlan",
+                "set_vlan:120",
+                "output:3"
+              ]
+            },
+            "bucket_respaldo": {
+              "watch_port": 4,
+              "acciones": [
+                "OFPActionPushVlan(ethertype=33024,len=8,type=17)",
+                "OFPActionSetField(vlan_vid=4197)",
+                "OFPActionOutput(len=16,max_len=65509,port=4,type=0)"
+              ]
+            }
+          },
+          "activacion_propuesta": "MODIFY_STRICT IPv4/ARP despues de preparar y verificar",
+          "requiere_barreras": true
+        }
+      ],
+      "flowmods_add_propuestos": 6,
+      "flowmods_modify_strict_propuestos": 2,
+      "groupmods_add_propuestos": 1,
+      "ejecucion_openflow_autorizada": false
+    },
+    {
+      "target_id": "T00148",
+      "estado": "BLOQUEADO",
+      "bloqueos": [
+        {
+          "comunicacion": "h1->h2",
+          "motivo": "Regla base IP/ARP no unica en s4: {'eth_type': 2048, 'ipv4_src': '10.0.0.1', 'ipv4_dst': '10.0.0.2'}"
+        },
+        {
+          "comunicacion": "h1->h3",
+          "motivo": "Primer salto compartido: requiere otra estrategia"
+        }
+      ],
+      "comunicaciones": [
+        {
+          "comunicacion": "h3->h4",
+          "ruta_fs": [
+            "h3",
+            "s5",
+            "s4",
+            "s7",
+            "h4"
+          ],
+          "ruta_target": [
+            "h3",
+            "s5",
+            "s8",
+            "s7",
+            "h4"
+          ],
+          "switch_ingreso": "s5",
+          "puerto_fs": 3,
+          "puerto_target": 4,
+          "vlan_nueva": 121,
+          "group_id_nuevo": 40001,
+          "reglas_actuales_ingreso": {
+            "ipv4": {
+              "match": {
+                "eth_type": 2048,
+                "ipv4_src": "10.0.0.3",
+                "ipv4_dst": "10.0.0.4"
+              },
+              "cookie": 41219,
+              "prioridad": 100,
+              "acciones_actuales": [
+                "OFPActionGroup(group_id=1012,len=8,type=22)"
+              ],
+              "acciones_respaldo": [
+                "OFPActionOutput(len=16,max_len=65509,port=3,type=0)"
+              ]
+            },
+            "arp": {
+              "match": {
+                "eth_type": 2054,
+                "arp_spa": "10.0.0.3",
+                "arp_tpa": "10.0.0.4"
+              },
+              "cookie": 41219,
+              "prioridad": 100,
+              "acciones_actuales": [
+                "OFPActionGroup(group_id=1012,len=8,type=22)"
+              ],
+              "acciones_respaldo": [
+                "OFPActionOutput(len=16,max_len=65509,port=3,type=0)"
+              ]
+            }
+          },
+          "respaldo_actual_verificado": [
+            "OFPActionOutput(len=16,max_len=65509,port=3,type=0)"
+          ],
+          "flowmods_preparacion": [
+            {
+              "switch": "s8",
+              "protocolo": "ipv4",
+              "match_exacto": {
+                "eth_type": 2048,
+                "ipv4_src": "10.0.0.3",
+                "ipv4_dst": "10.0.0.4",
+                "vlan_vid": 4217
+              },
+              "prioridad": 300,
+              "acciones_propuestas": [
+                "output:2"
+              ],
+              "funcion": "TRANSITO_VLAN"
+            },
+            {
+              "switch": "s8",
+              "protocolo": "arp",
+              "match_exacto": {
+                "eth_type": 2054,
+                "arp_spa": "10.0.0.3",
+                "arp_tpa": "10.0.0.4",
+                "vlan_vid": 4217
+              },
+              "prioridad": 300,
+              "acciones_propuestas": [
+                "output:2"
+              ],
+              "funcion": "TRANSITO_VLAN"
+            },
+            {
+              "switch": "s7",
+              "protocolo": "ipv4",
+              "match_exacto": {
+                "eth_type": 2048,
+                "ipv4_src": "10.0.0.3",
+                "ipv4_dst": "10.0.0.4",
+                "vlan_vid": 4217
+              },
+              "prioridad": 300,
+              "acciones_propuestas": [
+                "pop_vlan",
+                "OFPActionOutput(len=16,max_len=65509,port=1,type=0)"
+              ],
+              "funcion": "REINCORPORACION_FS"
+            },
+            {
+              "switch": "s7",
+              "protocolo": "arp",
+              "match_exacto": {
+                "eth_type": 2054,
+                "arp_spa": "10.0.0.3",
+                "arp_tpa": "10.0.0.4",
+                "vlan_vid": 4217
+              },
+              "prioridad": 300,
+              "acciones_propuestas": [
+                "pop_vlan",
+                "OFPActionOutput(len=16,max_len=65509,port=1,type=0)"
+              ],
+              "funcion": "REINCORPORACION_FS"
+            }
+          ],
+          "grupo_ff_propuesto": {
+            "bucket_primario": {
+              "watch_port": 4,
+              "acciones": [
+                "push_vlan",
+                "set_vlan:121",
+                "output:4"
+              ]
+            },
+            "bucket_respaldo": {
+              "watch_port": 3,
+              "acciones": [
+                "OFPActionOutput(len=16,max_len=65509,port=3,type=0)"
+              ]
+            }
+          },
+          "activacion_propuesta": "MODIFY_STRICT IPv4/ARP despues de preparar y verificar",
+          "requiere_barreras": true
+        }
+      ],
+      "flowmods_add_propuestos": 4,
+      "flowmods_modify_strict_propuestos": 2,
+      "groupmods_add_propuestos": 1,
+      "ejecucion_openflow_autorizada": false
+    },
+    {
+      "target_id": "T00150",
+      "estado": "BLOQUEADO",
+      "bloqueos": [
+        {
+          "comunicacion": "h1->h2",
+          "motivo": "Regla base IP/ARP no unica en s4: {'eth_type': 2048, 'ipv4_src': '10.0.0.1', 'ipv4_dst': '10.0.0.2'}"
+        },
+        {
+          "comunicacion": "h1->h3",
+          "motivo": "Primer salto compartido: requiere otra estrategia"
+        },
+        {
+          "comunicacion": "h3->h4",
+          "motivo": "Primer salto compartido: requiere otra estrategia"
+        }
+      ],
+      "comunicaciones": [],
+      "flowmods_add_propuestos": 0,
+      "flowmods_modify_strict_propuestos": 0,
+      "groupmods_add_propuestos": 0,
+      "ejecucion_openflow_autorizada": false
+    },
+    {
+      "target_id": "T00156",
+      "estado": "BLOQUEADO",
+      "bloqueos": [
+        {
+          "comunicacion": "h1->h2",
+          "motivo": "Regla base IP/ARP no unica en s4: {'eth_type': 2048, 'ipv4_src': '10.0.0.1', 'ipv4_dst': '10.0.0.2'}"
+        },
+        {
+          "comunicacion": "h1->h3",
+          "motivo": "Primer salto compartido: requiere otra estrategia"
+        },
+        {
+          "comunicacion": "h2->h4",
+          "motivo": "Primer salto compartido: requiere otra estrategia"
+        }
+      ],
+      "comunicaciones": [],
+      "flowmods_add_propuestos": 0,
+      "flowmods_modify_strict_propuestos": 0,
+      "groupmods_add_propuestos": 0,
+      "ejecucion_openflow_autorizada": false
+    },
+    {
+      "target_id": "T00006",
+      "estado": "PREPARACION_PLAUSIBLE_REQUIERE_PRUEBA_EN_OVS",
+      "bloqueos": [],
+      "comunicaciones": [
+        {
+          "comunicacion": "h1->h3",
+          "ruta_fs": [
+            "h1",
+            "s1",
+            "s4",
+            "s2",
+            "s5",
+            "h3"
+          ],
+          "ruta_target": [
+            "h1",
+            "s1",
+            "s3",
+            "s4",
+            "s5",
+            "h3"
+          ],
+          "switch_ingreso": "s1",
+          "puerto_fs": 4,
+          "puerto_target": 3,
+          "vlan_nueva": 120,
+          "group_id_nuevo": 40000,
+          "reglas_actuales_ingreso": {
+            "ipv4": {
+              "match": {
+                "eth_type": 2048,
+                "ipv4_src": "10.0.0.1",
+                "ipv4_dst": "10.0.0.3"
+              },
+              "cookie": 41219,
+              "prioridad": 100,
+              "acciones_actuales": [
+                "OFPActionGroup(group_id=1001,len=8,type=22)"
+              ],
+              "acciones_respaldo": [
+                "OFPActionPushVlan(ethertype=33024,len=8,type=17)",
+                "OFPActionSetField(vlan_vid=4197)",
+                "OFPActionOutput(len=16,max_len=65509,port=4,type=0)"
+              ]
+            },
+            "arp": {
+              "match": {
+                "eth_type": 2054,
+                "arp_spa": "10.0.0.1",
+                "arp_tpa": "10.0.0.3"
+              },
+              "cookie": 41219,
+              "prioridad": 100,
+              "acciones_actuales": [
+                "OFPActionGroup(group_id=1001,len=8,type=22)"
+              ],
+              "acciones_respaldo": [
+                "OFPActionPushVlan(ethertype=33024,len=8,type=17)",
+                "OFPActionSetField(vlan_vid=4197)",
+                "OFPActionOutput(len=16,max_len=65509,port=4,type=0)"
+              ]
+            }
+          },
+          "respaldo_actual_verificado": [
+            "OFPActionPushVlan(ethertype=33024,len=8,type=17)",
+            "OFPActionSetField(vlan_vid=4197)",
+            "OFPActionOutput(len=16,max_len=65509,port=4,type=0)"
+          ],
+          "flowmods_preparacion": [
+            {
+              "switch": "s3",
+              "protocolo": "ipv4",
+              "match_exacto": {
+                "eth_type": 2048,
+                "ipv4_src": "10.0.0.1",
+                "ipv4_dst": "10.0.0.3",
+                "vlan_vid": 4216
+              },
+              "prioridad": 300,
+              "acciones_propuestas": [
+                "output:2"
+              ],
+              "funcion": "TRANSITO_VLAN"
+            },
+            {
+              "switch": "s3",
+              "protocolo": "arp",
+              "match_exacto": {
+                "eth_type": 2054,
+                "arp_spa": "10.0.0.1",
+                "arp_tpa": "10.0.0.3",
+                "vlan_vid": 4216
+              },
+              "prioridad": 300,
+              "acciones_propuestas": [
+                "output:2"
+              ],
+              "funcion": "TRANSITO_VLAN"
+            },
+            {
+              "switch": "s4",
+              "protocolo": "ipv4",
+              "match_exacto": {
+                "eth_type": 2048,
+                "ipv4_src": "10.0.0.1",
+                "ipv4_dst": "10.0.0.3",
+                "vlan_vid": 4216
+              },
+              "prioridad": 300,
+              "acciones_propuestas": [
+                "output:4"
+              ],
+              "funcion": "TRANSITO_VLAN"
+            },
+            {
+              "switch": "s4",
+              "protocolo": "arp",
+              "match_exacto": {
+                "eth_type": 2054,
+                "arp_spa": "10.0.0.1",
+                "arp_tpa": "10.0.0.3",
+                "vlan_vid": 4216
+              },
+              "prioridad": 300,
+              "acciones_propuestas": [
+                "output:4"
+              ],
+              "funcion": "TRANSITO_VLAN"
+            },
+            {
+              "switch": "s5",
+              "protocolo": "ipv4",
+              "match_exacto": {
+                "eth_type": 2048,
+                "ipv4_src": "10.0.0.1",
+                "ipv4_dst": "10.0.0.3",
+                "vlan_vid": 4216
+              },
+              "prioridad": 300,
+              "acciones_propuestas": [
+                "pop_vlan",
+                "OFPActionOutput(len=16,max_len=65509,port=1,type=0)"
+              ],
+              "funcion": "REINCORPORACION_FS"
+            },
+            {
+              "switch": "s5",
+              "protocolo": "arp",
+              "match_exacto": {
+                "eth_type": 2054,
+                "arp_spa": "10.0.0.1",
+                "arp_tpa": "10.0.0.3",
+                "vlan_vid": 4216
+              },
+              "prioridad": 300,
+              "acciones_propuestas": [
+                "pop_vlan",
+                "OFPActionOutput(len=16,max_len=65509,port=1,type=0)"
+              ],
+              "funcion": "REINCORPORACION_FS"
+            }
+          ],
+          "grupo_ff_propuesto": {
+            "bucket_primario": {
+              "watch_port": 3,
+              "acciones": [
+                "push_vlan",
+                "set_vlan:120",
+                "output:3"
+              ]
+            },
+            "bucket_respaldo": {
+              "watch_port": 4,
+              "acciones": [
+                "OFPActionPushVlan(ethertype=33024,len=8,type=17)",
+                "OFPActionSetField(vlan_vid=4197)",
+                "OFPActionOutput(len=16,max_len=65509,port=4,type=0)"
+              ]
+            }
+          },
+          "activacion_propuesta": "MODIFY_STRICT IPv4/ARP despues de preparar y verificar",
+          "requiere_barreras": true
+        }
+      ],
+      "flowmods_add_propuestos": 6,
+      "flowmods_modify_strict_propuestos": 2,
+      "groupmods_add_propuestos": 1,
+      "ejecucion_openflow_autorizada": false
+    },
+    {
+      "target_id": "T00072",
+      "estado": "BLOQUEADO",
+      "bloqueos": [
+        {
+          "comunicacion": "h1->h2",
+          "motivo": "Regla base IP/ARP no unica en s4: {'eth_type': 2048, 'ipv4_src': '10.0.0.1', 'ipv4_dst': '10.0.0.2'}"
+        },
+        {
+          "comunicacion": "h1->h3",
+          "motivo": "Primer salto compartido: requiere otra estrategia"
+        }
+      ],
+      "comunicaciones": [],
+      "flowmods_add_propuestos": 0,
+      "flowmods_modify_strict_propuestos": 0,
+      "groupmods_add_propuestos": 0,
+      "ejecucion_openflow_autorizada": false
+    },
+    {
+      "target_id": "T00001",
+      "estado": "PREPARACION_PLAUSIBLE_REQUIERE_PRUEBA_EN_OVS",
+      "bloqueos": [],
+      "comunicaciones": [
+        {
+          "comunicacion": "h2->h3",
+          "ruta_fs": [
+            "h2",
+            "s2",
+            "s5",
+            "h3"
+          ],
+          "ruta_target": [
+            "h2",
+            "s2",
+            "s4",
+            "s5",
+            "h3"
+          ],
+          "switch_ingreso": "s2",
+          "puerto_fs": 4,
+          "puerto_target": 3,
+          "vlan_nueva": 120,
+          "group_id_nuevo": 40000,
+          "reglas_actuales_ingreso": {
+            "ipv4": {
+              "match": {
+                "eth_type": 2048,
+                "ipv4_src": "10.0.0.2",
+                "ipv4_dst": "10.0.0.3"
+              },
+              "cookie": 41219,
+              "prioridad": 100,
+              "acciones_actuales": [
+                "OFPActionGroup(group_id=1006,len=8,type=22)"
+              ],
+              "acciones_respaldo": [
+                "OFPActionOutput(len=16,max_len=65509,port=4,type=0)"
+              ]
+            },
+            "arp": {
+              "match": {
+                "eth_type": 2054,
+                "arp_spa": "10.0.0.2",
+                "arp_tpa": "10.0.0.3"
+              },
+              "cookie": 41219,
+              "prioridad": 100,
+              "acciones_actuales": [
+                "OFPActionGroup(group_id=1006,len=8,type=22)"
+              ],
+              "acciones_respaldo": [
+                "OFPActionOutput(len=16,max_len=65509,port=4,type=0)"
+              ]
+            }
+          },
+          "respaldo_actual_verificado": [
+            "OFPActionOutput(len=16,max_len=65509,port=4,type=0)"
+          ],
+          "flowmods_preparacion": [
+            {
+              "switch": "s4",
+              "protocolo": "ipv4",
+              "match_exacto": {
+                "eth_type": 2048,
+                "ipv4_src": "10.0.0.2",
+                "ipv4_dst": "10.0.0.3",
+                "vlan_vid": 4216
+              },
+              "prioridad": 300,
+              "acciones_propuestas": [
+                "output:4"
+              ],
+              "funcion": "TRANSITO_VLAN"
+            },
+            {
+              "switch": "s4",
+              "protocolo": "arp",
+              "match_exacto": {
+                "eth_type": 2054,
+                "arp_spa": "10.0.0.2",
+                "arp_tpa": "10.0.0.3",
+                "vlan_vid": 4216
+              },
+              "prioridad": 300,
+              "acciones_propuestas": [
+                "output:4"
+              ],
+              "funcion": "TRANSITO_VLAN"
+            },
+            {
+              "switch": "s5",
+              "protocolo": "ipv4",
+              "match_exacto": {
+                "eth_type": 2048,
+                "ipv4_src": "10.0.0.2",
+                "ipv4_dst": "10.0.0.3",
+                "vlan_vid": 4216
+              },
+              "prioridad": 300,
+              "acciones_propuestas": [
+                "pop_vlan",
+                "OFPActionOutput(len=16,max_len=65509,port=1,type=0)"
+              ],
+              "funcion": "REINCORPORACION_FS"
+            },
+            {
+              "switch": "s5",
+              "protocolo": "arp",
+              "match_exacto": {
+                "eth_type": 2054,
+                "arp_spa": "10.0.0.2",
+                "arp_tpa": "10.0.0.3",
+                "vlan_vid": 4216
+              },
+              "prioridad": 300,
+              "acciones_propuestas": [
+                "pop_vlan",
+                "OFPActionOutput(len=16,max_len=65509,port=1,type=0)"
+              ],
+              "funcion": "REINCORPORACION_FS"
+            }
+          ],
+          "grupo_ff_propuesto": {
+            "bucket_primario": {
+              "watch_port": 3,
+              "acciones": [
+                "push_vlan",
+                "set_vlan:120",
+                "output:3"
+              ]
+            },
+            "bucket_respaldo": {
+              "watch_port": 4,
+              "acciones": [
+                "OFPActionOutput(len=16,max_len=65509,port=4,type=0)"
+              ]
+            }
+          },
+          "activacion_propuesta": "MODIFY_STRICT IPv4/ARP despues de preparar y verificar",
+          "requiere_barreras": true
+        }
+      ],
+      "flowmods_add_propuestos": 4,
+      "flowmods_modify_strict_propuestos": 2,
+      "groupmods_add_propuestos": 1,
+      "ejecucion_openflow_autorizada": false
+    },
+    {
+      "target_id": "T00005",
+      "estado": "BLOQUEADO",
+      "bloqueos": [
+        {
+          "comunicacion": "h1->h3",
+          "motivo": "Primer salto compartido: requiere otra estrategia"
+        }
+      ],
+      "comunicaciones": [],
+      "flowmods_add_propuestos": 0,
+      "flowmods_modify_strict_propuestos": 0,
+      "groupmods_add_propuestos": 0,
+      "ejecucion_openflow_autorizada": false
+    }
+  ]
+}

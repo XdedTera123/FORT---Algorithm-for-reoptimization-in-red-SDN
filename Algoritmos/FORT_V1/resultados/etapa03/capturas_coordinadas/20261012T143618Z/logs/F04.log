@@ -1,0 +1,35 @@
+------------------------------------------------------------
+Client connecting to 10.0.0.1, UDP port 5804
+Sending 1470 byte datagrams, IPG target: 1401.90 us (kalman adjust)
+UDP buffer size:  208 KByte (default)
+------------------------------------------------------------
+[  1] local 10.0.0.4 port 52067 connected with 10.0.0.1 port 5804
+[ ID] Interval       Transfer     Bandwidth
+[  1] 0.0000-2.0000 sec  1.99 MBytes  8.34 Mbits/sec
+[  1] 2.0000-4.0000 sec  2.00 MBytes  8.40 Mbits/sec
+[  1] 4.0000-6.0000 sec  2.01 MBytes  8.41 Mbits/sec
+[  1] 6.0000-8.0000 sec  2.00 MBytes  8.40 Mbits/sec
+[  1] 8.0000-10.0000 sec  2.00 MBytes  8.38 Mbits/sec
+[  1] 10.0000-12.0000 sec  1.99 MBytes  8.36 Mbits/sec
+[  1] 12.0000-14.0000 sec  2.00 MBytes  8.41 Mbits/sec
+[  1] 14.0000-16.0000 sec  2.00 MBytes  8.40 Mbits/sec
+[  1] 16.0000-18.0000 sec  2.00 MBytes  8.40 Mbits/sec
+[  1] 18.0000-20.0000 sec  1.99 MBytes  8.37 Mbits/sec
+[  1] 20.0000-22.0000 sec  2.00 MBytes  8.40 Mbits/sec
+[  1] 22.0000-24.0000 sec  1.99 MBytes  8.37 Mbits/sec
+[  1] 24.0000-26.0000 sec  2.00 MBytes  8.37 Mbits/sec
+[  1] 26.0000-28.0000 sec  2.01 MBytes  8.43 Mbits/sec
+[  1] 28.0000-30.0000 sec  2.00 MBytes  8.38 Mbits/sec
+[  1] 30.0000-32.0000 sec  2.00 MBytes  8.39 Mbits/sec
+[  1] 32.0000-34.0000 sec  2.00 MBytes  8.40 Mbits/sec
+[  1] 34.0000-36.0000 sec  1.99 MBytes  8.36 Mbits/sec
+[  1] 36.0000-38.0000 sec  2.01 MBytes  8.42 Mbits/sec
+[  1] 38.0000-40.0000 sec  2.00 MBytes  8.39 Mbits/sec
+[  1] 40.0000-42.0000 sec  2.00 MBytes  8.39 Mbits/sec
+[  1] 42.0000-44.0000 sec  1.99 MBytes  8.36 Mbits/sec
+[  1] 0.0000-45.0006 sec  45.0 MBytes  8.39 Mbits/sec
+[  1] Sent 32092 datagrams
+[  1] Server Report:
+[ ID] Interval       Transfer     Bandwidth        Jitter   Lost/Total Datagrams
+[  1] 0.0000-45.0099 sec  45.0 MBytes  8.38 Mbits/sec   1.244 ms 0/32091 (0%)
+[  1] 0.0000-45.0099 sec  1324 datagrams received out-of-order

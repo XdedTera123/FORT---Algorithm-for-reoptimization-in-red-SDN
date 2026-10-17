@@ -1,0 +1,310 @@
+{
+  "tipo": "FORT_FS_POST_FF_INFERIDO_OPENFLOW",
+  "fecha_utc": "2026-10-13T02:59:44.256879+00:00",
+  "inicio_consultas_utc": "2026-10-13T02:59:39.207461+00:00",
+  "captura_atomica": false,
+  "enlace_fallado": [
+    "s1",
+    "s2"
+  ],
+  "fuente": "FlowStats + GroupDescStats + PortDescStats OpenFlow 1.3",
+  "cantidad_comunicaciones": 12,
+  "comunicaciones": [
+    {
+      "origen": "h1",
+      "destino": "h2",
+      "ruta_seleccionada": [
+        "h1",
+        "s1",
+        "s4",
+        "s2",
+        "h2"
+      ],
+      "grupos_ff": [
+        {
+          "switch": "s1",
+          "grupo": 1000,
+          "bucket_indice": 1,
+          "modo_inferido": "RESPALDO",
+          "watch_port": 4
+        }
+      ]
+    },
+    {
+      "origen": "h1",
+      "destino": "h3",
+      "ruta_seleccionada": [
+        "h1",
+        "s1",
+        "s4",
+        "s2",
+        "s5",
+        "h3"
+      ],
+      "grupos_ff": [
+        {
+          "switch": "s1",
+          "grupo": 1001,
+          "bucket_indice": 1,
+          "modo_inferido": "RESPALDO",
+          "watch_port": 4
+        },
+        {
+          "switch": "s2",
+          "grupo": 1002,
+          "bucket_indice": 0,
+          "modo_inferido": "PRINCIPAL",
+          "watch_port": 4
+        }
+      ]
+    },
+    {
+      "origen": "h1",
+      "destino": "h4",
+      "ruta_seleccionada": [
+        "h1",
+        "s1",
+        "s4",
+        "s7",
+        "h4"
+      ],
+      "grupos_ff": [
+        {
+          "switch": "s1",
+          "grupo": 1003,
+          "bucket_indice": 0,
+          "modo_inferido": "PRINCIPAL",
+          "watch_port": 4
+        },
+        {
+          "switch": "s4",
+          "grupo": 1004,
+          "bucket_indice": 0,
+          "modo_inferido": "PRINCIPAL",
+          "watch_port": 5
+        }
+      ]
+    },
+    {
+      "origen": "h2",
+      "destino": "h1",
+      "ruta_seleccionada": [
+        "h2",
+        "s2",
+        "s4",
+        "s1",
+        "h1"
+      ],
+      "grupos_ff": [
+        {
+          "switch": "s2",
+          "grupo": 1005,
+          "bucket_indice": 1,
+          "modo_inferido": "RESPALDO",
+          "watch_port": 3
+        }
+      ]
+    },
+    {
+      "origen": "h2",
+      "destino": "h3",
+      "ruta_seleccionada": [
+        "h2",
+        "s2",
+        "s5",
+        "h3"
+      ],
+      "grupos_ff": [
+        {
+          "switch": "s2",
+          "grupo": 1006,
+          "bucket_indice": 0,
+          "modo_inferido": "PRINCIPAL",
+          "watch_port": 4
+        }
+      ]
+    },
+    {
+      "origen": "h2",
+      "destino": "h4",
+      "ruta_seleccionada": [
+        "h2",
+        "s2",
+        "s4",
+        "s7",
+        "h4"
+      ],
+      "grupos_ff": [
+        {
+          "switch": "s2",
+          "grupo": 1007,
+          "bucket_indice": 0,
+          "modo_inferido": "PRINCIPAL",
+          "watch_port": 3
+        },
+        {
+          "switch": "s4",
+          "grupo": 1008,
+          "bucket_indice": 0,
+          "modo_inferido": "PRINCIPAL",
+          "watch_port": 5
+        }
+      ]
+    },
+    {
+      "origen": "h3",
+      "destino": "h1",
+      "ruta_seleccionada": [
+        "h3",
+        "s5",
+        "s2",
+        "s4",
+        "s1",
+        "h1"
+      ],
+      "grupos_ff": [
+        {
+          "switch": "s5",
+          "grupo": 1009,
+          "bucket_indice": 0,
+          "modo_inferido": "PRINCIPAL",
+          "watch_port": 2
+        },
+        {
+          "switch": "s2",
+          "grupo": 1010,
+          "bucket_indice": 1,
+          "modo_inferido": "RESPALDO",
+          "watch_port": 3
+        }
+      ]
+    },
+    {
+      "origen": "h3",
+      "destino": "h2",
+      "ruta_seleccionada": [
+        "h3",
+        "s5",
+        "s2",
+        "h2"
+      ],
+      "grupos_ff": [
+        {
+          "switch": "s5",
+          "grupo": 1011,
+          "bucket_indice": 0,
+          "modo_inferido": "PRINCIPAL",
+          "watch_port": 2
+        }
+      ]
+    },
+    {
+      "origen": "h3",
+      "destino": "h4",
+      "ruta_seleccionada": [
+        "h3",
+        "s5",
+        "s4",
+        "s7",
+        "h4"
+      ],
+      "grupos_ff": [
+        {
+          "switch": "s5",
+          "grupo": 1012,
+          "bucket_indice": 0,
+          "modo_inferido": "PRINCIPAL",
+          "watch_port": 3
+        },
+        {
+          "switch": "s4",
+          "grupo": 1013,
+          "bucket_indice": 0,
+          "modo_inferido": "PRINCIPAL",
+          "watch_port": 5
+        }
+      ]
+    },
+    {
+      "origen": "h4",
+      "destino": "h1",
+      "ruta_seleccionada": [
+        "h4",
+        "s7",
+        "s4",
+        "s1",
+        "h1"
+      ],
+      "grupos_ff": [
+        {
+          "switch": "s7",
+          "grupo": 1014,
+          "bucket_indice": 0,
+          "modo_inferido": "PRINCIPAL",
+          "watch_port": 2
+        },
+        {
+          "switch": "s4",
+          "grupo": 1015,
+          "bucket_indice": 0,
+          "modo_inferido": "PRINCIPAL",
+          "watch_port": 1
+        }
+      ]
+    },
+    {
+      "origen": "h4",
+      "destino": "h2",
+      "ruta_seleccionada": [
+        "h4",
+        "s7",
+        "s4",
+        "s2",
+        "h2"
+      ],
+      "grupos_ff": [
+        {
+          "switch": "s7",
+          "grupo": 1016,
+          "bucket_indice": 0,
+          "modo_inferido": "PRINCIPAL",
+          "watch_port": 2
+        },
+        {
+          "switch": "s4",
+          "grupo": 1017,
+          "bucket_indice": 0,
+          "modo_inferido": "PRINCIPAL",
+          "watch_port": 2
+        }
+      ]
+    },
+    {
+      "origen": "h4",
+      "destino": "h3",
+      "ruta_seleccionada": [
+        "h4",
+        "s7",
+        "s4",
+        "s5",
+        "h3"
+      ],
+      "grupos_ff": [
+        {
+          "switch": "s7",
+          "grupo": 1018,
+          "bucket_indice": 0,
+          "modo_inferido": "PRINCIPAL",
+          "watch_port": 2
+        },
+        {
+          "switch": "s4",
+          "grupo": 1019,
+          "bucket_indice": 0,
+          "modo_inferido": "PRINCIPAL",
+          "watch_port": 4
+        }
+      ]
+    }
+  ]
+}

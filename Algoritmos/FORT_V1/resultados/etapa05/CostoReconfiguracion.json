@@ -1,0 +1,2364 @@
+{
+  "tipo": "CostoReconfiguracion_Estructural_Piloto",
+  "generado_utc": "2026-10-12T20:31:43.761833+00:00",
+  "enlace_fallado": [
+    "s1",
+    "s2"
+  ],
+  "targets_analizados": 40,
+  "parejas_evaluadas": 24,
+  "targets_con_distinto_costo_segun_orden": 0,
+  "tiempo_calculo_s": 0.035632,
+  "modificaciones_ejecutadas_en_ovs": 0,
+  "criterio": "Vector de costo sin pesos: FlowMod, GroupMod, barreras, verificaciones y switches afectados.",
+  "limitaciones": [
+    "No equivale a tiempo de instalacion, costo monetario ni uso real de CPU.",
+    "BarrierRequest y verificaciones son solicitudes planificadas, no respuestas medidas.",
+    "Las operaciones de limpieza o rollback aun no estan catalogadas.",
+    "La misma coleccion de operaciones tiene igual costo de conteo independientemente del orden.",
+    "Ninguna Transition esta certificada como segura o ejecutada."
+  ],
+  "targets": [
+    {
+      "target_id": "T000",
+      "transitions_evaluadas": 0,
+      "perfiles_costo_distintos": 0,
+      "costos": []
+    },
+    {
+      "target_id": "T001",
+      "transitions_evaluadas": 1,
+      "perfiles_costo_distintos": 1,
+      "costos": [
+        {
+          "transition_id": "T001_TR01",
+          "estrategia": "SECUENCIAL_ASC",
+          "comunicaciones_modificadas": 1,
+          "flowmod_add": 4,
+          "flowmod_modify_strict": 2,
+          "groupmod_add": 1,
+          "total_mensajes_modificacion_propuestos": 7,
+          "barrier_request_propuestos": 4,
+          "verificaciones_planificadas": 1,
+          "total_pasos_logicos": 12,
+          "switches_con_modificaciones": [
+            "s1",
+            "s3",
+            "s4"
+          ],
+          "cantidad_switches_con_modificaciones": 3,
+          "desglose_por_switch": [
+            {
+              "switch": "s1",
+              "flowmod_add": 0,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 2,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s3",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s4",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            }
+          ],
+          "costo_vectorial_sin_pesos": {
+            "mensajes_modificacion": 7,
+            "barreras": 4,
+            "verificaciones": 1,
+            "switches_modificados": 3
+          },
+          "costo_temporal_medido": null,
+          "costo_monetario_medido": null,
+          "ejecutada_en_ovs": false
+        }
+      ]
+    },
+    {
+      "target_id": "T002",
+      "transitions_evaluadas": 3,
+      "perfiles_costo_distintos": 1,
+      "costos": [
+        {
+          "transition_id": "T002_TR01",
+          "estrategia": "SECUENCIAL_ASC",
+          "comunicaciones_modificadas": 2,
+          "flowmod_add": 16,
+          "flowmod_modify_strict": 4,
+          "groupmod_add": 2,
+          "total_mensajes_modificacion_propuestos": 22,
+          "barrier_request_propuestos": 12,
+          "verificaciones_planificadas": 2,
+          "total_pasos_logicos": 36,
+          "switches_con_modificaciones": [
+            "s2",
+            "s3",
+            "s4",
+            "s5",
+            "s6",
+            "s7",
+            "s8"
+          ],
+          "cantidad_switches_con_modificaciones": 7,
+          "desglose_por_switch": [
+            {
+              "switch": "s2",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s3",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s4",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 2,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s5",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 3,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s6",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s7",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 3,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s8",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            }
+          ],
+          "costo_vectorial_sin_pesos": {
+            "mensajes_modificacion": 22,
+            "barreras": 12,
+            "verificaciones": 2,
+            "switches_modificados": 7
+          },
+          "costo_temporal_medido": null,
+          "costo_monetario_medido": null,
+          "ejecutada_en_ovs": false
+        },
+        {
+          "transition_id": "T002_TR02",
+          "estrategia": "SECUENCIAL_DESC",
+          "comunicaciones_modificadas": 2,
+          "flowmod_add": 16,
+          "flowmod_modify_strict": 4,
+          "groupmod_add": 2,
+          "total_mensajes_modificacion_propuestos": 22,
+          "barrier_request_propuestos": 12,
+          "verificaciones_planificadas": 2,
+          "total_pasos_logicos": 36,
+          "switches_con_modificaciones": [
+            "s2",
+            "s3",
+            "s4",
+            "s5",
+            "s6",
+            "s7",
+            "s8"
+          ],
+          "cantidad_switches_con_modificaciones": 7,
+          "desglose_por_switch": [
+            {
+              "switch": "s2",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s3",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s4",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 2,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s5",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 3,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s6",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s7",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 3,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s8",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            }
+          ],
+          "costo_vectorial_sin_pesos": {
+            "mensajes_modificacion": 22,
+            "barreras": 12,
+            "verificaciones": 2,
+            "switches_modificados": 7
+          },
+          "costo_temporal_medido": null,
+          "costo_monetario_medido": null,
+          "ejecutada_en_ovs": false
+        },
+        {
+          "transition_id": "T002_TR03",
+          "estrategia": "PREPARAR_TODOS_LUEGO_ACTIVAR",
+          "comunicaciones_modificadas": 2,
+          "flowmod_add": 16,
+          "flowmod_modify_strict": 4,
+          "groupmod_add": 2,
+          "total_mensajes_modificacion_propuestos": 22,
+          "barrier_request_propuestos": 12,
+          "verificaciones_planificadas": 2,
+          "total_pasos_logicos": 36,
+          "switches_con_modificaciones": [
+            "s2",
+            "s3",
+            "s4",
+            "s5",
+            "s6",
+            "s7",
+            "s8"
+          ],
+          "cantidad_switches_con_modificaciones": 7,
+          "desglose_por_switch": [
+            {
+              "switch": "s2",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s3",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s4",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 2,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s5",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 3,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s6",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s7",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 3,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s8",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            }
+          ],
+          "costo_vectorial_sin_pesos": {
+            "mensajes_modificacion": 22,
+            "barreras": 12,
+            "verificaciones": 2,
+            "switches_modificados": 7
+          },
+          "costo_temporal_medido": null,
+          "costo_monetario_medido": null,
+          "ejecutada_en_ovs": false
+        }
+      ]
+    },
+    {
+      "target_id": "T003",
+      "transitions_evaluadas": 0,
+      "perfiles_costo_distintos": 0,
+      "costos": []
+    },
+    {
+      "target_id": "T004",
+      "transitions_evaluadas": 0,
+      "perfiles_costo_distintos": 0,
+      "costos": []
+    },
+    {
+      "target_id": "T005",
+      "transitions_evaluadas": 0,
+      "perfiles_costo_distintos": 0,
+      "costos": []
+    },
+    {
+      "target_id": "T006",
+      "transitions_evaluadas": 0,
+      "perfiles_costo_distintos": 0,
+      "costos": []
+    },
+    {
+      "target_id": "T007",
+      "transitions_evaluadas": 1,
+      "perfiles_costo_distintos": 1,
+      "costos": [
+        {
+          "transition_id": "T007_TR01",
+          "estrategia": "SECUENCIAL_ASC",
+          "comunicaciones_modificadas": 1,
+          "flowmod_add": 4,
+          "flowmod_modify_strict": 2,
+          "groupmod_add": 1,
+          "total_mensajes_modificacion_propuestos": 7,
+          "barrier_request_propuestos": 4,
+          "verificaciones_planificadas": 1,
+          "total_pasos_logicos": 12,
+          "switches_con_modificaciones": [
+            "s1",
+            "s3",
+            "s4"
+          ],
+          "cantidad_switches_con_modificaciones": 3,
+          "desglose_por_switch": [
+            {
+              "switch": "s1",
+              "flowmod_add": 0,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 2,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s3",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s4",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            }
+          ],
+          "costo_vectorial_sin_pesos": {
+            "mensajes_modificacion": 7,
+            "barreras": 4,
+            "verificaciones": 1,
+            "switches_modificados": 3
+          },
+          "costo_temporal_medido": null,
+          "costo_monetario_medido": null,
+          "ejecutada_en_ovs": false
+        }
+      ]
+    },
+    {
+      "target_id": "T008",
+      "transitions_evaluadas": 0,
+      "perfiles_costo_distintos": 0,
+      "costos": []
+    },
+    {
+      "target_id": "T009",
+      "transitions_evaluadas": 0,
+      "perfiles_costo_distintos": 0,
+      "costos": []
+    },
+    {
+      "target_id": "T010",
+      "transitions_evaluadas": 0,
+      "perfiles_costo_distintos": 0,
+      "costos": []
+    },
+    {
+      "target_id": "T011",
+      "transitions_evaluadas": 0,
+      "perfiles_costo_distintos": 0,
+      "costos": []
+    },
+    {
+      "target_id": "T012",
+      "transitions_evaluadas": 0,
+      "perfiles_costo_distintos": 0,
+      "costos": []
+    },
+    {
+      "target_id": "T013",
+      "transitions_evaluadas": 1,
+      "perfiles_costo_distintos": 1,
+      "costos": [
+        {
+          "transition_id": "T013_TR01",
+          "estrategia": "SECUENCIAL_ASC",
+          "comunicaciones_modificadas": 1,
+          "flowmod_add": 6,
+          "flowmod_modify_strict": 2,
+          "groupmod_add": 1,
+          "total_mensajes_modificacion_propuestos": 9,
+          "barrier_request_propuestos": 5,
+          "verificaciones_planificadas": 1,
+          "total_pasos_logicos": 15,
+          "switches_con_modificaciones": [
+            "s1",
+            "s3",
+            "s4",
+            "s5"
+          ],
+          "cantidad_switches_con_modificaciones": 4,
+          "desglose_por_switch": [
+            {
+              "switch": "s1",
+              "flowmod_add": 0,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 2,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s3",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s4",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s5",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            }
+          ],
+          "costo_vectorial_sin_pesos": {
+            "mensajes_modificacion": 9,
+            "barreras": 5,
+            "verificaciones": 1,
+            "switches_modificados": 4
+          },
+          "costo_temporal_medido": null,
+          "costo_monetario_medido": null,
+          "ejecutada_en_ovs": false
+        }
+      ]
+    },
+    {
+      "target_id": "T014",
+      "transitions_evaluadas": 0,
+      "perfiles_costo_distintos": 0,
+      "costos": []
+    },
+    {
+      "target_id": "T015",
+      "transitions_evaluadas": 0,
+      "perfiles_costo_distintos": 0,
+      "costos": []
+    },
+    {
+      "target_id": "T016",
+      "transitions_evaluadas": 0,
+      "perfiles_costo_distintos": 0,
+      "costos": []
+    },
+    {
+      "target_id": "T017",
+      "transitions_evaluadas": 3,
+      "perfiles_costo_distintos": 1,
+      "costos": [
+        {
+          "transition_id": "T017_TR01",
+          "estrategia": "SECUENCIAL_ASC",
+          "comunicaciones_modificadas": 8,
+          "flowmod_add": 50,
+          "flowmod_modify_strict": 16,
+          "groupmod_add": 8,
+          "total_mensajes_modificacion_propuestos": 74,
+          "barrier_request_propuestos": 41,
+          "verificaciones_planificadas": 8,
+          "total_pasos_logicos": 123,
+          "switches_con_modificaciones": [
+            "s1",
+            "s2",
+            "s3",
+            "s4",
+            "s5",
+            "s6",
+            "s7",
+            "s8"
+          ],
+          "cantidad_switches_con_modificaciones": 8,
+          "desglose_por_switch": [
+            {
+              "switch": "s1",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 4,
+              "groupmod_add": 2,
+              "barrier_request": 5,
+              "verificaciones": 2
+            },
+            {
+              "switch": "s2",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 4,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s3",
+              "flowmod_add": 10,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 5,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s4",
+              "flowmod_add": 12,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 6,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s5",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 6,
+              "groupmod_add": 3,
+              "barrier_request": 8,
+              "verificaciones": 3
+            },
+            {
+              "switch": "s6",
+              "flowmod_add": 6,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 3,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s7",
+              "flowmod_add": 6,
+              "flowmod_modify_strict": 4,
+              "groupmod_add": 2,
+              "barrier_request": 7,
+              "verificaciones": 2
+            },
+            {
+              "switch": "s8",
+              "flowmod_add": 6,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 3,
+              "verificaciones": 0
+            }
+          ],
+          "costo_vectorial_sin_pesos": {
+            "mensajes_modificacion": 74,
+            "barreras": 41,
+            "verificaciones": 8,
+            "switches_modificados": 8
+          },
+          "costo_temporal_medido": null,
+          "costo_monetario_medido": null,
+          "ejecutada_en_ovs": false
+        },
+        {
+          "transition_id": "T017_TR02",
+          "estrategia": "SECUENCIAL_DESC",
+          "comunicaciones_modificadas": 8,
+          "flowmod_add": 50,
+          "flowmod_modify_strict": 16,
+          "groupmod_add": 8,
+          "total_mensajes_modificacion_propuestos": 74,
+          "barrier_request_propuestos": 41,
+          "verificaciones_planificadas": 8,
+          "total_pasos_logicos": 123,
+          "switches_con_modificaciones": [
+            "s1",
+            "s2",
+            "s3",
+            "s4",
+            "s5",
+            "s6",
+            "s7",
+            "s8"
+          ],
+          "cantidad_switches_con_modificaciones": 8,
+          "desglose_por_switch": [
+            {
+              "switch": "s1",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 4,
+              "groupmod_add": 2,
+              "barrier_request": 5,
+              "verificaciones": 2
+            },
+            {
+              "switch": "s2",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 4,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s3",
+              "flowmod_add": 10,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 5,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s4",
+              "flowmod_add": 12,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 6,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s5",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 6,
+              "groupmod_add": 3,
+              "barrier_request": 8,
+              "verificaciones": 3
+            },
+            {
+              "switch": "s6",
+              "flowmod_add": 6,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 3,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s7",
+              "flowmod_add": 6,
+              "flowmod_modify_strict": 4,
+              "groupmod_add": 2,
+              "barrier_request": 7,
+              "verificaciones": 2
+            },
+            {
+              "switch": "s8",
+              "flowmod_add": 6,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 3,
+              "verificaciones": 0
+            }
+          ],
+          "costo_vectorial_sin_pesos": {
+            "mensajes_modificacion": 74,
+            "barreras": 41,
+            "verificaciones": 8,
+            "switches_modificados": 8
+          },
+          "costo_temporal_medido": null,
+          "costo_monetario_medido": null,
+          "ejecutada_en_ovs": false
+        },
+        {
+          "transition_id": "T017_TR03",
+          "estrategia": "PREPARAR_TODOS_LUEGO_ACTIVAR",
+          "comunicaciones_modificadas": 8,
+          "flowmod_add": 50,
+          "flowmod_modify_strict": 16,
+          "groupmod_add": 8,
+          "total_mensajes_modificacion_propuestos": 74,
+          "barrier_request_propuestos": 41,
+          "verificaciones_planificadas": 8,
+          "total_pasos_logicos": 123,
+          "switches_con_modificaciones": [
+            "s1",
+            "s2",
+            "s3",
+            "s4",
+            "s5",
+            "s6",
+            "s7",
+            "s8"
+          ],
+          "cantidad_switches_con_modificaciones": 8,
+          "desglose_por_switch": [
+            {
+              "switch": "s1",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 4,
+              "groupmod_add": 2,
+              "barrier_request": 5,
+              "verificaciones": 2
+            },
+            {
+              "switch": "s2",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 4,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s3",
+              "flowmod_add": 10,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 5,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s4",
+              "flowmod_add": 12,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 6,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s5",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 6,
+              "groupmod_add": 3,
+              "barrier_request": 8,
+              "verificaciones": 3
+            },
+            {
+              "switch": "s6",
+              "flowmod_add": 6,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 3,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s7",
+              "flowmod_add": 6,
+              "flowmod_modify_strict": 4,
+              "groupmod_add": 2,
+              "barrier_request": 7,
+              "verificaciones": 2
+            },
+            {
+              "switch": "s8",
+              "flowmod_add": 6,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 3,
+              "verificaciones": 0
+            }
+          ],
+          "costo_vectorial_sin_pesos": {
+            "mensajes_modificacion": 74,
+            "barreras": 41,
+            "verificaciones": 8,
+            "switches_modificados": 8
+          },
+          "costo_temporal_medido": null,
+          "costo_monetario_medido": null,
+          "ejecutada_en_ovs": false
+        }
+      ]
+    },
+    {
+      "target_id": "T018",
+      "transitions_evaluadas": 0,
+      "perfiles_costo_distintos": 0,
+      "costos": []
+    },
+    {
+      "target_id": "T019",
+      "transitions_evaluadas": 0,
+      "perfiles_costo_distintos": 0,
+      "costos": []
+    },
+    {
+      "target_id": "T020",
+      "transitions_evaluadas": 3,
+      "perfiles_costo_distintos": 1,
+      "costos": [
+        {
+          "transition_id": "T020_TR01",
+          "estrategia": "SECUENCIAL_ASC",
+          "comunicaciones_modificadas": 2,
+          "flowmod_add": 16,
+          "flowmod_modify_strict": 4,
+          "groupmod_add": 2,
+          "total_mensajes_modificacion_propuestos": 22,
+          "barrier_request_propuestos": 12,
+          "verificaciones_planificadas": 2,
+          "total_pasos_logicos": 36,
+          "switches_con_modificaciones": [
+            "s2",
+            "s3",
+            "s4",
+            "s5",
+            "s6",
+            "s7",
+            "s8"
+          ],
+          "cantidad_switches_con_modificaciones": 7,
+          "desglose_por_switch": [
+            {
+              "switch": "s2",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 3,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s3",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s4",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s5",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 3,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s6",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s7",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 2,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s8",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            }
+          ],
+          "costo_vectorial_sin_pesos": {
+            "mensajes_modificacion": 22,
+            "barreras": 12,
+            "verificaciones": 2,
+            "switches_modificados": 7
+          },
+          "costo_temporal_medido": null,
+          "costo_monetario_medido": null,
+          "ejecutada_en_ovs": false
+        },
+        {
+          "transition_id": "T020_TR02",
+          "estrategia": "SECUENCIAL_DESC",
+          "comunicaciones_modificadas": 2,
+          "flowmod_add": 16,
+          "flowmod_modify_strict": 4,
+          "groupmod_add": 2,
+          "total_mensajes_modificacion_propuestos": 22,
+          "barrier_request_propuestos": 12,
+          "verificaciones_planificadas": 2,
+          "total_pasos_logicos": 36,
+          "switches_con_modificaciones": [
+            "s2",
+            "s3",
+            "s4",
+            "s5",
+            "s6",
+            "s7",
+            "s8"
+          ],
+          "cantidad_switches_con_modificaciones": 7,
+          "desglose_por_switch": [
+            {
+              "switch": "s2",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 3,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s3",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s4",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s5",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 3,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s6",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s7",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 2,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s8",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            }
+          ],
+          "costo_vectorial_sin_pesos": {
+            "mensajes_modificacion": 22,
+            "barreras": 12,
+            "verificaciones": 2,
+            "switches_modificados": 7
+          },
+          "costo_temporal_medido": null,
+          "costo_monetario_medido": null,
+          "ejecutada_en_ovs": false
+        },
+        {
+          "transition_id": "T020_TR03",
+          "estrategia": "PREPARAR_TODOS_LUEGO_ACTIVAR",
+          "comunicaciones_modificadas": 2,
+          "flowmod_add": 16,
+          "flowmod_modify_strict": 4,
+          "groupmod_add": 2,
+          "total_mensajes_modificacion_propuestos": 22,
+          "barrier_request_propuestos": 12,
+          "verificaciones_planificadas": 2,
+          "total_pasos_logicos": 36,
+          "switches_con_modificaciones": [
+            "s2",
+            "s3",
+            "s4",
+            "s5",
+            "s6",
+            "s7",
+            "s8"
+          ],
+          "cantidad_switches_con_modificaciones": 7,
+          "desglose_por_switch": [
+            {
+              "switch": "s2",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 3,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s3",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s4",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s5",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 3,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s6",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s7",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 2,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s8",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            }
+          ],
+          "costo_vectorial_sin_pesos": {
+            "mensajes_modificacion": 22,
+            "barreras": 12,
+            "verificaciones": 2,
+            "switches_modificados": 7
+          },
+          "costo_temporal_medido": null,
+          "costo_monetario_medido": null,
+          "ejecutada_en_ovs": false
+        }
+      ]
+    },
+    {
+      "target_id": "T021",
+      "transitions_evaluadas": 0,
+      "perfiles_costo_distintos": 0,
+      "costos": []
+    },
+    {
+      "target_id": "T022",
+      "transitions_evaluadas": 0,
+      "perfiles_costo_distintos": 0,
+      "costos": []
+    },
+    {
+      "target_id": "T023",
+      "transitions_evaluadas": 0,
+      "perfiles_costo_distintos": 0,
+      "costos": []
+    },
+    {
+      "target_id": "T024",
+      "transitions_evaluadas": 0,
+      "perfiles_costo_distintos": 0,
+      "costos": []
+    },
+    {
+      "target_id": "T025",
+      "transitions_evaluadas": 0,
+      "perfiles_costo_distintos": 0,
+      "costos": []
+    },
+    {
+      "target_id": "T026",
+      "transitions_evaluadas": 3,
+      "perfiles_costo_distintos": 1,
+      "costos": [
+        {
+          "transition_id": "T026_TR01",
+          "estrategia": "SECUENCIAL_ASC",
+          "comunicaciones_modificadas": 2,
+          "flowmod_add": 16,
+          "flowmod_modify_strict": 4,
+          "groupmod_add": 2,
+          "total_mensajes_modificacion_propuestos": 22,
+          "barrier_request_propuestos": 12,
+          "verificaciones_planificadas": 2,
+          "total_pasos_logicos": 36,
+          "switches_con_modificaciones": [
+            "s1",
+            "s2",
+            "s3",
+            "s4",
+            "s5",
+            "s6",
+            "s7"
+          ],
+          "cantidad_switches_con_modificaciones": 7,
+          "desglose_por_switch": [
+            {
+              "switch": "s1",
+              "flowmod_add": 0,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 2,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s2",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s3",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 2,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s4",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s5",
+              "flowmod_add": 0,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 2,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s6",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 2,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s7",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 2,
+              "verificaciones": 0
+            }
+          ],
+          "costo_vectorial_sin_pesos": {
+            "mensajes_modificacion": 22,
+            "barreras": 12,
+            "verificaciones": 2,
+            "switches_modificados": 7
+          },
+          "costo_temporal_medido": null,
+          "costo_monetario_medido": null,
+          "ejecutada_en_ovs": false
+        },
+        {
+          "transition_id": "T026_TR02",
+          "estrategia": "SECUENCIAL_DESC",
+          "comunicaciones_modificadas": 2,
+          "flowmod_add": 16,
+          "flowmod_modify_strict": 4,
+          "groupmod_add": 2,
+          "total_mensajes_modificacion_propuestos": 22,
+          "barrier_request_propuestos": 12,
+          "verificaciones_planificadas": 2,
+          "total_pasos_logicos": 36,
+          "switches_con_modificaciones": [
+            "s1",
+            "s2",
+            "s3",
+            "s4",
+            "s5",
+            "s6",
+            "s7"
+          ],
+          "cantidad_switches_con_modificaciones": 7,
+          "desglose_por_switch": [
+            {
+              "switch": "s1",
+              "flowmod_add": 0,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 2,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s2",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s3",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 2,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s4",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s5",
+              "flowmod_add": 0,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 2,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s6",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 2,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s7",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 2,
+              "verificaciones": 0
+            }
+          ],
+          "costo_vectorial_sin_pesos": {
+            "mensajes_modificacion": 22,
+            "barreras": 12,
+            "verificaciones": 2,
+            "switches_modificados": 7
+          },
+          "costo_temporal_medido": null,
+          "costo_monetario_medido": null,
+          "ejecutada_en_ovs": false
+        },
+        {
+          "transition_id": "T026_TR03",
+          "estrategia": "PREPARAR_TODOS_LUEGO_ACTIVAR",
+          "comunicaciones_modificadas": 2,
+          "flowmod_add": 16,
+          "flowmod_modify_strict": 4,
+          "groupmod_add": 2,
+          "total_mensajes_modificacion_propuestos": 22,
+          "barrier_request_propuestos": 12,
+          "verificaciones_planificadas": 2,
+          "total_pasos_logicos": 36,
+          "switches_con_modificaciones": [
+            "s1",
+            "s2",
+            "s3",
+            "s4",
+            "s5",
+            "s6",
+            "s7"
+          ],
+          "cantidad_switches_con_modificaciones": 7,
+          "desglose_por_switch": [
+            {
+              "switch": "s1",
+              "flowmod_add": 0,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 2,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s2",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s3",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 2,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s4",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s5",
+              "flowmod_add": 0,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 2,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s6",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 2,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s7",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 2,
+              "verificaciones": 0
+            }
+          ],
+          "costo_vectorial_sin_pesos": {
+            "mensajes_modificacion": 22,
+            "barreras": 12,
+            "verificaciones": 2,
+            "switches_modificados": 7
+          },
+          "costo_temporal_medido": null,
+          "costo_monetario_medido": null,
+          "ejecutada_en_ovs": false
+        }
+      ]
+    },
+    {
+      "target_id": "T027",
+      "transitions_evaluadas": 0,
+      "perfiles_costo_distintos": 0,
+      "costos": []
+    },
+    {
+      "target_id": "T028",
+      "transitions_evaluadas": 0,
+      "perfiles_costo_distintos": 0,
+      "costos": []
+    },
+    {
+      "target_id": "T029",
+      "transitions_evaluadas": 0,
+      "perfiles_costo_distintos": 0,
+      "costos": []
+    },
+    {
+      "target_id": "T030",
+      "transitions_evaluadas": 0,
+      "perfiles_costo_distintos": 0,
+      "costos": []
+    },
+    {
+      "target_id": "T031",
+      "transitions_evaluadas": 0,
+      "perfiles_costo_distintos": 0,
+      "costos": []
+    },
+    {
+      "target_id": "T032",
+      "transitions_evaluadas": 3,
+      "perfiles_costo_distintos": 1,
+      "costos": [
+        {
+          "transition_id": "T032_TR01",
+          "estrategia": "SECUENCIAL_ASC",
+          "comunicaciones_modificadas": 2,
+          "flowmod_add": 18,
+          "flowmod_modify_strict": 4,
+          "groupmod_add": 2,
+          "total_mensajes_modificacion_propuestos": 24,
+          "barrier_request_propuestos": 13,
+          "verificaciones_planificadas": 2,
+          "total_pasos_logicos": 39,
+          "switches_con_modificaciones": [
+            "s1",
+            "s2",
+            "s3",
+            "s4",
+            "s5",
+            "s6",
+            "s7",
+            "s8"
+          ],
+          "cantidad_switches_con_modificaciones": 8,
+          "desglose_por_switch": [
+            {
+              "switch": "s1",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s2",
+              "flowmod_add": 0,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 2,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s3",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 2,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s4",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 2,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s5",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 3,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s6",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s7",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s8",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            }
+          ],
+          "costo_vectorial_sin_pesos": {
+            "mensajes_modificacion": 24,
+            "barreras": 13,
+            "verificaciones": 2,
+            "switches_modificados": 8
+          },
+          "costo_temporal_medido": null,
+          "costo_monetario_medido": null,
+          "ejecutada_en_ovs": false
+        },
+        {
+          "transition_id": "T032_TR02",
+          "estrategia": "SECUENCIAL_DESC",
+          "comunicaciones_modificadas": 2,
+          "flowmod_add": 18,
+          "flowmod_modify_strict": 4,
+          "groupmod_add": 2,
+          "total_mensajes_modificacion_propuestos": 24,
+          "barrier_request_propuestos": 13,
+          "verificaciones_planificadas": 2,
+          "total_pasos_logicos": 39,
+          "switches_con_modificaciones": [
+            "s1",
+            "s2",
+            "s3",
+            "s4",
+            "s5",
+            "s6",
+            "s7",
+            "s8"
+          ],
+          "cantidad_switches_con_modificaciones": 8,
+          "desglose_por_switch": [
+            {
+              "switch": "s1",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s2",
+              "flowmod_add": 0,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 2,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s3",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 2,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s4",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 2,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s5",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 3,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s6",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s7",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s8",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            }
+          ],
+          "costo_vectorial_sin_pesos": {
+            "mensajes_modificacion": 24,
+            "barreras": 13,
+            "verificaciones": 2,
+            "switches_modificados": 8
+          },
+          "costo_temporal_medido": null,
+          "costo_monetario_medido": null,
+          "ejecutada_en_ovs": false
+        },
+        {
+          "transition_id": "T032_TR03",
+          "estrategia": "PREPARAR_TODOS_LUEGO_ACTIVAR",
+          "comunicaciones_modificadas": 2,
+          "flowmod_add": 18,
+          "flowmod_modify_strict": 4,
+          "groupmod_add": 2,
+          "total_mensajes_modificacion_propuestos": 24,
+          "barrier_request_propuestos": 13,
+          "verificaciones_planificadas": 2,
+          "total_pasos_logicos": 39,
+          "switches_con_modificaciones": [
+            "s1",
+            "s2",
+            "s3",
+            "s4",
+            "s5",
+            "s6",
+            "s7",
+            "s8"
+          ],
+          "cantidad_switches_con_modificaciones": 8,
+          "desglose_por_switch": [
+            {
+              "switch": "s1",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s2",
+              "flowmod_add": 0,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 2,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s3",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 2,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s4",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 2,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s5",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 3,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s6",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s7",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s8",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            }
+          ],
+          "costo_vectorial_sin_pesos": {
+            "mensajes_modificacion": 24,
+            "barreras": 13,
+            "verificaciones": 2,
+            "switches_modificados": 8
+          },
+          "costo_temporal_medido": null,
+          "costo_monetario_medido": null,
+          "ejecutada_en_ovs": false
+        }
+      ]
+    },
+    {
+      "target_id": "T033",
+      "transitions_evaluadas": 3,
+      "perfiles_costo_distintos": 1,
+      "costos": [
+        {
+          "transition_id": "T033_TR01",
+          "estrategia": "SECUENCIAL_ASC",
+          "comunicaciones_modificadas": 3,
+          "flowmod_add": 26,
+          "flowmod_modify_strict": 6,
+          "groupmod_add": 3,
+          "total_mensajes_modificacion_propuestos": 35,
+          "barrier_request_propuestos": 19,
+          "verificaciones_planificadas": 3,
+          "total_pasos_logicos": 57,
+          "switches_con_modificaciones": [
+            "s2",
+            "s3",
+            "s4",
+            "s5",
+            "s6",
+            "s7",
+            "s8"
+          ],
+          "cantidad_switches_con_modificaciones": 7,
+          "desglose_por_switch": [
+            {
+              "switch": "s2",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 4,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s3",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 2,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s4",
+              "flowmod_add": 6,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 3,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s5",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 4,
+              "groupmod_add": 2,
+              "barrier_request": 5,
+              "verificaciones": 2
+            },
+            {
+              "switch": "s6",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 2,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s7",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 2,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s8",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            }
+          ],
+          "costo_vectorial_sin_pesos": {
+            "mensajes_modificacion": 35,
+            "barreras": 19,
+            "verificaciones": 3,
+            "switches_modificados": 7
+          },
+          "costo_temporal_medido": null,
+          "costo_monetario_medido": null,
+          "ejecutada_en_ovs": false
+        },
+        {
+          "transition_id": "T033_TR02",
+          "estrategia": "SECUENCIAL_DESC",
+          "comunicaciones_modificadas": 3,
+          "flowmod_add": 26,
+          "flowmod_modify_strict": 6,
+          "groupmod_add": 3,
+          "total_mensajes_modificacion_propuestos": 35,
+          "barrier_request_propuestos": 19,
+          "verificaciones_planificadas": 3,
+          "total_pasos_logicos": 57,
+          "switches_con_modificaciones": [
+            "s2",
+            "s3",
+            "s4",
+            "s5",
+            "s6",
+            "s7",
+            "s8"
+          ],
+          "cantidad_switches_con_modificaciones": 7,
+          "desglose_por_switch": [
+            {
+              "switch": "s2",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 4,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s3",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 2,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s4",
+              "flowmod_add": 6,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 3,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s5",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 4,
+              "groupmod_add": 2,
+              "barrier_request": 5,
+              "verificaciones": 2
+            },
+            {
+              "switch": "s6",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 2,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s7",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 2,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s8",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            }
+          ],
+          "costo_vectorial_sin_pesos": {
+            "mensajes_modificacion": 35,
+            "barreras": 19,
+            "verificaciones": 3,
+            "switches_modificados": 7
+          },
+          "costo_temporal_medido": null,
+          "costo_monetario_medido": null,
+          "ejecutada_en_ovs": false
+        },
+        {
+          "transition_id": "T033_TR03",
+          "estrategia": "PREPARAR_TODOS_LUEGO_ACTIVAR",
+          "comunicaciones_modificadas": 3,
+          "flowmod_add": 26,
+          "flowmod_modify_strict": 6,
+          "groupmod_add": 3,
+          "total_mensajes_modificacion_propuestos": 35,
+          "barrier_request_propuestos": 19,
+          "verificaciones_planificadas": 3,
+          "total_pasos_logicos": 57,
+          "switches_con_modificaciones": [
+            "s2",
+            "s3",
+            "s4",
+            "s5",
+            "s6",
+            "s7",
+            "s8"
+          ],
+          "cantidad_switches_con_modificaciones": 7,
+          "desglose_por_switch": [
+            {
+              "switch": "s2",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 4,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s3",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 2,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s4",
+              "flowmod_add": 6,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 3,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s5",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 4,
+              "groupmod_add": 2,
+              "barrier_request": 5,
+              "verificaciones": 2
+            },
+            {
+              "switch": "s6",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 2,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s7",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 2,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s8",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            }
+          ],
+          "costo_vectorial_sin_pesos": {
+            "mensajes_modificacion": 35,
+            "barreras": 19,
+            "verificaciones": 3,
+            "switches_modificados": 7
+          },
+          "costo_temporal_medido": null,
+          "costo_monetario_medido": null,
+          "ejecutada_en_ovs": false
+        }
+      ]
+    },
+    {
+      "target_id": "T034",
+      "transitions_evaluadas": 0,
+      "perfiles_costo_distintos": 0,
+      "costos": []
+    },
+    {
+      "target_id": "T035",
+      "transitions_evaluadas": 0,
+      "perfiles_costo_distintos": 0,
+      "costos": []
+    },
+    {
+      "target_id": "T036",
+      "transitions_evaluadas": 0,
+      "perfiles_costo_distintos": 0,
+      "costos": []
+    },
+    {
+      "target_id": "T037",
+      "transitions_evaluadas": 0,
+      "perfiles_costo_distintos": 0,
+      "costos": []
+    },
+    {
+      "target_id": "T038",
+      "transitions_evaluadas": 3,
+      "perfiles_costo_distintos": 1,
+      "costos": [
+        {
+          "transition_id": "T038_TR01",
+          "estrategia": "SECUENCIAL_ASC",
+          "comunicaciones_modificadas": 2,
+          "flowmod_add": 16,
+          "flowmod_modify_strict": 4,
+          "groupmod_add": 2,
+          "total_mensajes_modificacion_propuestos": 22,
+          "barrier_request_propuestos": 12,
+          "verificaciones_planificadas": 2,
+          "total_pasos_logicos": 36,
+          "switches_con_modificaciones": [
+            "s2",
+            "s3",
+            "s4",
+            "s5",
+            "s6",
+            "s7",
+            "s8"
+          ],
+          "cantidad_switches_con_modificaciones": 7,
+          "desglose_por_switch": [
+            {
+              "switch": "s2",
+              "flowmod_add": 0,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 2,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s3",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s4",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s5",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 2,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s6",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s7",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 3,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s8",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 2,
+              "verificaciones": 0
+            }
+          ],
+          "costo_vectorial_sin_pesos": {
+            "mensajes_modificacion": 22,
+            "barreras": 12,
+            "verificaciones": 2,
+            "switches_modificados": 7
+          },
+          "costo_temporal_medido": null,
+          "costo_monetario_medido": null,
+          "ejecutada_en_ovs": false
+        },
+        {
+          "transition_id": "T038_TR02",
+          "estrategia": "SECUENCIAL_DESC",
+          "comunicaciones_modificadas": 2,
+          "flowmod_add": 16,
+          "flowmod_modify_strict": 4,
+          "groupmod_add": 2,
+          "total_mensajes_modificacion_propuestos": 22,
+          "barrier_request_propuestos": 12,
+          "verificaciones_planificadas": 2,
+          "total_pasos_logicos": 36,
+          "switches_con_modificaciones": [
+            "s2",
+            "s3",
+            "s4",
+            "s5",
+            "s6",
+            "s7",
+            "s8"
+          ],
+          "cantidad_switches_con_modificaciones": 7,
+          "desglose_por_switch": [
+            {
+              "switch": "s2",
+              "flowmod_add": 0,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 2,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s3",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s4",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s5",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 2,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s6",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s7",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 3,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s8",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 2,
+              "verificaciones": 0
+            }
+          ],
+          "costo_vectorial_sin_pesos": {
+            "mensajes_modificacion": 22,
+            "barreras": 12,
+            "verificaciones": 2,
+            "switches_modificados": 7
+          },
+          "costo_temporal_medido": null,
+          "costo_monetario_medido": null,
+          "ejecutada_en_ovs": false
+        },
+        {
+          "transition_id": "T038_TR03",
+          "estrategia": "PREPARAR_TODOS_LUEGO_ACTIVAR",
+          "comunicaciones_modificadas": 2,
+          "flowmod_add": 16,
+          "flowmod_modify_strict": 4,
+          "groupmod_add": 2,
+          "total_mensajes_modificacion_propuestos": 22,
+          "barrier_request_propuestos": 12,
+          "verificaciones_planificadas": 2,
+          "total_pasos_logicos": 36,
+          "switches_con_modificaciones": [
+            "s2",
+            "s3",
+            "s4",
+            "s5",
+            "s6",
+            "s7",
+            "s8"
+          ],
+          "cantidad_switches_con_modificaciones": 7,
+          "desglose_por_switch": [
+            {
+              "switch": "s2",
+              "flowmod_add": 0,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 2,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s3",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s4",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s5",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 2,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s6",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 1,
+              "verificaciones": 0
+            },
+            {
+              "switch": "s7",
+              "flowmod_add": 2,
+              "flowmod_modify_strict": 2,
+              "groupmod_add": 1,
+              "barrier_request": 3,
+              "verificaciones": 1
+            },
+            {
+              "switch": "s8",
+              "flowmod_add": 4,
+              "flowmod_modify_strict": 0,
+              "groupmod_add": 0,
+              "barrier_request": 2,
+              "verificaciones": 0
+            }
+          ],
+          "costo_vectorial_sin_pesos": {
+            "mensajes_modificacion": 22,
+            "barreras": 12,
+            "verificaciones": 2,
+            "switches_modificados": 7
+          },
+          "costo_temporal_medido": null,
+          "costo_monetario_medido": null,
+          "ejecutada_en_ovs": false
+        }
+      ]
+    },
+    {
+      "target_id": "T039",
+      "transitions_evaluadas": 0,
+      "perfiles_costo_distintos": 0,
+      "costos": []
+    }
+  ]
+}

@@ -1,0 +1,607 @@
+{
+  "tipo": "FS_post_Fast_Failover",
+  "fecha_utc": "2026-10-12T14:11:49.143193+00:00",
+  "fuente": "Reglas y grupos OpenFlow 1.3; estado de puertos Open vSwitch",
+  "interpretacion": "Caminos seleccionados reconstruidos; no equivalen por si solos a mediciones de demanda o throughput",
+  "enlaces_fallados_observados": [
+    {
+      "extremo_a": "s1",
+      "extremo_b": "s2",
+      "puerto_a": 2,
+      "puerto_b": 2,
+      "activo_a": false,
+      "activo_b": false
+    }
+  ],
+  "cantidad_comunicaciones": 12,
+  "comunicaciones": [
+    {
+      "origen": "h1",
+      "destino": "h2",
+      "ip_origen": "10.0.0.1",
+      "ip_destino": "10.0.0.2",
+      "ruta_seleccionada": [
+        "h1",
+        "s1",
+        "s4",
+        "s2",
+        "h2"
+      ],
+      "grupos_ff": [
+        "S1 - Grupo 1000: RESPALDO (watch_port=4)"
+      ],
+      "pasos_openflow": [
+        {
+          "switch": "s1",
+          "vlan_entrada": null,
+          "acciones_openflow": "group:1000",
+          "puerto_salida": "4",
+          "siguiente_nodo": "s4",
+          "vlan_salida": 100,
+          "grupos_ff": [
+            "S1 - Grupo 1000: RESPALDO (watch_port=4)"
+          ]
+        },
+        {
+          "switch": "s4",
+          "vlan_entrada": 100,
+          "acciones_openflow": "output:2",
+          "puerto_salida": "2",
+          "siguiente_nodo": "s2",
+          "vlan_salida": 100,
+          "grupos_ff": []
+        },
+        {
+          "switch": "s2",
+          "vlan_entrada": 100,
+          "acciones_openflow": "pop_vlan,output:1",
+          "puerto_salida": "1",
+          "siguiente_nodo": "h2",
+          "vlan_salida": null,
+          "grupos_ff": []
+        }
+      ]
+    },
+    {
+      "origen": "h1",
+      "destino": "h3",
+      "ip_origen": "10.0.0.1",
+      "ip_destino": "10.0.0.3",
+      "ruta_seleccionada": [
+        "h1",
+        "s1",
+        "s4",
+        "s2",
+        "s5",
+        "h3"
+      ],
+      "grupos_ff": [
+        "S1 - Grupo 1001: RESPALDO (watch_port=4)",
+        "S2 - Grupo 1002: PRINCIPAL (watch_port=4)"
+      ],
+      "pasos_openflow": [
+        {
+          "switch": "s1",
+          "vlan_entrada": null,
+          "acciones_openflow": "group:1001",
+          "puerto_salida": "4",
+          "siguiente_nodo": "s4",
+          "vlan_salida": 101,
+          "grupos_ff": [
+            "S1 - Grupo 1001: RESPALDO (watch_port=4)"
+          ]
+        },
+        {
+          "switch": "s4",
+          "vlan_entrada": 101,
+          "acciones_openflow": "output:2",
+          "puerto_salida": "2",
+          "siguiente_nodo": "s2",
+          "vlan_salida": 101,
+          "grupos_ff": []
+        },
+        {
+          "switch": "s2",
+          "vlan_entrada": 101,
+          "acciones_openflow": "pop_vlan,group:1002",
+          "puerto_salida": "4",
+          "siguiente_nodo": "s5",
+          "vlan_salida": null,
+          "grupos_ff": [
+            "S2 - Grupo 1002: PRINCIPAL (watch_port=4)"
+          ]
+        },
+        {
+          "switch": "s5",
+          "vlan_entrada": null,
+          "acciones_openflow": "output:1",
+          "puerto_salida": "1",
+          "siguiente_nodo": "h3",
+          "vlan_salida": null,
+          "grupos_ff": []
+        }
+      ]
+    },
+    {
+      "origen": "h1",
+      "destino": "h4",
+      "ip_origen": "10.0.0.1",
+      "ip_destino": "10.0.0.4",
+      "ruta_seleccionada": [
+        "h1",
+        "s1",
+        "s4",
+        "s7",
+        "h4"
+      ],
+      "grupos_ff": [
+        "S1 - Grupo 1003: PRINCIPAL (watch_port=4)",
+        "S4 - Grupo 1004: PRINCIPAL (watch_port=5)"
+      ],
+      "pasos_openflow": [
+        {
+          "switch": "s1",
+          "vlan_entrada": null,
+          "acciones_openflow": "group:1003",
+          "puerto_salida": "4",
+          "siguiente_nodo": "s4",
+          "vlan_salida": null,
+          "grupos_ff": [
+            "S1 - Grupo 1003: PRINCIPAL (watch_port=4)"
+          ]
+        },
+        {
+          "switch": "s4",
+          "vlan_entrada": null,
+          "acciones_openflow": "group:1004",
+          "puerto_salida": "5",
+          "siguiente_nodo": "s7",
+          "vlan_salida": null,
+          "grupos_ff": [
+            "S4 - Grupo 1004: PRINCIPAL (watch_port=5)"
+          ]
+        },
+        {
+          "switch": "s7",
+          "vlan_entrada": null,
+          "acciones_openflow": "output:1",
+          "puerto_salida": "1",
+          "siguiente_nodo": "h4",
+          "vlan_salida": null,
+          "grupos_ff": []
+        }
+      ]
+    },
+    {
+      "origen": "h2",
+      "destino": "h1",
+      "ip_origen": "10.0.0.2",
+      "ip_destino": "10.0.0.1",
+      "ruta_seleccionada": [
+        "h2",
+        "s2",
+        "s4",
+        "s1",
+        "h1"
+      ],
+      "grupos_ff": [
+        "S2 - Grupo 1005: RESPALDO (watch_port=3)"
+      ],
+      "pasos_openflow": [
+        {
+          "switch": "s2",
+          "vlan_entrada": null,
+          "acciones_openflow": "group:1005",
+          "puerto_salida": "3",
+          "siguiente_nodo": "s4",
+          "vlan_salida": 105,
+          "grupos_ff": [
+            "S2 - Grupo 1005: RESPALDO (watch_port=3)"
+          ]
+        },
+        {
+          "switch": "s4",
+          "vlan_entrada": 105,
+          "acciones_openflow": "output:1",
+          "puerto_salida": "1",
+          "siguiente_nodo": "s1",
+          "vlan_salida": 105,
+          "grupos_ff": []
+        },
+        {
+          "switch": "s1",
+          "vlan_entrada": 105,
+          "acciones_openflow": "pop_vlan,output:1",
+          "puerto_salida": "1",
+          "siguiente_nodo": "h1",
+          "vlan_salida": null,
+          "grupos_ff": []
+        }
+      ]
+    },
+    {
+      "origen": "h2",
+      "destino": "h3",
+      "ip_origen": "10.0.0.2",
+      "ip_destino": "10.0.0.3",
+      "ruta_seleccionada": [
+        "h2",
+        "s2",
+        "s5",
+        "h3"
+      ],
+      "grupos_ff": [
+        "S2 - Grupo 1006: PRINCIPAL (watch_port=4)"
+      ],
+      "pasos_openflow": [
+        {
+          "switch": "s2",
+          "vlan_entrada": null,
+          "acciones_openflow": "group:1006",
+          "puerto_salida": "4",
+          "siguiente_nodo": "s5",
+          "vlan_salida": null,
+          "grupos_ff": [
+            "S2 - Grupo 1006: PRINCIPAL (watch_port=4)"
+          ]
+        },
+        {
+          "switch": "s5",
+          "vlan_entrada": null,
+          "acciones_openflow": "output:1",
+          "puerto_salida": "1",
+          "siguiente_nodo": "h3",
+          "vlan_salida": null,
+          "grupos_ff": []
+        }
+      ]
+    },
+    {
+      "origen": "h2",
+      "destino": "h4",
+      "ip_origen": "10.0.0.2",
+      "ip_destino": "10.0.0.4",
+      "ruta_seleccionada": [
+        "h2",
+        "s2",
+        "s4",
+        "s7",
+        "h4"
+      ],
+      "grupos_ff": [
+        "S2 - Grupo 1007: PRINCIPAL (watch_port=3)",
+        "S4 - Grupo 1008: PRINCIPAL (watch_port=5)"
+      ],
+      "pasos_openflow": [
+        {
+          "switch": "s2",
+          "vlan_entrada": null,
+          "acciones_openflow": "group:1007",
+          "puerto_salida": "3",
+          "siguiente_nodo": "s4",
+          "vlan_salida": null,
+          "grupos_ff": [
+            "S2 - Grupo 1007: PRINCIPAL (watch_port=3)"
+          ]
+        },
+        {
+          "switch": "s4",
+          "vlan_entrada": null,
+          "acciones_openflow": "group:1008",
+          "puerto_salida": "5",
+          "siguiente_nodo": "s7",
+          "vlan_salida": null,
+          "grupos_ff": [
+            "S4 - Grupo 1008: PRINCIPAL (watch_port=5)"
+          ]
+        },
+        {
+          "switch": "s7",
+          "vlan_entrada": null,
+          "acciones_openflow": "output:1",
+          "puerto_salida": "1",
+          "siguiente_nodo": "h4",
+          "vlan_salida": null,
+          "grupos_ff": []
+        }
+      ]
+    },
+    {
+      "origen": "h3",
+      "destino": "h1",
+      "ip_origen": "10.0.0.3",
+      "ip_destino": "10.0.0.1",
+      "ruta_seleccionada": [
+        "h3",
+        "s5",
+        "s2",
+        "s4",
+        "s1",
+        "h1"
+      ],
+      "grupos_ff": [
+        "S5 - Grupo 1009: PRINCIPAL (watch_port=2)",
+        "S2 - Grupo 1010: RESPALDO (watch_port=3)"
+      ],
+      "pasos_openflow": [
+        {
+          "switch": "s5",
+          "vlan_entrada": null,
+          "acciones_openflow": "group:1009",
+          "puerto_salida": "2",
+          "siguiente_nodo": "s2",
+          "vlan_salida": null,
+          "grupos_ff": [
+            "S5 - Grupo 1009: PRINCIPAL (watch_port=2)"
+          ]
+        },
+        {
+          "switch": "s2",
+          "vlan_entrada": null,
+          "acciones_openflow": "group:1010",
+          "puerto_salida": "3",
+          "siguiente_nodo": "s4",
+          "vlan_salida": 110,
+          "grupos_ff": [
+            "S2 - Grupo 1010: RESPALDO (watch_port=3)"
+          ]
+        },
+        {
+          "switch": "s4",
+          "vlan_entrada": 110,
+          "acciones_openflow": "output:1",
+          "puerto_salida": "1",
+          "siguiente_nodo": "s1",
+          "vlan_salida": 110,
+          "grupos_ff": []
+        },
+        {
+          "switch": "s1",
+          "vlan_entrada": 110,
+          "acciones_openflow": "pop_vlan,output:1",
+          "puerto_salida": "1",
+          "siguiente_nodo": "h1",
+          "vlan_salida": null,
+          "grupos_ff": []
+        }
+      ]
+    },
+    {
+      "origen": "h3",
+      "destino": "h2",
+      "ip_origen": "10.0.0.3",
+      "ip_destino": "10.0.0.2",
+      "ruta_seleccionada": [
+        "h3",
+        "s5",
+        "s2",
+        "h2"
+      ],
+      "grupos_ff": [
+        "S5 - Grupo 1011: PRINCIPAL (watch_port=2)"
+      ],
+      "pasos_openflow": [
+        {
+          "switch": "s5",
+          "vlan_entrada": null,
+          "acciones_openflow": "group:1011",
+          "puerto_salida": "2",
+          "siguiente_nodo": "s2",
+          "vlan_salida": null,
+          "grupos_ff": [
+            "S5 - Grupo 1011: PRINCIPAL (watch_port=2)"
+          ]
+        },
+        {
+          "switch": "s2",
+          "vlan_entrada": null,
+          "acciones_openflow": "output:1",
+          "puerto_salida": "1",
+          "siguiente_nodo": "h2",
+          "vlan_salida": null,
+          "grupos_ff": []
+        }
+      ]
+    },
+    {
+      "origen": "h3",
+      "destino": "h4",
+      "ip_origen": "10.0.0.3",
+      "ip_destino": "10.0.0.4",
+      "ruta_seleccionada": [
+        "h3",
+        "s5",
+        "s4",
+        "s7",
+        "h4"
+      ],
+      "grupos_ff": [
+        "S5 - Grupo 1012: PRINCIPAL (watch_port=3)",
+        "S4 - Grupo 1013: PRINCIPAL (watch_port=5)"
+      ],
+      "pasos_openflow": [
+        {
+          "switch": "s5",
+          "vlan_entrada": null,
+          "acciones_openflow": "group:1012",
+          "puerto_salida": "3",
+          "siguiente_nodo": "s4",
+          "vlan_salida": null,
+          "grupos_ff": [
+            "S5 - Grupo 1012: PRINCIPAL (watch_port=3)"
+          ]
+        },
+        {
+          "switch": "s4",
+          "vlan_entrada": null,
+          "acciones_openflow": "group:1013",
+          "puerto_salida": "5",
+          "siguiente_nodo": "s7",
+          "vlan_salida": null,
+          "grupos_ff": [
+            "S4 - Grupo 1013: PRINCIPAL (watch_port=5)"
+          ]
+        },
+        {
+          "switch": "s7",
+          "vlan_entrada": null,
+          "acciones_openflow": "output:1",
+          "puerto_salida": "1",
+          "siguiente_nodo": "h4",
+          "vlan_salida": null,
+          "grupos_ff": []
+        }
+      ]
+    },
+    {
+      "origen": "h4",
+      "destino": "h1",
+      "ip_origen": "10.0.0.4",
+      "ip_destino": "10.0.0.1",
+      "ruta_seleccionada": [
+        "h4",
+        "s7",
+        "s4",
+        "s1",
+        "h1"
+      ],
+      "grupos_ff": [
+        "S7 - Grupo 1014: PRINCIPAL (watch_port=2)",
+        "S4 - Grupo 1015: PRINCIPAL (watch_port=1)"
+      ],
+      "pasos_openflow": [
+        {
+          "switch": "s7",
+          "vlan_entrada": null,
+          "acciones_openflow": "group:1014",
+          "puerto_salida": "2",
+          "siguiente_nodo": "s4",
+          "vlan_salida": null,
+          "grupos_ff": [
+            "S7 - Grupo 1014: PRINCIPAL (watch_port=2)"
+          ]
+        },
+        {
+          "switch": "s4",
+          "vlan_entrada": null,
+          "acciones_openflow": "group:1015",
+          "puerto_salida": "1",
+          "siguiente_nodo": "s1",
+          "vlan_salida": null,
+          "grupos_ff": [
+            "S4 - Grupo 1015: PRINCIPAL (watch_port=1)"
+          ]
+        },
+        {
+          "switch": "s1",
+          "vlan_entrada": null,
+          "acciones_openflow": "output:1",
+          "puerto_salida": "1",
+          "siguiente_nodo": "h1",
+          "vlan_salida": null,
+          "grupos_ff": []
+        }
+      ]
+    },
+    {
+      "origen": "h4",
+      "destino": "h2",
+      "ip_origen": "10.0.0.4",
+      "ip_destino": "10.0.0.2",
+      "ruta_seleccionada": [
+        "h4",
+        "s7",
+        "s4",
+        "s2",
+        "h2"
+      ],
+      "grupos_ff": [
+        "S7 - Grupo 1016: PRINCIPAL (watch_port=2)",
+        "S4 - Grupo 1017: PRINCIPAL (watch_port=2)"
+      ],
+      "pasos_openflow": [
+        {
+          "switch": "s7",
+          "vlan_entrada": null,
+          "acciones_openflow": "group:1016",
+          "puerto_salida": "2",
+          "siguiente_nodo": "s4",
+          "vlan_salida": null,
+          "grupos_ff": [
+            "S7 - Grupo 1016: PRINCIPAL (watch_port=2)"
+          ]
+        },
+        {
+          "switch": "s4",
+          "vlan_entrada": null,
+          "acciones_openflow": "group:1017",
+          "puerto_salida": "2",
+          "siguiente_nodo": "s2",
+          "vlan_salida": null,
+          "grupos_ff": [
+            "S4 - Grupo 1017: PRINCIPAL (watch_port=2)"
+          ]
+        },
+        {
+          "switch": "s2",
+          "vlan_entrada": null,
+          "acciones_openflow": "output:1",
+          "puerto_salida": "1",
+          "siguiente_nodo": "h2",
+          "vlan_salida": null,
+          "grupos_ff": []
+        }
+      ]
+    },
+    {
+      "origen": "h4",
+      "destino": "h3",
+      "ip_origen": "10.0.0.4",
+      "ip_destino": "10.0.0.3",
+      "ruta_seleccionada": [
+        "h4",
+        "s7",
+        "s4",
+        "s5",
+        "h3"
+      ],
+      "grupos_ff": [
+        "S7 - Grupo 1018: PRINCIPAL (watch_port=2)",
+        "S4 - Grupo 1019: PRINCIPAL (watch_port=4)"
+      ],
+      "pasos_openflow": [
+        {
+          "switch": "s7",
+          "vlan_entrada": null,
+          "acciones_openflow": "group:1018",
+          "puerto_salida": "2",
+          "siguiente_nodo": "s4",
+          "vlan_salida": null,
+          "grupos_ff": [
+            "S7 - Grupo 1018: PRINCIPAL (watch_port=2)"
+          ]
+        },
+        {
+          "switch": "s4",
+          "vlan_entrada": null,
+          "acciones_openflow": "group:1019",
+          "puerto_salida": "4",
+          "siguiente_nodo": "s5",
+          "vlan_salida": null,
+          "grupos_ff": [
+            "S4 - Grupo 1019: PRINCIPAL (watch_port=4)"
+          ]
+        },
+        {
+          "switch": "s5",
+          "vlan_entrada": null,
+          "acciones_openflow": "output:1",
+          "puerto_salida": "1",
+          "siguiente_nodo": "h3",
+          "vlan_salida": null,
+          "grupos_ff": []
+        }
+      ]
+    }
+  ]
+}

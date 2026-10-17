@@ -1,0 +1,15 @@
+------------------------------------------------------------
+Client connecting to 10.0.0.3, TCP port 5602
+TCP window size: 85.3 KByte (default)
+------------------------------------------------------------
+[  1] local 10.0.0.2 port 45158 connected with 10.0.0.3 port 5602 (icwnd/mss/irtt=14/1448/512)
+[ ID] Interval       Transfer     Bandwidth
+[  1] 0.0000-2.0000 sec  3.00 MBytes  12.6 Mbits/sec
+[  1] 2.0000-4.0000 sec  3.00 MBytes  12.6 Mbits/sec
+[  1] 4.0000-6.0000 sec  3.12 MBytes  13.1 Mbits/sec
+[  1] 6.0000-8.0000 sec  3.00 MBytes  12.6 Mbits/sec
+[  1] 8.0000-10.0000 sec  3.00 MBytes  12.6 Mbits/sec
+[  1] 10.0000-12.0000 sec  3.00 MBytes  12.6 Mbits/sec
+[  1] 12.0000-14.0000 sec  3.00 MBytes  12.6 Mbits/sec
+[  1] 14.0000-15.2202 sec  1.37 MBytes  9.45 Mbits/sec
+[  1] 0.0000-15.2202 sec  22.5 MBytes  12.4 Mbits/sec

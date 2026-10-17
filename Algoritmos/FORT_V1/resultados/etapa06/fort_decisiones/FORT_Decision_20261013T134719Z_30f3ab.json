@@ -1,0 +1,20 @@
+{
+  "tipo": "FORT_DECISION_DINAMICA_GUIADA_POR_CARGA",
+  "generado_utc": "2026-10-13T13:47:25.078350+00:00",
+  "fallo": [
+    "s1",
+    "s2"
+  ],
+  "captura_origen_utc": "2026-10-13T13:47:24.996617+00:00",
+  "captura_atomica": false,
+  "mlu_fs_observada_pct": 0.0,
+  "mlu_fs_modelada_pct": 0.0,
+  "demanda_total_observada_bps": 0.0,
+  "mejora_real_observada_pct": null,
+  "ejecucion_openflow_autorizada": false,
+  "estado": "SIN_CARGA_SUFICIENTE",
+  "targets_evaluados": 0,
+  "pareja_preferida_modelo": null,
+  "motivo_parada": "DEMANDA_INSUFICIENTE",
+  "tiempo_busqueda_s": 0.001472
+}

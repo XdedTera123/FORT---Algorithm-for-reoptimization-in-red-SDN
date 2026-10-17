@@ -1,0 +1,188 @@
+/home/vboxuser/Desktop/Tesis-SDN/.venv/lib/python3.12/site-packages/os_ken/lib/hub.py:160: EventletDeprecationWarning: 
+Eventlet is deprecated. It is currently being maintained in bugfix mode, and
+we strongly recommend against using it for new projects.
+
+If you are already using Eventlet, we recommend migrating to a different
+framework.  For more detail see
+https://eventlet.readthedocs.io/en/latest/asyncio/migration.html
+
+  import eventlet
+
+==========================================================================
+[14:36:43] [CONTROL   ] INICIO DEL CONTROLADOR
+--------------------------------------------------------------------------
+[14:36:43] [CONTROL   ] OpenFlow 1.3 | Puerto 6653
+[14:36:43] [CONTROL   ] Ejecucion: ACTIVADA
+[14:36:43] [CONTROL   ] Modo: piloto
+[14:36:43] [CONTROL   ] Consola: RESUMIDA
+
+==========================================================================
+[14:36:43] [FF        ] ETAPA 01 | RUTAS Y FAST FAILOVER
+--------------------------------------------------------------------------
+[14:36:43] [FF        ] Comunicaciones: 12
+[14:36:43] [FF        ] Grupos Fast Failover calculados: 20
+[14:36:43] [FF        ] Reglas principales y de desvio calculadas: 156
+
+==========================================================================
+[14:36:43] [CAPTURA   ] ETAPA 02 | SUPERVISION OPENFLOW
+--------------------------------------------------------------------------
+[14:36:43] [CAPTURA   ] Switches esperados: 8
+[14:36:43] [CAPTURA   ] Enlaces supervisados: 12
+[14:36:43] [CAPTURA   ] Fuente: FS + PS + RS + demandas IP por OpenFlow 1.3
+[14:36:43] [AVISO     ] Modo: SOLO OBSERVACION | Cambios enviados a OVS: 0
+[14:36:43] [TARGETS   ] FORT MOTOR: presupuesto computacional ADAPTATIVO
+[14:36:43] [TARGETS   ] FORT MOTOR: ejecucion OpenFlow DESACTIVADA
+[14:36:43] [TRANSITION] FORT ETAPAS 04/05: evaluacion preliminar AUTOMATICA
+[14:36:43] [TRANSITION] FORT ETAPAS 04/05: ejecucion OpenFlow BLOQUEADA
+[14:36:43] [PREFLIGHT ] FORT VALIDADOR: comprobacion OpenFlow real ACTIVADA
+[14:36:43] [PREFLIGHT ] FORT VALIDADOR: modificaciones en OVS DESACTIVADAS
+[14:36:43] [EJECUTOR  ] FORT EJECUTOR: HABILITADO (piloto)
+[14:36:43] [CAPTURA   ] FORT V1: FF -> captura -> Targets -> Transitions -> preflight -> ejecutor
+[14:36:44] [FF        ] S1: 3 grupos FF, 22 reglas enviadas
+[14:36:44] [FF        ] S6: 0 grupos FF, 12 reglas enviadas
+[14:36:44] [FF        ] S2: 5 grupos FF, 34 reglas enviadas
+[14:36:44] [FF        ] S8: 0 grupos FF, 0 reglas enviadas
+[14:36:44] [CAPTURA   ] FORT: referencia inicial completada
+[14:36:44] [CAPTURA   ] FORT: enlaces caidos inicialmente: []
+[14:36:44] [CAPTURA   ] FORT: esperando eventos OpenFlow
+[14:36:44] [FF        ] S4: 6 grupos FF, 40 reglas enviadas
+[14:36:44] [FF        ] S7: 3 grupos FF, 18 reglas enviadas
+[14:36:44] [FF        ] S3: 0 grupos FF, 12 reglas enviadas
+[14:36:44] [FF        ] S5: 3 grupos FF, 18 reglas enviadas
+[14:36:44] [EJECUTOR  ] FORT EJECUTOR: limpieza de artefactos propios verificada
+[14:36:55] [CAPTURA   ] FORT: ENLACE NO OPERATIVO: s1-s2
+[14:36:55] [CAPTURA   ] FORT: iniciando captura FS + PS + RS por OpenFlow
+[14:36:55] [CAPTURA   ] FORT [20261013T143655Z_378b7e]: fase 1/2 | 32 respuestas OpenFlow solicitadas
+[14:37:00] [CAPTURA   ] FORT [20261013T143655Z_378b7e]: fase 2/2 | 16 respuestas OpenFlow solicitadas
+
+==========================================================================
+[14:37:00] [CAPTURA   ] ETAPA 02 | ESTADO POST-FF (FS / PS / RS)
+--------------------------------------------------------------------------
+[14:37:00] [CAPTURA   ] Enlace fallado: S1-S2
+[14:37:00] [CAPTURA   ] FS | Comunicaciones: 12
+[14:37:00] [CAPTURA   ] H1 -> H2 : H1 -> S1 -> S4 -> S2 -> H2
+[14:37:00] [CAPTURA   ] S1 | Grupo 1000 | RESPALDO inferido | watch_port=4
+[14:37:00] [CAPTURA   ] H1 -> H3 : H1 -> S1 -> S4 -> S2 -> S5 -> H3
+[14:37:00] [CAPTURA   ] S1 | Grupo 1001 | RESPALDO inferido | watch_port=4
+[14:37:00] [CAPTURA   ] H2 -> H1 : H2 -> S2 -> S4 -> S1 -> H1
+[14:37:00] [CAPTURA   ] S2 | Grupo 1005 | RESPALDO inferido | watch_port=3
+[14:37:00] [CAPTURA   ] H3 -> H1 : H3 -> S5 -> S2 -> S4 -> S1 -> H1
+[14:37:00] [CAPTURA   ] S2 | Grupo 1010 | RESPALDO inferido | watch_port=3
+[14:37:00] [CAPTURA   ] PS | Grupos FF: 20 | Buckets: 40 | Respaldos inferidos: 4
+[14:37:00] [CAPTURA   ] RS | Direcciones operativas: 22 | MLU observada: 0.0 %
+[14:37:00] [CAPTURA   ] Demandas IP activas: 0 / 12
+[14:37:00] [CAPTURA   ] FORT | Captura coordinada: SI
+[14:37:00] [CAPTURA   ] FORT | Captura atomica: NO
+[14:37:00] [CAPTURA   ] FORT | Archivo: /home/vboxuser/Desktop/Tesis-SDN/resultados/etapa06/fort_capturas_estado/FORT_Estado_20261013T143655Z_378b7e.json
+[14:37:00] [CAPTURA   ] FORT | Reoptimizacion: NO EJECUTADA (observacion)
+
+==========================================================================
+[14:37:01] [TARGETS   ] ETAPA 03 | BUSQUEDA Y TARGETS
+--------------------------------------------------------------------------
+[14:37:01] [TARGETS   ] Fallo: S1-S2
+[14:37:01] [TARGETS   ] MLU FF observada: 0.0 %
+[14:37:01] [TARGETS   ] MLU FF modelada: 0.0 %
+[14:37:01] [TARGETS   ] Sin carga: conservar FF
+[14:37:01] [AVISO     ] Mejora REAL: PENDIENTE DE EJECUCION Y MEDICION
+[14:37:01] [AVISO     ] OpenFlow: NO AUTORIZADO
+[14:37:01] [TARGETS   ] Archivo: /home/vboxuser/Desktop/Tesis-SDN/resultados/etapa06/fort_decisiones/FORT_Decision_20261013T143655Z_378b7e.json
+[14:37:12] [CAPTURA   ] FORT: ENLACE RECUPERADO: s1-s2
+[14:37:20] [CAPTURA   ] FORT: ENLACE NO OPERATIVO: s1-s2
+[14:37:20] [CAPTURA   ] FORT: iniciando captura FS + PS + RS por OpenFlow
+[14:37:20] [CAPTURA   ] FORT [20261013T143720Z_884d52]: fase 1/2 | 32 respuestas OpenFlow solicitadas
+[14:37:26] [CAPTURA   ] FORT [20261013T143720Z_884d52]: fase 2/2 | 16 respuestas OpenFlow solicitadas
+
+==========================================================================
+[14:37:26] [CAPTURA   ] ETAPA 02 | ESTADO POST-FF (FS / PS / RS)
+--------------------------------------------------------------------------
+[14:37:26] [CAPTURA   ] Enlace fallado: S1-S2
+[14:37:26] [CAPTURA   ] FS | Comunicaciones: 12
+[14:37:26] [CAPTURA   ] H1 -> H2 : H1 -> S1 -> S4 -> S2 -> H2
+[14:37:26] [CAPTURA   ] S1 | Grupo 1000 | RESPALDO inferido | watch_port=4
+[14:37:26] [CAPTURA   ] H1 -> H3 : H1 -> S1 -> S4 -> S2 -> S5 -> H3
+[14:37:26] [CAPTURA   ] S1 | Grupo 1001 | RESPALDO inferido | watch_port=4
+[14:37:26] [CAPTURA   ] H2 -> H1 : H2 -> S2 -> S4 -> S1 -> H1
+[14:37:26] [CAPTURA   ] S2 | Grupo 1005 | RESPALDO inferido | watch_port=3
+[14:37:26] [CAPTURA   ] H3 -> H1 : H3 -> S5 -> S2 -> S4 -> S1 -> H1
+[14:37:26] [CAPTURA   ] S2 | Grupo 1010 | RESPALDO inferido | watch_port=3
+[14:37:26] [CAPTURA   ] PS | Grupos FF: 20 | Buckets: 40 | Respaldos inferidos: 4
+[14:37:26] [CAPTURA   ] RS | Direcciones operativas: 22 | MLU observada: 21.13203 %
+[14:37:26] [CAPTURA   ] Demandas IP activas: 9 / 12
+[14:37:26] [CAPTURA   ] FORT | Captura coordinada: SI
+[14:37:26] [CAPTURA   ] FORT | Captura atomica: NO
+[14:37:26] [CAPTURA   ] FORT | Archivo: /home/vboxuser/Desktop/Tesis-SDN/resultados/etapa06/fort_capturas_estado/FORT_Estado_20261013T143720Z_884d52.json
+[14:37:26] [CAPTURA   ] FORT | Reoptimizacion: NO EJECUTADA (observacion)
+
+==========================================================================
+[14:37:29] [TARGETS   ] ETAPA 03 | BUSQUEDA Y TARGETS
+--------------------------------------------------------------------------
+[14:37:29] [TARGETS   ] Fallo: S1-S2
+[14:37:29] [TARGETS   ] MLU FF observada: 21.13203 %
+[14:37:29] [TARGETS   ] MLU FF modelada: 21.255532 %
+[14:37:29] [TARGETS   ] Presupuesto AUTO: 3.555115 s
+[14:37:29] [TARGETS   ] Velocidad medida: 1359.13 Targets/s
+[14:37:29] [TARGETS   ] Ancho de haz AUTO: 8
+[14:37:29] [TARGETS   ] Targets evaluados: 1421
+[14:37:29] [TARGETS   ] Alternativas descubiertas: 63
+[14:37:29] [TARGETS   ] Candidatos Pareto: 9
+[14:37:29] [TARGETS   ] Fin: CONVERGENCIA_HEURISTICA_NO_CERTIFICADA | Tiempo: 1.048548 s
+
+==========================================================================
+[14:37:29] [TARGETS   ] === ENLACES CRITICOS EN FS ===
+--------------------------------------------------------------------------
+[14:37:29] [TARGETS   ] s2->s5 | 21.255532% | h2->h3, h1->h3
+[14:37:29] [TARGETS   ] s1->s4 | 16.663092% | h1->h3, h1->h2
+[14:37:29] [TARGETS   ] s4->s2 | 16.663092% | h1->h3, h1->h2
+[14:37:29] [TARGETS   ] Target: T00014
+[14:37:29] [TARGETS   ] Transition LOGICA: ASC
+[14:37:29] [TARGETS   ] Final MLU MODELO: 12.646261 %
+[14:37:29] [TARGETS   ] Peak MLU MODELO: 21.255532 %
+[14:37:29] [TARGETS   ] Mejora MODELO: 8.609271 p.p.
+
+==========================================================================
+[14:37:29] [TARGETS   ] === RUTAS QUE CAMBIARIAN ===
+--------------------------------------------------------------------------
+[14:37:29] [TARGETS   ] h1->h3
+[14:37:29] [TARGETS   ] FS: h1 -> s1 -> s4 -> s2 -> s5 -> h3
+[14:37:29] [TARGETS   ] Target: h1 -> s1 -> s3 -> s4 -> s5 -> h3
+[14:37:29] [TARGETS   ] h3->h4
+[14:37:29] [TARGETS   ] FS: h3 -> s5 -> s4 -> s7 -> h4
+[14:37:29] [TARGETS   ] Target: h3 -> s5 -> s8 -> s7 -> h4
+[14:37:29] [AVISO     ] Mejora REAL: PENDIENTE DE EJECUCION Y MEDICION
+[14:37:29] [AVISO     ] OpenFlow: NO AUTORIZADO
+[14:37:29] [TARGETS   ] Archivo: /home/vboxuser/Desktop/Tesis-SDN/resultados/etapa06/fort_decisiones/FORT_Decision_20261013T143720Z_884d52.json
+
+==========================================================================
+[14:37:30] [TRANSITION] ETAPAS 04-05 | EVALUACION TARGET-TRANSITION
+--------------------------------------------------------------------------
+[14:37:30] [TRANSITION] Fallo: S1-S2
+[14:37:30] [TRANSITION] Targets Pareto: 9
+[14:37:30] [TRANSITION] Parejas modeladas: 23
+[14:37:30] [TRANSITION] Parejas admisibles en modelo: 4
+[14:37:30] [TRANSITION] Parejas Pareto: 4
+[14:37:30] [TRANSITION] Pareja PRELIMINAR: {'target_id': 'T00014', 'transition_id': 'T00014_TR01_ASC', 'estrategia': 'TR01_ASC', 'final_mlu_pct': 12.646261, 'peak_mlu_pct': 21.255532, 'mensajes_modificacion': 16, 'barreras': 9, 'verificaciones': 2, 'switches_modificados': 6}
+[14:37:30] [TRANSITION] OpenFlow ejecutable: NO - requiere reglas y acciones reales
+[14:37:30] [TRANSITION] Archivo: /home/vboxuser/Desktop/Tesis-SDN/resultados/etapa06/fort_planes/FORT_Plan_20261013T143720Z_884d52.json
+[14:37:30] [PREFLIGHT ] FORT VALIDADOR: 24 respuestas OpenFlow solicitadas
+
+==========================================================================
+[14:37:30] [PREFLIGHT ] ETAPA 05 | VALIDACION OPENFLOW
+--------------------------------------------------------------------------
+[14:37:30] [PREFLIGHT ] Fallo: s1-s2
+[14:37:30] [PREFLIGHT ] Targets Pareto: 9
+[14:37:30] [PREFLIGHT ] Preparaciones compatibles: 2
+[14:37:30] [PREFLIGHT ] Bloqueados: 7
+[14:37:30] [PREFLIGHT ] Preferencia OpenFlow preliminar: {'target_id': 'T00014', 'transition_id': 'T00014_TR01_ASC', 'final_mlu_pct': 12.646261, 'peak_mlu_pct': 21.255532}
+[14:37:30] [PREFLIGHT ] Modificaciones ejecutadas en OVS: 0
+[14:37:30] [PREFLIGHT ] Archivo: /home/vboxuser/Desktop/Tesis-SDN/resultados/etapa06/fort_validaciones/FORT_Preflight_20261013T143720Z_884d52.json
+
+==========================================================================
+[14:37:31] [EJECUTOR  ] ETAPA 06 | EJECUCION CONTROLADA
+--------------------------------------------------------------------------
+[14:37:31] [EJECUTOR  ] FORT EJECUTOR: precondiciones OK; preparando
+[14:37:31] [EJECUTOR  ] FORT EJECUTOR: reglas VLAN verificadas
+[14:37:32] [EJECUTOR  ] FORT EJECUTOR: grupos FF verificados
+[14:37:32] [EJECUTOR  ] FORT EJECUTOR: rutas Target activadas y verificadas
+[14:37:37] [EJECUTOR  ] FORT EJECUTOR: modo piloto; red restaurada a FF
+[14:37:37] [EJECUTOR  ] FORT EJECUTOR: MLU post-FORT 12.716683% | MLU post-FF 21.13203% (comparacion exploratoria)
+[14:37:37] [EJECUTOR  ] FORT EJECUTOR: resultado: /home/vboxuser/Desktop/Tesis-SDN/resultados/etapa06/fort_ejecuciones_reales/FORT_Resultado_20261013T143720Z_884d52.json

@@ -1,0 +1,217 @@
+{
+  "tipo": "Topologia_Operativa_PostFallo",
+  "generado_utc": "2026-10-12T14:44:53.461968+00:00",
+  "fuente": "Escenario SDN, inventario de puertos, EstadoPostFallo y estado actual OpenFlow",
+  "captura_origen_simultanea": false,
+  "switches": [
+    "s1",
+    "s2",
+    "s3",
+    "s4",
+    "s5",
+    "s6",
+    "s7",
+    "s8"
+  ],
+  "hosts": [
+    {
+      "nombre": "h1",
+      "ip": "10.0.0.1/24",
+      "switch": "s1"
+    },
+    {
+      "nombre": "h2",
+      "ip": "10.0.0.2/24",
+      "switch": "s2"
+    },
+    {
+      "nombre": "h3",
+      "ip": "10.0.0.3/24",
+      "switch": "s5"
+    },
+    {
+      "nombre": "h4",
+      "ip": "10.0.0.4/24",
+      "switch": "s7"
+    }
+  ],
+  "enlaces_configurados": 12,
+  "enlaces_operativos": [
+    {
+      "extremo_a": "s1",
+      "extremo_b": "s3",
+      "puerto_a": 3,
+      "puerto_b": 1,
+      "activo_a": true,
+      "activo_b": true,
+      "capacidad_a_b_bps": 100000000.0,
+      "capacidad_b_a_bps": 100000000.0
+    },
+    {
+      "extremo_a": "s1",
+      "extremo_b": "s4",
+      "puerto_a": 4,
+      "puerto_b": 1,
+      "activo_a": true,
+      "activo_b": true,
+      "capacidad_a_b_bps": 100000000.0,
+      "capacidad_b_a_bps": 100000000.0
+    },
+    {
+      "extremo_a": "s2",
+      "extremo_b": "s4",
+      "puerto_a": 3,
+      "puerto_b": 2,
+      "activo_a": true,
+      "activo_b": true,
+      "capacidad_a_b_bps": 100000000.0,
+      "capacidad_b_a_bps": 100000000.0
+    },
+    {
+      "extremo_a": "s2",
+      "extremo_b": "s5",
+      "puerto_a": 4,
+      "puerto_b": 2,
+      "activo_a": true,
+      "activo_b": true,
+      "capacidad_a_b_bps": 100000000.0,
+      "capacidad_b_a_bps": 100000000.0
+    },
+    {
+      "extremo_a": "s3",
+      "extremo_b": "s4",
+      "puerto_a": 2,
+      "puerto_b": 3,
+      "activo_a": true,
+      "activo_b": true,
+      "capacidad_a_b_bps": 100000000.0,
+      "capacidad_b_a_bps": 100000000.0
+    },
+    {
+      "extremo_a": "s3",
+      "extremo_b": "s6",
+      "puerto_a": 3,
+      "puerto_b": 1,
+      "activo_a": true,
+      "activo_b": true,
+      "capacidad_a_b_bps": 100000000.0,
+      "capacidad_b_a_bps": 100000000.0
+    },
+    {
+      "extremo_a": "s4",
+      "extremo_b": "s5",
+      "puerto_a": 4,
+      "puerto_b": 3,
+      "activo_a": true,
+      "activo_b": true,
+      "capacidad_a_b_bps": 100000000.0,
+      "capacidad_b_a_bps": 100000000.0
+    },
+    {
+      "extremo_a": "s4",
+      "extremo_b": "s7",
+      "puerto_a": 5,
+      "puerto_b": 2,
+      "activo_a": true,
+      "activo_b": true,
+      "capacidad_a_b_bps": 100000000.0,
+      "capacidad_b_a_bps": 100000000.0
+    },
+    {
+      "extremo_a": "s5",
+      "extremo_b": "s8",
+      "puerto_a": 4,
+      "puerto_b": 1,
+      "activo_a": true,
+      "activo_b": true,
+      "capacidad_a_b_bps": 100000000.0,
+      "capacidad_b_a_bps": 100000000.0
+    },
+    {
+      "extremo_a": "s6",
+      "extremo_b": "s7",
+      "puerto_a": 2,
+      "puerto_b": 3,
+      "activo_a": true,
+      "activo_b": true,
+      "capacidad_a_b_bps": 100000000.0,
+      "capacidad_b_a_bps": 100000000.0
+    },
+    {
+      "extremo_a": "s7",
+      "extremo_b": "s8",
+      "puerto_a": 4,
+      "puerto_b": 2,
+      "activo_a": true,
+      "activo_b": true,
+      "capacidad_a_b_bps": 100000000.0,
+      "capacidad_b_a_bps": 100000000.0
+    }
+  ],
+  "enlaces_caidos": [
+    {
+      "extremo_a": "s1",
+      "extremo_b": "s2",
+      "puerto_a": 2,
+      "puerto_b": 2,
+      "activo_a": false,
+      "activo_b": false,
+      "capacidad_a_b_bps": 100000000.0,
+      "capacidad_b_a_bps": 100000000.0
+    }
+  ],
+  "adyacencia": {
+    "s1": [
+      "s3",
+      "s4"
+    ],
+    "s2": [
+      "s4",
+      "s5"
+    ],
+    "s3": [
+      "s1",
+      "s4",
+      "s6"
+    ],
+    "s4": [
+      "s1",
+      "s2",
+      "s3",
+      "s5",
+      "s7"
+    ],
+    "s5": [
+      "s2",
+      "s4",
+      "s8"
+    ],
+    "s6": [
+      "s3",
+      "s7"
+    ],
+    "s7": [
+      "s4",
+      "s6",
+      "s8"
+    ],
+    "s8": [
+      "s5",
+      "s7"
+    ]
+  },
+  "componentes_conectadas": [
+    [
+      "s1",
+      "s2",
+      "s3",
+      "s4",
+      "s5",
+      "s6",
+      "s7",
+      "s8"
+    ]
+  ],
+  "red_conectada": true,
+  "rutas_fs_verificadas": 12
+}

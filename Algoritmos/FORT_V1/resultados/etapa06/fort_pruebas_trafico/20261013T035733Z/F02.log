@@ -1,0 +1,25 @@
+------------------------------------------------------------
+Client connecting to 10.0.0.3, TCP port 6202
+TCP window size: 85.3 KByte (default)
+------------------------------------------------------------
+[  1] local 10.0.0.2 port 52772 connected with 10.0.0.3 port 6202 (icwnd/mss/irtt=14/1448/15783)
+[ ID] Interval       Transfer     Bandwidth
+[  1] 0.0000-2.0000 sec  2.25 MBytes  9.43 Mbits/sec
+[  1] 2.0000-4.0000 sec  2.75 MBytes  11.5 Mbits/sec
+[  1] 4.0000-6.0000 sec  3.37 MBytes  14.1 Mbits/sec
+[  1] 6.0000-8.0000 sec  3.00 MBytes  12.6 Mbits/sec
+[  1] 8.0000-10.0000 sec  1.37 MBytes  5.76 Mbits/sec
+[  1] 10.0000-12.0000 sec  1.83 MBytes  7.66 Mbits/sec
+[  1] 12.0000-14.0000 sec  3.50 MBytes  14.7 Mbits/sec
+[  1] 14.0000-16.0000 sec  3.87 MBytes  16.2 Mbits/sec
+[  1] 16.0000-18.0000 sec  3.87 MBytes  16.2 Mbits/sec
+[  1] 18.0000-20.0000 sec  2.50 MBytes  10.5 Mbits/sec
+[  1] 20.0000-22.0000 sec  1.25 MBytes  5.24 Mbits/sec
+[  1] 22.0000-24.0000 sec  1.37 MBytes  5.76 Mbits/sec
+[  1] 24.0000-26.0000 sec   544 KBytes  2.23 Mbits/sec
+[  1] 26.0000-28.0000 sec  1.37 MBytes  5.76 Mbits/sec
+[  1] 28.0000-30.0000 sec   568 KBytes  2.32 Mbits/sec
+[  1] 30.0000-32.0000 sec   827 KBytes  3.39 Mbits/sec
+[  1] 32.0000-34.0000 sec   507 KBytes  2.08 Mbits/sec
+[  1] 34.0000-35.3626 sec   319 KBytes  1.92 Mbits/sec
+[  1] 0.0000-35.3626 sec  35.0 MBytes  8.30 Mbits/sec
